@@ -1,0 +1,56 @@
+<div class="page-break"></div>
+<section class="content-section">
+    <h1 id="conclusion" class="section-title">6. Conclusion</h1>
+
+    <div class="conclusion-content">
+        <p>This penetration test assessment of {{ClientName}}'s infrastructure identified a total of <strong>{{VulnTotalCount}}</strong> security findings. The overall security posture has been rated as <strong class="risk-text-{{OverallRiskRating | string.downcase}}">{{OverallRiskRating}}</strong>.</p>
+
+        <div class="conclusion-summary">
+            <h3>Key Statistics</h3>
+            <table class="conclusion-stats">
+                <tr>
+                    <td>Assessment Duration</td>
+                    <td>{{ProjectDuration}} days</td>
+                </tr>
+                <tr>
+                    <td>Targets Assessed</td>
+                    <td>{{Targets | array.size}}</td>
+                </tr>
+                <tr>
+                    <td>Total Findings</td>
+                    <td>{{VulnTotalCount}}</td>
+                </tr>
+                <tr>
+                    <td>Average CVSS Score</td>
+                    <td>{{VulnAvgCvss}}</td>
+                </tr>
+            </table>
+        </div>
+
+        <p>We recommend that {{ClientName}} prioritize the remediation of critical and high severity findings immediately, followed by medium severity findings within a reasonable timeframe. Regular security assessments should be conducted to maintain a strong security posture.</p>
+
+        <p>The {{OrganizationName}} team is available to provide additional guidance or clarification on any of the findings presented in this report.</p>
+    </div>
+
+    <div class="contact-info">
+        <h3>Contact Information</h3>
+        <table class="contact-table">
+            <tr>
+                <td class="contact-label">Organization</td>
+                <td class="contact-value">{{OrganizationName}}</td>
+            </tr>
+            <tr>
+                <td class="contact-label">Contact</td>
+                <td class="contact-value">{{OrganizationContactName}}</td>
+            </tr>
+            <tr>
+                <td class="contact-label">Email</td>
+                <td class="contact-value">{{OrganizationEmail}}</td>
+            </tr>
+            <tr>
+                <td class="contact-label">Phone</td>
+                <td class="contact-value">{{OrganizationPhone}}</td>
+            </tr>
+        </table>
+    </div>
+</section>

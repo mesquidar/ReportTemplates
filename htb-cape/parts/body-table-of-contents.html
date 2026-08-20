@@ -1,0 +1,38 @@
+<div class="page-break"></div>
+<section class="toc-section">
+    <h1 class="section-title">Table of Contents</h1>
+    <div class="toc-container">
+        <div class="toc-item toc-level-1">
+            <a href="#executive-summary" class="toc-link">1. Executive Summary</a>
+        </div>
+        <div class="toc-item toc-level-1">
+            <a href="#scope" class="toc-link">2. Scope and Methodology</a>
+        </div>
+        <div class="toc-item toc-level-2">
+            <a href="#scope-targets" class="toc-link">2.1 In-Scope Targets</a>
+        </div>
+        <div class="toc-item toc-level-2">
+            <a href="#methodology" class="toc-link">2.2 Methodology</a>
+        </div>
+        <div class="toc-item toc-level-1">
+            <a href="#findings-summary" class="toc-link">3. Findings Summary</a>
+        </div>
+        <div class="toc-item toc-level-1">
+            <a href="#detailed-findings" class="toc-link">4. Detailed Findings</a>
+        </div>
+        {{for vuln in Vulns}}
+        <div class="toc-item toc-level-2">
+            <a href="#vuln-{{vuln.VulnFindingId}}" class="toc-link">4.{{for.index + 1}} {{vuln.VulnName}}</a>
+        </div>
+        {{end}}
+        <div class="toc-item toc-level-1">
+            <a href="#recommendations" class="toc-link">5. Recommendations</a>
+        </div>
+        <div class="toc-item toc-level-1">
+            <a href="#conclusion" class="toc-link">6. Conclusion</a>
+        </div>
+        <div class="toc-item toc-level-1">
+            <a href="#appendices" class="toc-link">Appendices</a>
+        </div>
+    </div>
+</section>

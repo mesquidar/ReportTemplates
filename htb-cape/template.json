@@ -1,0 +1,112 @@
+{
+  "name": "Hack The Box CAPE Penetration Test Report",
+  "description": "Professional CAPE penetration testing report template for Cervantes.",
+  "version": "1.0.0",
+  "author": "Cervantes",
+  "language": "en",
+  "reportType": "general",
+  "tags": [
+    "hack-the-box",
+    "htb",
+    "cape",
+    "penetration-testing"
+  ],
+  "parts": [
+    {
+      "key": "cover-cape",
+      "name": "HTB CAPE Cover",
+      "type": "Cover",
+      "order": 0,
+      "html": "parts/cover-cape.html",
+      "css": "parts/cover-cape.css"
+    },
+    {
+      "key": "header-htb",
+      "name": "HTB Header",
+      "type": "Header",
+      "order": 0,
+      "html": "parts/header-htb.html",
+      "css": "parts/header-htb.css"
+    },
+    {
+      "key": "footer-default",
+      "name": "HTB Footer",
+      "type": "Footer",
+      "order": 0,
+      "html": "parts/footer-default.html",
+      "css": "parts/footer-default.css"
+    },
+    {
+      "key": "body-document-control",
+      "name": "Document Control",
+      "type": "Body",
+      "order": 0,
+      "html": "parts/body-document-control.html",
+      "css": "parts/body-document-control.css"
+    },
+    {
+      "key": "body-table-of-contents",
+      "name": "Table of Contents",
+      "type": "Body",
+      "order": 1,
+      "html": "parts/body-table-of-contents.html",
+      "css": "parts/body-table-of-contents.css"
+    },
+    {
+      "key": "body-executive-summary",
+      "name": "Executive Summary",
+      "type": "Body",
+      "order": 2,
+      "html": "parts/body-executive-summary.html",
+      "css": "parts/body-executive-summary.css"
+    },
+    {
+      "key": "body-scope-methodology",
+      "name": "Scope and Methodology",
+      "type": "Body",
+      "order": 3,
+      "html": "parts/body-scope-methodology.html",
+      "css": "parts/body-scope-methodology.css"
+    },
+    {
+      "key": "body-findings-summary",
+      "name": "Findings Summary",
+      "type": "Body",
+      "order": 4,
+      "html": "parts/body-findings-summary.html",
+      "css": "parts/body-findings-summary.css"
+    },
+    {
+      "key": "body-detailed-findings",
+      "name": "Detailed Findings",
+      "type": "Body",
+      "order": 5,
+      "html": "parts/body-detailed-findings.html",
+      "css": "parts/body-detailed-findings.css"
+    },
+    {
+      "key": "body-recommendations",
+      "name": "Recommendations",
+      "type": "Body",
+      "order": 6,
+      "html": "parts/body-recommendations.html",
+      "css": "parts/body-recommendations.css"
+    },
+    {
+      "key": "body-conclusion",
+      "name": "Conclusion",
+      "type": "Body",
+      "order": 7,
+      "html": "parts/body-conclusion.html",
+      "css": "parts/body-conclusion.css"
+    },
+    {
+      "key": "body-appendices",
+      "name": "Appendices",
+      "type": "Body",
+      "order": 8,
+      "html": "parts/body-appendices.html",
+      "css": "parts/body-appendices.css"
+    }
+  ]
+}

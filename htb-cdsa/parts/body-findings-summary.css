@@ -1,0 +1,102 @@
+/* ============================================================
+   FINDINGS SUMMARY TABLE
+   ============================================================ */
+
+.findings-summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15pt 0;
+}
+
+.findings-summary-table th {
+    background-color: #1A2332;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 10pt 8pt;
+    text-align: left;
+    border: 1pt solid #1A2332;
+}
+
+.findings-summary-table td {
+    padding: 8pt;
+    border: 1pt solid #E2E8F0;
+    vertical-align: middle;
+}
+
+.findings-summary-table tr:nth-child(even) {
+    background-color: #F7FAFC;
+}
+
+.col-id {
+    width: 12%;
+}
+
+.col-title {
+    width: 40%;
+}
+
+.col-severity {
+    width: 18%;
+}
+
+.col-cvss {
+    width: 12%;
+}
+
+.col-status {
+    width: 18%;
+}
+
+.finding-id {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    color: #1A2332;
+}
+
+.finding-title {
+    font-weight: bold;
+}
+
+.finding-cvss {
+    text-align: center;
+    font-weight: bold;
+}
+
+.finding-status {
+    font-size: 9pt;
+}
+
+/* Severity Badges */
+.severity-badge {
+    display: inline-block;
+    padding: 4pt 8pt;
+    font-size: 8pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5pt;
+}
+
+.severity-critical {
+    background-color: #FF3E3E;
+    color: #FFFFFF;
+}
+
+.severity-high {
+    background-color: #FF6B35;
+    color: #FFFFFF;
+}
+
+.severity-medium {
+    background-color: #FFB800;
+    color: #1A2332;
+}
+
+.severity-low {
+    background-color: #01EFFF;
+    color: #1A2332;
+}
+
+.severity-info {
+    background-color: #00B4D8;
+    color: #FFFFFF;
+}

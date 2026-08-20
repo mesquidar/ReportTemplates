@@ -1,0 +1,220 @@
+/* ============================================================
+   COVER PAGE STYLES
+   ============================================================ */
+
+cover {
+    page: cover-page;
+}
+
+.cover-page {
+    width: 210mm;
+    height: 297mm;
+    background-color: #1A2332;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.cover-decoration-top {
+    position: absolute;
+    top: -100;
+    left: 0;
+    width: 100%;
+    height: 120pt;
+}
+
+.cover-decoration-bottom {
+    position: absolute;
+    bottom: 0pt;
+    left: 0;
+    width: 100%;
+    height: 100pt;
+}
+
+.cover-content {
+    padding: 40mm 25mm 30mm 25mm;
+    text-align: center;
+}
+
+.cover-logo-section {
+    margin-bottom: 0mm;
+    text-align: center;
+}
+
+.cover-logo-container {
+    margin-bottom: 15pt;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cover-logo-cert-container {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cover-logo-svg {
+    width: 120pt;
+    height: 120pt;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.brand-text {
+    display: block;
+    font-size: 24pt;
+    font-weight: bold;
+    color: #BE3998;
+    letter-spacing: 4pt;
+    margin-bottom: 5pt;
+}
+
+.brand-subtitle {
+    display: block;
+    font-size: 11pt;
+    color: #A4B1CD;
+    letter-spacing: 2pt;
+}
+
+.cover-report-type {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #BE3998;
+    letter-spacing: 3pt;
+    margin-bottom: 10pt;
+    border-top: 1pt solid #BE3998;
+    border-bottom: 1pt solid #BE3998;
+    padding: 8pt 0;
+}
+
+.cover-project-name {
+    font-size: 28pt;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 15pt 0;
+    line-height: 1.2;
+}
+
+.cover-client-name {
+    font-size: 16pt;
+    color: #A4B1CD;
+    margin-top: 10pt;
+}
+
+.cover-metadata {
+    margin-bottom: 20mm;
+}
+
+.cover-info-table {
+    width: auto;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.cover-info-table td {
+    padding: 5pt 15pt;
+    text-align: left;
+}
+
+.info-label {
+    font-size: 9pt;
+    color: #A4B1CD;
+    text-align: right;
+    padding-right: 10pt;
+}
+
+.info-value {
+    font-size: 10pt;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.classification-badge {
+    color: #BE3998;
+}
+
+.cover-risk-section {
+    margin-top: 15mm;
+}
+
+.risk-indicator {
+    display: inline-block;
+    background-color: #141D2B;
+    border: 2pt solid #BE3998;
+    padding: 15pt 30pt;
+}
+
+.risk-label {
+    display: block;
+    font-size: 8pt;
+    color: #A4B1CD;
+    letter-spacing: 2pt;
+    margin-bottom: 8pt;
+}
+
+.risk-value {
+    display: block;
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+/* Risk colors for cover */
+.risk-critical {
+    color: #FF3E3E;
+}
+
+.risk-high {
+    color: #FF6B35;
+}
+
+.risk-medium {
+    color: #FFB800;
+}
+
+.risk-low {
+    color: #BE3998;
+}
+
+.risk-info {
+    color: #00B4D8;
+}
+
+.risk-none {
+    color: #BE3998;
+}
+
+.cover-footer {
+    position: absolute;
+    bottom: 20mm;
+    left: 25mm;
+    right: 25mm;
+}
+
+.cover-footer table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cover-footer-left {
+    text-align: left;
+    width: 50%;
+}
+
+.cover-footer-right {
+    text-align: right;
+    width: 50%;
+}
+
+.footer-org {
+    font-size: 9pt;
+    color: #A4B1CD;
+}
+
+.footer-reference {
+    font-size: 9pt;
+    color: #BE3998;
+}

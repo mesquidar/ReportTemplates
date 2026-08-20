@@ -1,0 +1,47 @@
+/* ============================================================
+   TABLE OF CONTENTS STYLES
+   ============================================================ */
+
+.toc-section {
+    padding: 0;
+}
+
+.toc-container {
+    margin-top: 15pt;
+}
+
+.toc-item {
+    padding: 6pt 0;
+    border-bottom: 1pt dotted #E2E8F0;
+}
+
+.toc-level-1 {
+    font-weight: bold;
+    font-size: 11pt;
+    padding-left: 0;
+}
+
+.toc-level-2 {
+    font-weight: normal;
+    font-size: 10pt;
+    padding-left: 15pt;
+}
+
+.toc-level-3 {
+    font-weight: normal;
+    font-size: 9pt;
+    padding-left: 30pt;
+    color: #718096;
+}
+
+.toc-link {
+    color: #1A2332;
+    text-decoration: none;
+}
+
+.toc-link::after {
+    content: target-counter(attr(href), page);
+    float: right;
+    color: #01EFFF;
+    font-weight: bold;
+}

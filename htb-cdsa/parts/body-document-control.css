@@ -1,0 +1,58 @@
+/* ============================================================
+   DOCUMENT CONTROL STYLES
+   ============================================================ */
+
+.document-control {
+    padding: 0;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15pt;
+}
+
+.info-table td {
+    padding: 8pt 10pt;
+    border: 1pt solid #E2E8F0;
+}
+
+.info-table .label-cell {
+    width: 30%;
+    background-color: #F7FAFC;
+    font-weight: bold;
+    color: #1A2332;
+}
+
+.info-table .value-cell {
+    width: 70%;
+    color: #2D3748;
+}
+
+.version-table,
+.team-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15pt;
+}
+
+.version-table th,
+.team-table th {
+    background-color: #1A2332;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 10pt;
+    text-align: left;
+    border: 1pt solid #1A2332;
+}
+
+.version-table td,
+.team-table td {
+    padding: 8pt 10pt;
+    border: 1pt solid #E2E8F0;
+}
+
+.version-table tr:nth-child(even),
+.team-table tr:nth-child(even) {
+    background-color: #F7FAFC;
+}

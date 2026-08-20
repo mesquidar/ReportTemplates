@@ -1,0 +1,67 @@
+/* ============================================================
+   RECOMMENDATIONS STYLES
+   ============================================================ */
+
+.recommendations-intro {
+    margin-bottom: 20pt;
+    font-size: 11pt;
+    line-height: 1.6;
+}
+
+.recommendation-priority {
+    margin-bottom: 20pt;
+}
+
+.priority-header {
+    font-size: 12pt;
+    font-weight: bold;
+    padding: 10pt 15pt;
+    margin-bottom: 10pt;
+}
+
+.priority-immediate {
+    background-color: #FF3E3E;
+    color: #FFFFFF;
+}
+
+.priority-shortterm {
+    background-color: #FFB800;
+    color: #1A2332;
+}
+
+.priority-longterm {
+    background-color: #01EFFF;
+    color: #1A2332;
+}
+
+.recommendation-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.recommendation-item {
+    padding: 10pt 15pt;
+    border-bottom: 1pt solid #E2E8F0;
+    background-color: #F7FAFC;
+}
+
+.rec-id {
+    display: inline-block;
+    width: 80pt;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    color: #1A2332;
+}
+
+.rec-name {
+    display: inline-block;
+    width: 350pt;
+}
+
+.rec-severity {
+    display: inline-block;
+    padding: 3pt 8pt;
+    font-size: 8pt;
+    font-weight: bold;
+}

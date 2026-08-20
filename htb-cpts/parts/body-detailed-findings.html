@@ -1,0 +1,101 @@
+<div class="page-break"></div>
+<section class="content-section">
+    <h1 id="detailed-findings" class="section-title">4. Detailed Findings</h1>
+
+    {{for vuln in Vulns}}
+    <div class="finding-detail no-break" id="vuln-{{vuln.VulnFindingId}}">
+        <!-- Finding Header -->
+        <div class="finding-header severity-border-{{vuln.VulnRisk | string.downcase}}">
+            <div class="finding-header-content">
+                <div class="finding-header-left">
+                    <span class="finding-number">{{vuln.VulnFindingId}}</span>
+                    <h2 class="finding-name">{{vuln.VulnName}}</h2>
+                </div>
+                <div class="finding-header-right">
+                    <span class="severity-badge-large severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Finding Metadata -->
+        <div class="finding-meta">
+            <table class="finding-meta-table">
+                <tr>
+                    <td class="meta-label">CVSS Score</td>
+                    <td class="meta-value">{{vuln.VulnCvss}} ({{vuln.VulnCvssSeverity}})</td>
+                    <td class="meta-label">Category</td>
+                    <td class="meta-value">{{vuln.VulnCategory}}</td>
+                </tr>
+                <tr>
+                    <td class="meta-label">CVSS Vector</td>
+                    <td class="meta-value" colspan="3"><code class="cvss-vector">{{vuln.VulnCvssVector}}</code></td>
+                </tr>
+                {{if vuln.VulnCve != ""}}
+                <tr>
+                    <td class="meta-label">CVE</td>
+                    <td class="meta-value">{{vuln.VulnCve}}</td>
+                    <td class="meta-label">CWE</td>
+                    <td class="meta-value">{{vuln.VulnCwes}}</td>
+                </tr>
+                {{end}}
+                <tr>
+                    <td class="meta-label">Affected Targets</td>
+                    <td class="meta-value" colspan="3">{{vuln.VulnTargets}}</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Finding Description -->
+        <div class="finding-section">
+            <h3 class="finding-section-title">
+                <span class="section-icon">D</span>
+                Description
+            </h3>
+            <div class="finding-section-content">
+                {{vuln.VulnDescription}}
+            </div>
+        </div>
+
+        <!-- Impact -->
+        <div class="finding-section">
+            <h3 class="finding-section-title">
+                <span class="section-icon">I</span>
+                Impact
+            </h3>
+            <div class="finding-section-content">
+                {{vuln.VulnImpact}}
+            </div>
+        </div>
+
+        <!-- Proof of Concept -->
+        <div class="finding-section">
+            <h3 class="finding-section-title">
+                <span class="section-icon">P</span>
+                Proof of Concept
+            </h3>
+            <div class="finding-section-content">
+                {{vuln.VulnPoc}}
+            </div>
+        </div>
+
+        <!-- Remediation -->
+        <div class="finding-section remediation-section">
+            <h3 class="finding-section-title">
+                <span class="section-icon">R</span>
+                Remediation
+            </h3>
+            <div class="finding-section-content">
+                {{vuln.VulnRemediation}}
+            </div>
+            <div class="remediation-meta">
+                <span class="remediation-badge">Complexity: {{vuln.VulnComplexity}}</span>
+                <span class="remediation-badge">Priority: {{vuln.VulnPriority}}</span>
+            </div>
+        </div>
+    </div>
+
+    {{if for.last == false}}
+    <div class="page-break"></div>
+    {{end}}
+    {{end}}
+</section>

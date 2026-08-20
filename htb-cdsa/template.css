@@ -1,0 +1,1481 @@
+/* ============================================================
+   HACK THE BOX - Professional Penetration Test Report Template
+   CSS Stylesheet - iText 9.x pdfHTML Compatible
+   ============================================================ */
+
+/* ============================================================
+   PAGE CONFIGURATION
+   ============================================================ */
+
+@page {
+    size: A4;
+    margin: 25mm 20mm 25mm 20mm;
+    @top-center {
+        content: element(header);
+    }
+    @bottom-center {
+        content: element(footer);
+    }
+}
+
+@page cover-page {
+    size: A4;
+    margin: 0;
+    @top-center {
+        content: none;
+    }
+    @bottom-center {
+        content: none;
+    }
+}
+
+@page :first {
+    margin: 0;
+    @top-center {
+        content: none;
+    }
+    @bottom-center {
+        content: none;
+    }
+}
+
+/* PDF Bookmarks */
+h1 {
+    bookmark-level: 1;
+    bookmark-state: open;
+}
+
+h2 {
+    bookmark-level: 2;
+    bookmark-state: open;
+}
+
+h3 {
+    bookmark-level: 3;
+    bookmark-state: closed;
+}
+
+/* ============================================================
+   COLOR VARIABLES (as direct values for iText compatibility)
+   HTB Brand Colors:
+   - Primary Green: #01EFFF
+   - Dark Background: #1A2332
+   - Darker Background: #141D2B
+   - White Text: #FFFFFF
+   - Secondary Text: #A4B1CD
+   - Alert Red: #FF3E3E
+   ============================================================ */
+
+/* ============================================================
+   GLOBAL STYLES
+   ============================================================ */
+
+* {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+html, body {
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    line-height: 1.5;
+    color: #2D3748;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+/* Page Break Controls */
+.page-break {
+    page-break-after: always;
+}
+
+.page-break-before {
+    page-break-before: always;
+}
+
+.no-break {
+    page-break-inside: avoid;
+}
+
+/* Orphans and Widows */
+p {
+    orphans: 3;
+    widows: 3;
+}
+
+h1, h2, h3, h4 {
+    page-break-after: avoid;
+}
+
+/* gallery-part:header-htb:start */
+/* ============================================================
+   HEADER STYLES
+   ============================================================ */
+
+header {
+    position: running(header);
+    width: 100%;
+    padding-bottom: 5mm;
+}
+
+.header-container {
+    width: 100%;
+}
+
+.header-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.header-left {
+    text-align: left;
+    width: 33%;
+    vertical-align: middle;
+}
+
+.header-center {
+    text-align: center;
+    width: 34%;
+    vertical-align: middle;
+}
+
+.header-right {
+    text-align: right;
+    width: 33%;
+    vertical-align: middle;
+}
+
+.header-logo {
+    vertical-align: middle;
+    height: 25pt;
+    width: auto;
+}
+
+.header-title {
+    font-size: 9pt;
+    font-weight: bold;
+    color: #1A2332;
+}
+
+.header-classification {
+    font-size: 8pt;
+    font-weight: bold;
+    color: #01EFFF;
+    background-color: #1A2332;
+    padding: 3pt 8pt;
+}
+
+.header-line {
+    border-bottom: 2pt solid #01EFFF;
+    margin-top: 3mm;
+}
+
+/* gallery-part:header-htb:end */
+/* gallery-part:footer-default:start */
+/* ============================================================
+   FOOTER STYLES
+   ============================================================ */
+
+footer {
+    position: running(footer);
+    width: 100%;
+    padding-top: 5mm;
+}
+
+.footer-line {
+    border-top: 1pt solid #01EFFF;
+    margin-bottom: 3mm;
+}
+
+.footer-container {
+    width: 100%;
+}
+
+.footer-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.footer-left {
+    text-align: left;
+    width: 33%;
+    vertical-align: middle;
+}
+
+.footer-center {
+    text-align: center;
+    width: 34%;
+    vertical-align: middle;
+}
+
+.footer-right {
+    text-align: right;
+    width: 33%;
+    vertical-align: middle;
+}
+
+.footer-confidential {
+    font-size: 7pt;
+    font-weight: bold;
+    color: #FF3E3E;
+}
+
+.footer-copyright {
+    font-size: 7pt;
+    color: #A4B1CD;
+}
+
+.footer-page {
+    font-size: 8pt;
+    color: #1A2332;
+}
+
+/* Page Numbering */
+#current-page::before {
+    content: counter(page);
+}
+
+#total-pages::before {
+    content: counter(pages);
+}
+
+/* gallery-part:footer-default:end */
+/* gallery-part:cover-cdsa:start */
+/* ============================================================
+   COVER PAGE STYLES
+   ============================================================ */
+
+cover {
+    page: cover-page;
+}
+
+.cover-page {
+    width: 210mm;
+    height: 297mm;
+    background-color: #1A2332;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.cover-decoration-top {
+    position: absolute;
+    top: -100;
+    left: 0;
+    width: 100%;
+    height: 120pt;
+}
+
+.cover-decoration-bottom {
+    position: absolute;
+    bottom: 0pt;
+    left: 0;
+    width: 100%;
+    height: 100pt;
+}
+
+.cover-content {
+    padding: 40mm 25mm 30mm 25mm;
+    text-align: center;
+}
+
+.cover-logo-section {
+    margin-bottom: 0mm;
+    text-align: center;
+}
+
+.cover-logo-container {
+    margin-bottom: 15pt;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cover-logo-cert-container {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cover-logo-svg {
+    width: 120pt;
+    height: 120pt;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.brand-text {
+    display: block;
+    font-size: 24pt;
+    font-weight: bold;
+    color: #01EFFF;
+    letter-spacing: 4pt;
+    margin-bottom: 5pt;
+}
+
+.brand-subtitle {
+    display: block;
+    font-size: 11pt;
+    color: #A4B1CD;
+    letter-spacing: 2pt;
+}
+
+.cover-title-section {
+    margin-bottom: 25mm;
+}
+
+.cover-report-type {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #01EFFF;
+    letter-spacing: 3pt;
+    margin-bottom: 10pt;
+    border-top: 1pt solid #01EFFF;
+    border-bottom: 1pt solid #01EFFF;
+    padding: 8pt 0;
+}
+
+.cover-project-name {
+    font-size: 28pt;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 15pt 0;
+    line-height: 1.2;
+}
+
+.cover-client-name {
+    font-size: 16pt;
+    color: #A4B1CD;
+    margin-top: 10pt;
+}
+
+.cover-metadata {
+    margin-bottom: 20mm;
+}
+
+.cover-info-table {
+    width: auto;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.cover-info-table td {
+    padding: 5pt 15pt;
+    text-align: left;
+}
+
+.info-label {
+    font-size: 9pt;
+    color: #A4B1CD;
+    text-align: right;
+    padding-right: 10pt;
+}
+
+.info-value {
+    font-size: 10pt;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.classification-badge {
+    color: #01EFFF;
+}
+
+.cover-risk-section {
+    margin-top: 15mm;
+}
+
+.risk-indicator {
+    display: inline-block;
+    background-color: #141D2B;
+    border: 2pt solid #01EFFF;
+    padding: 15pt 30pt;
+}
+
+.risk-label {
+    display: block;
+    font-size: 8pt;
+    color: #A4B1CD;
+    letter-spacing: 2pt;
+    margin-bottom: 8pt;
+}
+
+.risk-value {
+    display: block;
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+/* Risk colors for cover */
+.risk-critical {
+    color: #FF3E3E;
+}
+
+.risk-high {
+    color: #FF6B35;
+}
+
+.risk-medium {
+    color: #FFB800;
+}
+
+.risk-low {
+    color: #01EFFF;
+}
+
+.risk-info {
+    color: #00B4D8;
+}
+
+.risk-none {
+    color: #01EFFF;
+}
+
+.cover-footer {
+    position: absolute;
+    bottom: 20mm;
+    left: 25mm;
+    right: 25mm;
+}
+
+.cover-footer table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cover-footer-left {
+    text-align: left;
+    width: 50%;
+}
+
+.cover-footer-right {
+    text-align: right;
+    width: 50%;
+}
+
+.footer-org {
+    font-size: 9pt;
+    color: #A4B1CD;
+}
+
+.footer-reference {
+    font-size: 9pt;
+    color: #01EFFF;
+}
+
+/* gallery-part:cover-cdsa:end */
+/* ============================================================
+   CONTENT SECTION STYLES
+   ============================================================ */
+
+.content-section {
+    padding: 0;
+}
+
+.section-title {
+    font-size: 18pt;
+    font-weight: bold;
+    color: #1A2332;
+    border-bottom: 3pt solid #01EFFF;
+    padding-bottom: 8pt;
+    margin-bottom: 15pt;
+    margin-top: 0;
+}
+
+.subsection-title {
+    font-size: 13pt;
+    font-weight: bold;
+    color: #1A2332;
+    border-left: 4pt solid #01EFFF;
+    padding-left: 10pt;
+    margin-top: 20pt;
+    margin-bottom: 10pt;
+}
+
+/* gallery-part:body-document-control:start */
+/* ============================================================
+   DOCUMENT CONTROL STYLES
+   ============================================================ */
+
+.document-control {
+    padding: 0;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15pt;
+}
+
+.info-table td {
+    padding: 8pt 10pt;
+    border: 1pt solid #E2E8F0;
+}
+
+.info-table .label-cell {
+    width: 30%;
+    background-color: #F7FAFC;
+    font-weight: bold;
+    color: #1A2332;
+}
+
+.info-table .value-cell {
+    width: 70%;
+    color: #2D3748;
+}
+
+.version-table,
+.team-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15pt;
+}
+
+.version-table th,
+.team-table th {
+    background-color: #1A2332;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 10pt;
+    text-align: left;
+    border: 1pt solid #1A2332;
+}
+
+.version-table td,
+.team-table td {
+    padding: 8pt 10pt;
+    border: 1pt solid #E2E8F0;
+}
+
+.version-table tr:nth-child(even),
+.team-table tr:nth-child(even) {
+    background-color: #F7FAFC;
+}
+
+/* gallery-part:body-document-control:end */
+/* gallery-part:body-table-of-contents:start */
+/* ============================================================
+   TABLE OF CONTENTS STYLES
+   ============================================================ */
+
+.toc-section {
+    padding: 0;
+}
+
+.toc-container {
+    margin-top: 15pt;
+}
+
+.toc-item {
+    padding: 6pt 0;
+    border-bottom: 1pt dotted #E2E8F0;
+}
+
+.toc-level-1 {
+    font-weight: bold;
+    font-size: 11pt;
+    padding-left: 0;
+}
+
+.toc-level-2 {
+    font-weight: normal;
+    font-size: 10pt;
+    padding-left: 15pt;
+}
+
+.toc-level-3 {
+    font-weight: normal;
+    font-size: 9pt;
+    padding-left: 30pt;
+    color: #718096;
+}
+
+.toc-link {
+    color: #1A2332;
+    text-decoration: none;
+}
+
+.toc-link::after {
+    content: target-counter(attr(href), page);
+    float: right;
+    color: #01EFFF;
+    font-weight: bold;
+}
+
+/* gallery-part:body-table-of-contents:end */
+/* gallery-part:body-executive-summary:start */
+/* ============================================================
+   EXECUTIVE SUMMARY STYLES
+   ============================================================ */
+
+.executive-intro {
+    margin-bottom: 20pt;
+    font-size: 11pt;
+    line-height: 1.6;
+}
+
+.risk-summary-box {
+    border: 2pt solid #1A2332;
+    margin-bottom: 20pt;
+    page-break-inside: avoid;
+}
+
+.risk-summary-header {
+    background-color: #1A2332;
+    padding: 10pt 15pt;
+}
+
+.risk-summary-title {
+    color: #01EFFF;
+    font-size: 10pt;
+    font-weight: bold;
+    letter-spacing: 2pt;
+}
+
+.risk-summary-content {
+    padding: 15pt;
+    background-color: #F7FAFC;
+}
+
+.risk-rating-display {
+    font-size: 28pt;
+    font-weight: bold;
+    text-align: center;
+    padding: 15pt;
+    margin-bottom: 10pt;
+}
+
+.risk-rating-description {
+    font-size: 10pt;
+    line-height: 1.6;
+    color: #2D3748;
+}
+
+/* Statistics Table */
+.findings-stats {
+    margin: 20pt 0;
+    width: 100%;
+}
+
+.stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.stat-cell {
+    padding: 3pt;
+    text-align: center;
+    width: 18%;
+    vertical-align: top;
+}
+
+.stat-box {
+    padding: 10pt 5pt;
+    text-align: center;
+    width: 100%;
+}
+
+.stat-box.critical {
+    background-color: #FF3E3E;
+    color: #FFFFFF;
+}
+
+.stat-box.high {
+    background-color: #FF6B35;
+    color: #FFFFFF;
+}
+
+.stat-box.medium {
+    background-color: #FFB800;
+    color: #1A2332;
+}
+
+.stat-box.low {
+    background-color: #01EFFF;
+    color: #1A2332;
+}
+
+.stat-box.info {
+    background-color: #00B4D8;
+    color: #FFFFFF;
+}
+
+.stat-number {
+    display: block;
+    font-size: 18pt;
+    font-weight: bold;
+    margin-bottom: 3pt;
+}
+
+.stat-label {
+    display: block;
+    font-size: 7pt;
+    font-weight: bold;
+    letter-spacing: 0.5pt;
+}
+
+.total-findings {
+    text-align: right;
+    margin-top: 10pt;
+    font-size: 11pt;
+}
+
+.total-label {
+    color: #718096;
+}
+
+.total-number {
+    font-weight: bold;
+    color: #1A2332;
+    font-size: 14pt;
+}
+
+.executive-content {
+    margin-top: 20pt;
+    line-height: 1.6;
+}
+
+/* gallery-part:body-executive-summary:end */
+/* gallery-part:body-scope-methodology:start */
+/* ============================================================
+   SCOPE AND METHODOLOGY STYLES
+   ============================================================ */
+
+.targets-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15pt 0;
+}
+
+.targets-table th {
+    background-color: #1A2332;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 10pt;
+    text-align: left;
+    border: 1pt solid #1A2332;
+}
+
+.targets-table td {
+    padding: 8pt 10pt;
+    border: 1pt solid #E2E8F0;
+    vertical-align: top;
+}
+
+.targets-table tr:nth-child(even) {
+    background-color: #F7FAFC;
+}
+
+.target-name {
+    font-weight: bold;
+    color: #1A2332;
+}
+
+.target-type {
+    color: #01EFFF;
+    font-weight: bold;
+}
+
+.methodology-list {
+    margin: 10pt 0;
+    padding-left: 20pt;
+}
+
+.methodology-list li {
+    margin-bottom: 8pt;
+    line-height: 1.5;
+}
+
+.phases-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15pt 0;
+}
+
+.phases-table td {
+    padding: 10pt;
+    border-bottom: 1pt solid #E2E8F0;
+    vertical-align: top;
+}
+
+.phase-number {
+    width: 50pt;
+    font-size: 18pt;
+    font-weight: bold;
+    color: #01EFFF;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.phase-content strong {
+    display: block;
+    font-size: 11pt;
+    color: #1A2332;
+    margin-bottom: 3pt;
+}
+
+.phase-content p {
+    margin: 0;
+    font-size: 9pt;
+    color: #718096;
+}
+
+.project-info {
+    margin-top: 20pt;
+    padding: 15pt;
+    background-color: #F7FAFC;
+    border-left: 4pt solid #01EFFF;
+}
+
+.project-info h3 {
+    margin-top: 0;
+    color: #1A2332;
+}
+
+/* gallery-part:body-scope-methodology:end */
+/* gallery-part:body-findings-summary:start */
+/* ============================================================
+   FINDINGS SUMMARY TABLE
+   ============================================================ */
+
+.findings-summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15pt 0;
+}
+
+.findings-summary-table th {
+    background-color: #1A2332;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 10pt 8pt;
+    text-align: left;
+    border: 1pt solid #1A2332;
+}
+
+.findings-summary-table td {
+    padding: 8pt;
+    border: 1pt solid #E2E8F0;
+    vertical-align: middle;
+}
+
+.findings-summary-table tr:nth-child(even) {
+    background-color: #F7FAFC;
+}
+
+.col-id {
+    width: 12%;
+}
+
+.col-title {
+    width: 40%;
+}
+
+.col-severity {
+    width: 18%;
+}
+
+.col-cvss {
+    width: 12%;
+}
+
+.col-status {
+    width: 18%;
+}
+
+.finding-id {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    color: #1A2332;
+}
+
+.finding-title {
+    font-weight: bold;
+}
+
+.finding-cvss {
+    text-align: center;
+    font-weight: bold;
+}
+
+.finding-status {
+    font-size: 9pt;
+}
+
+/* Severity Badges */
+.severity-badge {
+    display: inline-block;
+    padding: 4pt 8pt;
+    font-size: 8pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5pt;
+}
+
+.severity-critical {
+    background-color: #FF3E3E;
+    color: #FFFFFF;
+}
+
+.severity-high {
+    background-color: #FF6B35;
+    color: #FFFFFF;
+}
+
+.severity-medium {
+    background-color: #FFB800;
+    color: #1A2332;
+}
+
+.severity-low {
+    background-color: #01EFFF;
+    color: #1A2332;
+}
+
+.severity-info {
+    background-color: #00B4D8;
+    color: #FFFFFF;
+}
+
+/* gallery-part:body-findings-summary:end */
+/* gallery-part:body-detailed-findings:start */
+/* ============================================================
+   DETAILED FINDINGS STYLES
+   ============================================================ */
+
+.finding-detail {
+    margin-bottom: 25pt;
+    page-break-inside: avoid;
+}
+
+.finding-header {
+    background-color: #1A2332;
+    padding: 12pt 15pt;
+    border-left: 5pt solid #01EFFF;
+}
+
+.severity-border-critical {
+    border-left-color: #FF3E3E;
+}
+
+.severity-border-high {
+    border-left-color: #FF6B35;
+}
+
+.severity-border-medium {
+    border-left-color: #FFB800;
+}
+
+.severity-border-low {
+    border-left-color: #01EFFF;
+}
+
+.severity-border-info {
+    border-left-color: #00B4D8;
+}
+
+.finding-header-content {
+    width: 100%;
+}
+
+.finding-header-content table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.finding-header-left {
+    text-align: left;
+    vertical-align: middle;
+}
+
+.finding-header-right {
+    text-align: right;
+    vertical-align: middle;
+    width: 100pt;
+}
+
+.finding-number {
+    display: inline-block;
+    font-family: 'Courier New', monospace;
+    font-size: 9pt;
+    color: #01EFFF;
+    margin-bottom: 3pt;
+}
+
+.finding-name {
+    color: #FFFFFF;
+    font-size: 14pt;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.severity-badge-large {
+    display: inline-block;
+    padding: 8pt 15pt;
+    font-size: 10pt;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Finding Metadata */
+.finding-meta {
+    background-color: #F7FAFC;
+    padding: 12pt 15pt;
+    border: 1pt solid #E2E8F0;
+    border-top: none;
+}
+
+.finding-meta-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.finding-meta-table td {
+    padding: 5pt 8pt;
+    vertical-align: top;
+}
+
+.meta-label {
+    font-size: 8pt;
+    font-weight: bold;
+    color: #718096;
+    text-transform: uppercase;
+    width: 15%;
+}
+
+.meta-value {
+    font-size: 9pt;
+    color: #2D3748;
+}
+
+.cvss-vector {
+    font-family: 'Courier New', monospace;
+    font-size: 8pt;
+    background-color: #E2E8F0;
+    padding: 3pt 6pt;
+}
+
+/* Finding Sections */
+.finding-section {
+    margin-top: 15pt;
+    padding: 12pt 15pt;
+    background-color: #FFFFFF;
+    border: 1pt solid #E2E8F0;
+    border-left: 3pt solid #01EFFF;
+}
+
+.finding-section-title {
+    font-size: 11pt;
+    font-weight: bold;
+    color: #1A2332;
+    margin-top: 0;
+    margin-bottom: 10pt;
+}
+
+.section-icon {
+    display: inline-block;
+    width: 18pt;
+    height: 18pt;
+    background-color: #1A2332;
+    color: #01EFFF;
+    text-align: center;
+    font-size: 10pt;
+    font-weight: bold;
+    margin-right: 8pt;
+    line-height: 18pt;
+}
+
+.finding-section-content {
+    font-size: 10pt;
+    line-height: 1.6;
+    color: #2D3748;
+}
+
+.poc-content {
+    font-family: 'Courier New', monospace;
+    font-size: 9pt;
+    background-color: #1A2332;
+    color: #01EFFF;
+    padding: 10pt;
+    overflow-x: auto;
+}
+
+.poc-content pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.poc-content code {
+    background-color: transparent;
+    color: #01EFFF;
+}
+
+.remediation-section {
+    border-left-color: #00B4D8;
+}
+
+.remediation-meta {
+    margin-top: 10pt;
+    padding-top: 10pt;
+    border-top: 1pt solid #E2E8F0;
+}
+
+.remediation-badge {
+    display: inline-block;
+    padding: 4pt 8pt;
+    background-color: #E2E8F0;
+    color: #2D3748;
+    font-size: 8pt;
+    font-weight: bold;
+    margin-right: 10pt;
+}
+
+/* gallery-part:body-detailed-findings:end */
+/* gallery-part:body-recommendations:start */
+/* ============================================================
+   RECOMMENDATIONS STYLES
+   ============================================================ */
+
+.recommendations-intro {
+    margin-bottom: 20pt;
+    font-size: 11pt;
+    line-height: 1.6;
+}
+
+.recommendation-priority {
+    margin-bottom: 20pt;
+}
+
+.priority-header {
+    font-size: 12pt;
+    font-weight: bold;
+    padding: 10pt 15pt;
+    margin-bottom: 10pt;
+}
+
+.priority-immediate {
+    background-color: #FF3E3E;
+    color: #FFFFFF;
+}
+
+.priority-shortterm {
+    background-color: #FFB800;
+    color: #1A2332;
+}
+
+.priority-longterm {
+    background-color: #01EFFF;
+    color: #1A2332;
+}
+
+.recommendation-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.recommendation-item {
+    padding: 10pt 15pt;
+    border-bottom: 1pt solid #E2E8F0;
+    background-color: #F7FAFC;
+}
+
+.rec-id {
+    display: inline-block;
+    width: 80pt;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    color: #1A2332;
+}
+
+.rec-name {
+    display: inline-block;
+    width: 350pt;
+}
+
+.rec-severity {
+    display: inline-block;
+    padding: 3pt 8pt;
+    font-size: 8pt;
+    font-weight: bold;
+}
+
+/* gallery-part:body-recommendations:end */
+/* gallery-part:body-conclusion:start */
+/* ============================================================
+   CONCLUSION STYLES
+   ============================================================ */
+
+.conclusion-content {
+    line-height: 1.7;
+    font-size: 11pt;
+}
+
+.conclusion-summary {
+    margin: 20pt 0;
+    padding: 15pt;
+    background-color: #F7FAFC;
+    border: 1pt solid #E2E8F0;
+}
+
+.conclusion-summary h3 {
+    margin-top: 0;
+    color: #1A2332;
+}
+
+.conclusion-stats {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.conclusion-stats td {
+    padding: 8pt 10pt;
+    border-bottom: 1pt solid #E2E8F0;
+}
+
+.conclusion-stats td:first-child {
+    font-weight: bold;
+    color: #718096;
+    width: 50%;
+}
+
+.conclusion-stats td:last-child {
+    font-weight: bold;
+    color: #1A2332;
+}
+
+/* Risk text colors */
+.risk-text-critical {
+    color: #FF3E3E;
+}
+
+.risk-text-high {
+    color: #FF6B35;
+}
+
+.risk-text-medium {
+    color: #FFB800;
+}
+
+.risk-text-low {
+    color: #01EFFF;
+}
+
+.risk-text-info {
+    color: #00B4D8;
+}
+
+.risk-text-none {
+    color: #01EFFF;
+}
+
+.contact-info {
+    margin-top: 25pt;
+    padding: 15pt;
+    background-color: #1A2332;
+}
+
+.contact-info h3 {
+    color: #01EFFF;
+    margin-top: 0;
+    margin-bottom: 10pt;
+}
+
+.contact-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.contact-table td {
+    padding: 5pt 10pt;
+    color: #FFFFFF;
+}
+
+.contact-label {
+    width: 30%;
+    color: #A4B1CD;
+}
+
+.contact-value {
+    font-weight: bold;
+}
+
+/* gallery-part:body-conclusion:end */
+/* gallery-part:body-appendices:start */
+/* ============================================================
+   APPENDICES STYLES
+   ============================================================ */
+
+.severity-definitions-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15pt 0;
+}
+
+.severity-definitions-table th {
+    background-color: #1A2332;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 10pt;
+    text-align: left;
+    border: 1pt solid #1A2332;
+}
+
+.severity-definitions-table td {
+    padding: 10pt;
+    border: 1pt solid #E2E8F0;
+    vertical-align: top;
+}
+
+.severity-definitions-table tr:nth-child(even) {
+    background-color: #F7FAFC;
+}
+
+.tools-section {
+    margin-top: 15pt;
+}
+
+.tools-list {
+    margin: 10pt 0;
+    padding-left: 20pt;
+}
+
+.tools-list li {
+    margin-bottom: 8pt;
+    line-height: 1.5;
+}
+
+/* gallery-part:body-appendices:end */
+/* ============================================================
+   CODE AND PRE STYLES
+   ============================================================ */
+
+code {
+    font-family: 'Courier New', monospace;
+    font-size: 9pt;
+    background-color: #F7FAFC;
+    padding: 2pt 4pt;
+    border: 1pt solid #E2E8F0;
+}
+
+pre {
+    font-family: 'Courier New', monospace;
+    font-size: 9pt;
+    background-color: #1A2332;
+    color: #01EFFF;
+    padding: 12pt;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border: 1pt solid #141D2B;
+}
+
+pre code {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    color: inherit;
+}
+
+/* ============================================================
+   IMAGE STYLES
+   ============================================================ */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.screenshot {
+    border: 1pt solid #E2E8F0;
+    margin: 10pt 0;
+    max-width: 100%;
+}
+
+/* ============================================================
+   UTILITY CLASSES
+   ============================================================ */
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.small {
+    font-size: 8pt;
+}
+
+.muted {
+    color: #718096;
+}
+
+.highlight {
+    background-color: #01EFFF;
+    color: #1A2332;
+    padding: 2pt 4pt;
+}
+
+/* ============================================================
+   RESPONSIVE TABLE LAYOUT FOR HEADER/FOOTER
+   Using table-based layout for iText compatibility
+   ============================================================ */
+
+header .header-container,
+footer .footer-container {
+    display: table;
+    width: 100%;
+}
+
+header .header-left,
+header .header-center,
+header .header-right,
+footer .footer-left,
+footer .footer-center,
+footer .footer-right {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.cover-footer {
+    display: table;
+    width: 100%;
+}
+
+.cover-footer-left,
+.cover-footer-right {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.finding-header-content {
+    display: table;
+    width: 100%;
+}
+
+.finding-header-left,
+.finding-header-right {
+    display: table-cell;
+    vertical-align: middle;
+}

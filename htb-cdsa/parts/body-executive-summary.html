@@ -1,0 +1,77 @@
+<div class="page-break"></div>
+<section class="content-section">
+    <h1 id="executive-summary" class="section-title">1. Executive Summary</h1>
+
+    <div class="executive-intro">
+        <p>{{OrganizationName}} was engaged by {{ClientName}} to perform a penetration test assessment of their infrastructure and applications. The assessment was conducted between {{StartDate}} and {{EndDate}}.</p>
+    </div>
+
+    <!-- Overall Risk Rating Box -->
+    <div class="risk-summary-box">
+        <div class="risk-summary-header">
+            <span class="risk-summary-title">OVERALL SECURITY POSTURE</span>
+        </div>
+        <div class="risk-summary-content">
+            <div class="risk-rating-display risk-{{OverallRiskRating | string.downcase}}">
+                {{OverallRiskRating}}
+            </div>
+            <div class="risk-rating-description">
+                {{if HasCriticalFindings}}
+                Critical vulnerabilities were identified that require immediate attention. These findings pose a significant risk to the organization's security posture.
+                {{else if HasHighFindings}}
+                High severity vulnerabilities were identified that should be addressed as a priority. While not immediately critical, these findings represent significant security risks.
+                {{else}}
+                The assessment identified opportunities for security improvements. While no critical issues were found, addressing the identified findings will strengthen the overall security posture.
+                {{end}}
+            </div>
+        </div>
+    </div>
+
+    <!-- Findings Statistics -->
+    <div class="findings-stats">
+        <h2 class="subsection-title">Vulnerability Distribution</h2>
+        <table class="stats-table">
+            <tr>
+                <td class="stat-cell">
+                    <div class="stat-box critical">
+                        <span class="stat-number">{{VulnCriticalCount}}</span>
+                        <span class="stat-label">CRITICAL</span>
+                    </div>
+                </td>
+                <td class="stat-cell">
+                    <div class="stat-box high">
+                        <span class="stat-number">{{VulnHighCount}}</span>
+                        <span class="stat-label">HIGH</span>
+                    </div>
+                </td>
+                <td class="stat-cell">
+                    <div class="stat-box medium">
+                        <span class="stat-number">{{VulnMediumCount}}</span>
+                        <span class="stat-label">MEDIUM</span>
+                    </div>
+                </td>
+                <td class="stat-cell">
+                    <div class="stat-box low">
+                        <span class="stat-number">{{VulnLowCount}}</span>
+                        <span class="stat-label">LOW</span>
+                    </div>
+                </td>
+                <td class="stat-cell">
+                    <div class="stat-box info">
+                        <span class="stat-number">{{VulnInfoCount}}</span>
+                        <span class="stat-label">INFO</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="total-findings">
+            <span class="total-label">Total Findings:</span>
+            <span class="total-number">{{VulnTotalCount}}</span>
+        </div>
+    </div>
+
+    <!-- Executive Summary Content -->
+    <div class="executive-content">
+        {{ProjectExecutiveSummary}}
+    </div>
+</section>

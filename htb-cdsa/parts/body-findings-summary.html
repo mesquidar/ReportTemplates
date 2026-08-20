@@ -1,0 +1,31 @@
+<div class="page-break"></div>
+<section class="content-section">
+    <h1 id="findings-summary" class="section-title">3. Findings Summary</h1>
+
+    <p>The following table provides a summary of all vulnerabilities identified during the assessment:</p>
+
+    <table class="findings-summary-table">
+        <thead>
+        <tr>
+            <th class="col-id">ID</th>
+            <th class="col-title">Vulnerability</th>
+            <th class="col-severity">Severity</th>
+            <th class="col-cvss">CVSS</th>
+            <th class="col-status">Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{for vuln in Vulns}}
+        <tr class="finding-row">
+            <td class="finding-id">{{vuln.VulnFindingId}}</td>
+            <td class="finding-title">{{vuln.VulnName}}</td>
+            <td class="finding-severity">
+                <span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span>
+            </td>
+            <td class="finding-cvss">{{vuln.VulnCvss}}</td>
+            <td class="finding-status">{{vuln.VulnStatus}}</td>
+        </tr>
+        {{end}}
+        </tbody>
+    </table>
+</section>

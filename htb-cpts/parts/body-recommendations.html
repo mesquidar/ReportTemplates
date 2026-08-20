@@ -1,0 +1,53 @@
+<div class="page-break"></div>
+<section class="content-section">
+    <h1 id="recommendations" class="section-title">5. Recommendations</h1>
+
+    <div class="recommendations-intro">
+        <p>Based on the findings of this assessment, we recommend the following prioritized remediation approach:</p>
+    </div>
+
+    <div class="recommendation-priority">
+        <h2 class="priority-header priority-immediate">Immediate Actions (Critical/High)</h2>
+        <ul class="recommendation-list">
+            {{for vuln in Vulns}}
+            {{if vuln.VulnRisk == "Critical" || vuln.VulnRisk == "High"}}
+            <li class="recommendation-item">
+                <span class="rec-id">{{vuln.VulnFindingId}}</span>
+                <span class="rec-name">{{vuln.VulnName}}</span>
+                <span class="rec-severity severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span>
+            </li>
+            {{end}}
+            {{end}}
+        </ul>
+    </div>
+
+    <div class="recommendation-priority">
+        <h2 class="priority-header priority-shortterm">Short-term Actions (Medium)</h2>
+        <ul class="recommendation-list">
+            {{for vuln in Vulns}}
+            {{if vuln.VulnRisk == "Medium"}}
+            <li class="recommendation-item">
+                <span class="rec-id">{{vuln.VulnFindingId}}</span>
+                <span class="rec-name">{{vuln.VulnName}}</span>
+                <span class="rec-severity severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span>
+            </li>
+            {{end}}
+            {{end}}
+        </ul>
+    </div>
+
+    <div class="recommendation-priority">
+        <h2 class="priority-header priority-longterm">Long-term Improvements (Low/Info)</h2>
+        <ul class="recommendation-list">
+            {{for vuln in Vulns}}
+            {{if vuln.VulnRisk == "Low" || vuln.VulnRisk == "Info"}}
+            <li class="recommendation-item">
+                <span class="rec-id">{{vuln.VulnFindingId}}</span>
+                <span class="rec-name">{{vuln.VulnName}}</span>
+                <span class="rec-severity severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span>
+            </li>
+            {{end}}
+            {{end}}
+        </ul>
+    </div>
+</section>

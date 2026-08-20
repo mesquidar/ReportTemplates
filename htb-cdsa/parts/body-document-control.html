@@ -1,0 +1,68 @@
+<div class="page-break"></div>
+<section class="document-control">
+    <h1 class="section-title">Document Control</h1>
+
+    <h2 class="subsection-title">Document Information</h2>
+    <table class="info-table">
+        <tr>
+            <td class="label-cell">Document Title</td>
+            <td class="value-cell">{{ProjectName}} - Penetration Test Report</td>
+        </tr>
+        <tr>
+            <td class="label-cell">Client</td>
+            <td class="value-cell">{{ClientName}}</td>
+        </tr>
+        <tr>
+            <td class="label-cell">Assessment Period</td>
+            <td class="value-cell">{{StartDate}} - {{EndDate}}</td>
+        </tr>
+        <tr>
+            <td class="label-cell">Report Date</td>
+            <td class="value-cell">{{TodayLong}}</td>
+        </tr>
+        <tr>
+            <td class="label-cell">Classification</td>
+            <td class="value-cell">Confidential</td>
+        </tr>
+    </table>
+
+    <h2 class="subsection-title">Version History</h2>
+    <table class="version-table">
+        <thead>
+        <tr>
+            <th>Version</th>
+            <th>Date</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{for doc in Documents}}
+        <tr>
+            <td>{{doc.DocumentVersion}}</td>
+            <td>{{doc.DocumentCreatedDate}}</td>
+            <td>{{doc.DocumentDescription}}</td>
+        </tr>
+        {{end}}
+        </tbody>
+    </table>
+
+    <h2 class="subsection-title">Assessment Team</h2>
+    <table class="team-table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{for user in Users}}
+        <tr>
+            <td>{{user.UserFullName}}</td>
+            <td>{{user.UserPosition}}</td>
+            <td>{{user.UserEmail}}</td>
+        </tr>
+        {{end}}
+        </tbody>
+    </table>
+</section>

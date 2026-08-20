@@ -1,0 +1,61 @@
+/* ============================================================
+   HEADER STYLES
+   ============================================================ */
+
+header {
+    position: running(header);
+    width: 100%;
+    padding-bottom: 5mm;
+}
+
+.header-container {
+    width: 100%;
+}
+
+.header-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.header-left {
+    text-align: left;
+    width: 33%;
+    vertical-align: middle;
+}
+
+.header-center {
+    text-align: center;
+    width: 34%;
+    vertical-align: middle;
+}
+
+.header-right {
+    text-align: right;
+    width: 33%;
+    vertical-align: middle;
+}
+
+.header-logo {
+    vertical-align: middle;
+    height: 25pt;
+    width: auto;
+}
+
+.header-title {
+    font-size: 9pt;
+    font-weight: bold;
+    color: #1A2332;
+}
+
+.header-classification {
+    font-size: 8pt;
+    font-weight: bold;
+    color: #01EFFF;
+    background-color: #1A2332;
+    padding: 3pt 8pt;
+}
+
+.header-line {
+    border-bottom: 2pt solid #01EFFF;
+    margin-top: 3mm;
+}

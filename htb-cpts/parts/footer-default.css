@@ -1,0 +1,67 @@
+/* ============================================================
+   FOOTER STYLES
+   ============================================================ */
+
+footer {
+    position: running(footer);
+    width: 100%;
+    padding-top: 5mm;
+}
+
+.footer-line {
+    border-top: 1pt solid #A247DE;
+    margin-bottom: 3mm;
+}
+
+.footer-container {
+    width: 100%;
+}
+
+.footer-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.footer-left {
+    text-align: left;
+    width: 33%;
+    vertical-align: middle;
+}
+
+.footer-center {
+    text-align: center;
+    width: 34%;
+    vertical-align: middle;
+}
+
+.footer-right {
+    text-align: right;
+    width: 33%;
+    vertical-align: middle;
+}
+
+.footer-confidential {
+    font-size: 7pt;
+    font-weight: bold;
+    color: #FF3E3E;
+}
+
+.footer-copyright {
+    font-size: 7pt;
+    color: #A4B1CD;
+}
+
+.footer-page {
+    font-size: 8pt;
+    color: #1A2332;
+}
+
+/* Page Numbering */
+#current-page::before {
+    content: counter(page);
+}
+
+#total-pages::before {
+    content: counter(pages);
+}
+

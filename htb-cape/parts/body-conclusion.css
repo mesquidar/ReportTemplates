@@ -1,0 +1,97 @@
+/* ============================================================
+   CONCLUSION STYLES
+   ============================================================ */
+
+.conclusion-content {
+    line-height: 1.7;
+    font-size: 11pt;
+}
+
+.conclusion-summary {
+    margin: 20pt 0;
+    padding: 15pt;
+    background-color: #F7FAFC;
+    border: 1pt solid #E2E8F0;
+}
+
+.conclusion-summary h3 {
+    margin-top: 0;
+    color: #1A2332;
+}
+
+.conclusion-stats {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.conclusion-stats td {
+    padding: 8pt 10pt;
+    border-bottom: 1pt solid #E2E8F0;
+}
+
+.conclusion-stats td:first-child {
+    font-weight: bold;
+    color: #718096;
+    width: 50%;
+}
+
+.conclusion-stats td:last-child {
+    font-weight: bold;
+    color: #1A2332;
+}
+
+/* Risk text colors */
+.risk-text-critical {
+    color: #FF3E3E;
+}
+
+.risk-text-high {
+    color: #FF6B35;
+}
+
+.risk-text-medium {
+    color: #FFB800;
+}
+
+.risk-text-low {
+    color: #BE3998;
+}
+
+.risk-text-info {
+    color: #00B4D8;
+}
+
+.risk-text-none {
+    color: #BE3998;
+}
+
+.contact-info {
+    margin-top: 25pt;
+    padding: 15pt;
+    background-color: #1A2332;
+}
+
+.contact-info h3 {
+    color: #BE3998;
+    margin-top: 0;
+    margin-bottom: 10pt;
+}
+
+.contact-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.contact-table td {
+    padding: 5pt 10pt;
+    color: #FFFFFF;
+}
+
+.contact-label {
+    width: 30%;
+    color: #A4B1CD;
+}
+
+.contact-value {
+    font-weight: bold;
+}

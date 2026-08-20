@@ -1,0 +1,82 @@
+<div class="page-break"></div>
+<section class="content-section">
+    <h1 id="scope" class="section-title">2. Scope and Methodology</h1>
+
+    <h2 id="scope-targets" class="subsection-title">2.1 In-Scope Targets</h2>
+    <p>The following targets were included in the scope of this assessment:</p>
+
+    <table class="targets-table">
+        <thead>
+        <tr>
+            <th>Target</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{for target in Targets}}
+        <tr>
+            <td class="target-name">{{target.TargetName}}</td>
+            <td class="target-type">{{target.TargetType}}</td>
+            <td class="target-desc">{{target.TargetDescription}}</td>
+        </tr>
+        {{end}}
+        </tbody>
+    </table>
+
+    <h2 id="methodology" class="subsection-title">2.2 Methodology</h2>
+    <div class="methodology-content">
+        <p>The assessment was conducted following industry-standard methodologies including:</p>
+        <ul class="methodology-list">
+            <li><strong>OWASP Testing Guide</strong> - For web application security testing</li>
+            <li><strong>PTES (Penetration Testing Execution Standard)</strong> - For overall engagement structure</li>
+            <li><strong>NIST SP 800-115</strong> - Technical Guide to Information Security Testing</li>
+        </ul>
+
+        <div class="methodology-phases">
+            <h3>Assessment Phases</h3>
+            <table class="phases-table">
+                <tr>
+                    <td class="phase-number">01</td>
+                    <td class="phase-content">
+                        <strong>Reconnaissance</strong>
+                        <p>Information gathering and target enumeration</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="phase-number">02</td>
+                    <td class="phase-content">
+                        <strong>Vulnerability Analysis</strong>
+                        <p>Identification and validation of security weaknesses</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="phase-number">03</td>
+                    <td class="phase-content">
+                        <strong>Exploitation</strong>
+                        <p>Controlled exploitation to demonstrate impact</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="phase-number">04</td>
+                    <td class="phase-content">
+                        <strong>Post-Exploitation</strong>
+                        <p>Assessment of potential lateral movement and data access</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="phase-number">05</td>
+                    <td class="phase-content">
+                        <strong>Reporting</strong>
+                        <p>Documentation of findings and remediation guidance</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="project-info">
+        <h3>Project Details</h3>
+        {{ProjectDescription}}
+    </div>
+</section>
