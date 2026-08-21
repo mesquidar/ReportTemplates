@@ -1,0 +1,91 @@
+.atlas-observation { margin: 0 0 22pt; }
+
+.atlas-observation-heading {
+    width: 100%;
+    border-top: 3pt solid #66705A;
+    border-bottom: 1pt solid #BBB7AA;
+}
+
+.atlas-observation-heading td {
+    padding: 11pt 0 12pt;
+    vertical-align: middle;
+}
+
+.atlas-observation-heading h2 {
+    margin: 2pt 0 0;
+    font-size: 22pt;
+    line-height: 1.08;
+}
+
+.atlas-observation-id {
+    color: #B45F43;
+    font-size: 7.5pt;
+    font-weight: 600;
+    letter-spacing: 1pt;
+    text-transform: uppercase;
+}
+
+.atlas-observation-rating {
+    width: 26mm;
+    text-align: right;
+}
+
+.atlas-observation-meta {
+    width: 100%;
+    margin-bottom: 15pt;
+    table-layout: fixed;
+    background: #F0EDE3;
+}
+
+.atlas-observation-meta td {
+    width: 33.33%;
+    padding: 8pt 9pt;
+    border-right: .6pt solid #D8D4C8;
+    border-bottom: .6pt solid #D8D4C8;
+    vertical-align: top;
+}
+
+.atlas-observation-meta strong {
+    display: block;
+    margin-top: 2pt;
+    font-size: 8.5pt;
+}
+
+.atlas-observation-section {
+    margin: 0 0 16pt 18mm;
+    padding-bottom: 13pt;
+    border-bottom: .6pt solid #D8D4C8;
+}
+
+.atlas-observation-section h3 {
+    margin: 0 0 7pt;
+    font-size: 13pt;
+}
+
+.atlas-observation-section h3 span {
+    display: inline-block;
+    width: 18mm;
+    margin-left: -18mm;
+    color: #B45F43;
+    font-family: "Atlas Sans", Arial, sans-serif;
+    font-size: 7.5pt;
+    letter-spacing: .5pt;
+}
+
+.atlas-evidence-section { border-left: 2pt solid #B45F43; padding-left: 10pt; }
+.atlas-action-section { border-left: 2pt solid #66705A; padding-left: 10pt; }
+
+.atlas-observation-references {
+    width: 100%;
+    margin-top: 17pt;
+    table-layout: fixed;
+    border-top: 1pt solid #BBB7AA;
+}
+
+.atlas-observation-references td {
+    width: 27%;
+    padding: 8pt 10pt 0 0;
+    vertical-align: top;
+}
+.atlas-observation-references td:last-child { width: 46%; }
+.atlas-observation-references code { display: block; margin-top: 3pt; word-wrap: break-word; }

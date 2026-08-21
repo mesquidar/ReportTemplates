@@ -1,0 +1,63 @@
+.atlas-risk-overview {
+    width: 100%;
+    margin: 4pt 0 18pt;
+    border-top: 1pt solid #66705A;
+    border-bottom: 1pt solid #BBB7AA;
+}
+
+.atlas-risk-overview td {
+    padding: 14pt 12pt;
+    vertical-align: middle;
+}
+
+.atlas-risk-rating { width: 34%; }
+.atlas-risk-rating strong {
+    display: block;
+    margin-top: 3pt;
+    font-family: "Atlas Serif", Georgia, serif;
+    font-size: 25pt;
+    line-height: 1;
+}
+.atlas-risk-narrative {
+    width: 66%;
+    border-left: .7pt solid #D8D4C8;
+    color: #575B53;
+    font-family: "Atlas Serif", Georgia, serif;
+    font-size: 11pt;
+}
+
+.atlas-severity-strip {
+    width: 100%;
+    margin: 0 0 20pt;
+    table-layout: fixed;
+}
+
+.atlas-severity-strip td {
+    width: 20%;
+    padding: 9pt 6pt;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.atlas-severity-strip strong,
+.atlas-severity-strip span { display: block; }
+.atlas-severity-strip strong {
+    font-family: "Atlas Serif", Georgia, serif;
+    font-size: 18pt;
+    line-height: 1;
+}
+.atlas-severity-strip span {
+    margin-top: 4pt;
+    font-size: 7pt;
+    letter-spacing: .5pt;
+    text-transform: uppercase;
+}
+
+.atlas-observations-table th:first-child,
+.atlas-observations-table td:first-child { width: 12%; }
+.atlas-observations-table th:nth-child(2),
+.atlas-observations-table td:nth-child(2) { width: 37%; }
+.atlas-observations-table th:nth-child(3),
+.atlas-observations-table td:nth-child(3) { width: 19%; }
+.atlas-observations-table th:nth-child(4),
+.atlas-observations-table td:nth-child(4) { width: 16%; }

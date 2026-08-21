@@ -1,0 +1,28 @@
+.atlas-record-grid {
+    width: 100%;
+    margin: 10pt 0 20pt;
+    table-layout: fixed;
+    border-top: 1pt solid #66705A;
+}
+
+.atlas-record-grid td {
+    width: 50%;
+    padding: 10pt 12pt 12pt 0;
+    border-bottom: .6pt solid #D8D4C8;
+    vertical-align: top;
+}
+
+.atlas-record-value {
+    display: block;
+    margin-top: 2pt;
+    color: #2D302B;
+    font-family: "Atlas Serif", Georgia, serif;
+    font-size: 12pt;
+}
+
+.atlas-revision-table th:first-child,
+.atlas-revision-table td:first-child { width: 16%; }
+.atlas-revision-table th:nth-child(2),
+.atlas-revision-table td:nth-child(2) { width: 22%; }
+.atlas-contributors-table th:last-child,
+.atlas-contributors-table td:last-child { width: 36%; }

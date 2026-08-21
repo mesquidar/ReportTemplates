@@ -1,0 +1,44 @@
+.atlas-toc { margin-top: 6pt; }
+
+.atlas-toc-row {
+    display: table;
+    width: 100%;
+    padding: 9pt 0;
+    border-bottom: .7pt solid #D8D4C8;
+    color: #292B27;
+}
+
+.atlas-toc-row > span,
+.atlas-toc-row > strong { display: table-cell; vertical-align: baseline; }
+
+.atlas-toc-row > span {
+    width: 18mm;
+    color: #B45F43;
+    font-size: 8pt;
+    font-weight: 600;
+    letter-spacing: 1pt;
+}
+
+.atlas-toc-row > strong {
+    font-family: "Atlas Serif", Georgia, serif;
+    font-size: 14pt;
+    font-weight: 400;
+}
+
+.atlas-toc-row > strong::after {
+    float: right;
+    color: #777B72;
+    font-family: "Atlas Sans", Arial, sans-serif;
+    font-size: 8pt;
+    content: target-counter(attr(href), page);
+}
+
+.atlas-contents-note {
+    width: 104mm;
+    margin: 28pt 0 0 18mm;
+    padding-left: 13pt;
+    border-left: 2pt solid #66705A;
+    color: #5A5E56;
+    font-family: "Atlas Serif", Georgia, serif;
+    font-size: 10.5pt;
+}

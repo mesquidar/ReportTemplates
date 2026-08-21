@@ -1,0 +1,66 @@
+<div class="page-break"></div>
+<section id="observations-summary" class="atlas-section atlas-observations-summary">
+    <table class="atlas-section-heading" role="presentation">
+        <tr>
+            <td class="atlas-section-index">05</td>
+            <td><h1 class="atlas-section-title">Observations at a glance</h1></td>
+        </tr>
+    </table>
+
+    {{if HasNoFindings}}
+    <p class="atlas-lead">No formal observations were recorded during this reporting period.</p>
+    <div class="atlas-empty">This does not imply the absence of risk. It records that no findings were entered in Cervantes for the defined scope and period.</div>
+    {{else}}
+    <table class="atlas-risk-overview" role="presentation">
+        <tr>
+            <td class="atlas-risk-rating">
+                <span class="atlas-meta-label">Overall assessment</span>
+                <strong class="risk-text-{{OverallRiskRating | string.downcase}}">{{OverallRiskRating}}</strong>
+            </td>
+            <td class="atlas-risk-narrative">
+                {{if HasCriticalFindings}}
+                Evidence includes critical observations that require immediate ownership and validation of corrective action.
+                {{else if HasHighFindings}}
+                Evidence includes high-priority observations that should be addressed before lower-risk improvement work.
+                {{else}}
+                The recorded observations support planned improvement. Maintain proportionate ownership and verify completion over time.
+                {{end}}
+            </td>
+        </tr>
+    </table>
+
+    <table class="atlas-severity-strip" role="presentation">
+        <tr>
+            <td class="severity-critical"><strong class="tabular">{{VulnCriticalCount}}</strong><span>Critical</span></td>
+            <td class="severity-high"><strong class="tabular">{{VulnHighCount}}</strong><span>High</span></td>
+            <td class="severity-medium"><strong class="tabular">{{VulnMediumCount}}</strong><span>Medium</span></td>
+            <td class="severity-low"><strong class="tabular">{{VulnLowCount}}</strong><span>Low</span></td>
+            <td class="severity-info"><strong class="tabular">{{VulnInfoCount}}</strong><span>Info</span></td>
+        </tr>
+    </table>
+
+    <h2 class="atlas-subtitle">Observation register</h2>
+    <table class="atlas-data-table atlas-observations-table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Observation</th>
+            <th>Category</th>
+            <th>Rating</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{for vuln in Vulns}}
+        <tr>
+            <td class="tabular">{{vuln.VulnFindingId}}</td>
+            <td><a href="#observation-{{vuln.VulnFindingId}}"><strong>{{vuln.VulnName}}</strong></a></td>
+            <td>{{vuln.VulnCategory}}</td>
+            <td><span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span></td>
+            <td>{{vuln.VulnStatus}}</td>
+        </tr>
+        {{end}}
+        </tbody>
+    </table>
+    {{end}}
+</section>

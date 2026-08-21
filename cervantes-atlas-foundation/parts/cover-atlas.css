@@ -1,0 +1,135 @@
+cover { page: atlas-cover-page; }
+
+.atlas-cover {
+    position: relative;
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+    overflow: hidden;
+    background: #F7F4EC;
+    color: #20231F;
+}
+
+.atlas-cover::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 13mm;
+    height: 297mm;
+    background: #66705A;
+    content: "";
+}
+
+.atlas-cover-contours {
+    position: absolute;
+    top: 0;
+    right: -44mm;
+    width: 178mm;
+    opacity: .82;
+}
+
+.atlas-cover-brand {
+    position: absolute;
+    top: 24mm;
+    left: 29mm;
+    width: 158mm;
+}
+
+.atlas-cover-brand td { vertical-align: middle; }
+.atlas-cover-mark-cell { width: 17mm; }
+.atlas-cover-mark { display: block; width: 12mm; height: 12mm; }
+
+.atlas-cover-wordmark,
+.atlas-cover-series { display: block; }
+
+.atlas-cover-wordmark {
+    font-family: "Atlas Serif", Georgia, serif;
+    font-size: 17pt;
+    font-weight: 600;
+    letter-spacing: -.2pt;
+}
+
+.atlas-cover-series {
+    color: #66705A;
+    font-size: 7.5pt;
+    font-weight: 600;
+    letter-spacing: 1.5pt;
+    text-transform: uppercase;
+}
+
+.atlas-cover-main {
+    position: absolute;
+    top: 84mm;
+    left: 29mm;
+    width: 145mm;
+}
+
+.atlas-cover-report-type {
+    margin-bottom: 9pt;
+    color: #B45F43;
+    font-size: 8pt;
+    font-weight: 600;
+    letter-spacing: 2pt;
+    text-transform: uppercase;
+}
+
+.atlas-cover-title {
+    max-width: 135mm;
+    margin: 0 0 13pt;
+    font-size: 42pt;
+    font-weight: 600;
+    line-height: .98;
+    letter-spacing: -1.1pt;
+}
+
+.atlas-cover-deck {
+    max-width: 90mm;
+    color: #575B53;
+    font-family: "Atlas Serif", Georgia, serif;
+    font-size: 13pt;
+    line-height: 1.42;
+}
+
+.atlas-cover-metadata {
+    position: absolute;
+    bottom: 30mm;
+    left: 29mm;
+    width: 158mm;
+    table-layout: fixed;
+    border-top: 1pt solid #8F9389;
+}
+
+.atlas-cover-metadata td {
+    width: 50%;
+    padding: 8pt 10pt 9pt 0;
+    border-bottom: .6pt solid #D1CDC1;
+    vertical-align: top;
+}
+
+.atlas-cover-label,
+.atlas-cover-value { display: block; }
+
+.atlas-cover-label {
+    margin-bottom: 2pt;
+    color: #777B72;
+    font-size: 7pt;
+    font-weight: 600;
+    letter-spacing: .8pt;
+    text-transform: uppercase;
+}
+
+.atlas-cover-value {
+    color: #2C2F2A;
+    font-size: 9.5pt;
+    font-weight: 600;
+}
+
+.atlas-cover-folio {
+    position: absolute;
+    right: 23mm;
+    bottom: 12mm;
+    color: #66705A;
+    font-size: 7pt;
+    font-weight: 600;
+    letter-spacing: 1.4pt;
+}

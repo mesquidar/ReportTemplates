@@ -1,0 +1,52 @@
+<div class="page-break"></div>
+<section id="activity-plan" class="atlas-section atlas-activity-plan">
+    <table class="atlas-section-heading" role="presentation">
+        <tr>
+            <td class="atlas-section-index">03</td>
+            <td><h1 class="atlas-section-title">Activity plan</h1></td>
+        </tr>
+    </table>
+
+    <p class="atlas-lead">Activities provide the working trail behind the report: what was planned, who owned it and how far it progressed.</p>
+
+    {{if HasTasks}}
+    <table class="atlas-data-table atlas-activity-table">
+        <thead>
+        <tr>
+            <th>Activity</th>
+            <th>Owner</th>
+            <th>Window</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{for task in Tasks}}
+        <tr>
+            <td>
+                <strong class="atlas-activity-name">{{task.TaskName}}</strong>
+                <div class="atlas-activity-description">{{task.TaskDescription}}</div>
+            </td>
+            <td>{{task.TaskAssignedTo}}</td>
+            <td class="tabular">{{task.TaskStartDate}}<br/>{{task.TaskEndDate}}</td>
+            <td><span class="atlas-status">{{task.TaskStatus}}</span></td>
+        </tr>
+        {{end}}
+        </tbody>
+    </table>
+    {{else}}
+    <div class="atlas-empty"><strong>No structured activities were recorded.</strong><br/>Use Cervantes tasks when the report needs to show ownership, sequence or completion of learning and assessment work.</div>
+    {{end}}
+
+    <table class="atlas-two-column atlas-activity-guidance">
+        <tr>
+            <td>
+                <span class="atlas-kicker">For assessment work</span>
+                <p>Activities can represent interviews, reviews, workshops, validation steps or evidence requests.</p>
+            </td>
+            <td>
+                <span class="atlas-kicker">For training work</span>
+                <p>Activities can represent modules, exercises, practice sessions, reviews and learner follow-up.</p>
+            </td>
+        </tr>
+    </table>
+</section>

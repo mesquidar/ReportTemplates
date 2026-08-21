@@ -1,0 +1,59 @@
+<div class="page-break"></div>
+<section id="assessment-progress" class="atlas-section atlas-assessment-progress">
+    <table class="atlas-section-heading" role="presentation">
+        <tr>
+            <td class="atlas-section-index">04</td>
+            <td><h1 class="atlas-section-title">Assessment progress</h1></td>
+        </tr>
+    </table>
+
+    <p class="atlas-lead">Structured criteria make coverage visible. They show what has been considered and where work remains incomplete.</p>
+
+    {{if HasChecklists}}
+    <table class="atlas-progress-overview" role="presentation">
+        <tr>
+            <td class="atlas-progress-primary">
+                <span class="atlas-progress-number tabular">{{ChecklistsCompletionRate}}%</span>
+                <span class="atlas-progress-label">Average completion</span>
+            </td>
+            <td>
+                <span class="atlas-progress-number tabular">{{ChecklistsTotalCount}}</span>
+                <span class="atlas-progress-label">Checklists</span>
+            </td>
+            <td>
+                <span class="atlas-progress-number tabular">{{ChecklistsInProgressCount}}</span>
+                <span class="atlas-progress-label">In progress</span>
+            </td>
+            <td>
+                <span class="atlas-progress-number tabular">{{ChecklistsCompletedCount}}</span>
+                <span class="atlas-progress-label">Completed</span>
+            </td>
+        </tr>
+    </table>
+
+    <table class="atlas-data-table atlas-checklist-table">
+        <thead>
+        <tr>
+            <th>Checklist</th>
+            <th>Subject</th>
+            <th>Progress</th>
+            <th>Result</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{for checklist in Checklists}}
+        <tr>
+            <td><strong>{{checklist.ChecklistName}}</strong><br/><span class="muted">{{checklist.ChecklistTemplateName}}</span></td>
+            <td>{{checklist.ChecklistTargetName}}</td>
+            <td class="tabular">{{checklist.ChecklistCompletionPercentage}}%</td>
+            <td class="tabular">{{checklist.ChecklistPassedItems}} passed<br/>{{checklist.ChecklistFailedItems}} flagged</td>
+            <td><span class="atlas-status">{{checklist.ChecklistStatus}}</span></td>
+        </tr>
+        {{end}}
+        </tbody>
+    </table>
+    {{else}}
+    <div class="atlas-empty"><strong>No structured assessment criteria were recorded.</strong><br/>A checklist can turn a broad review or learning programme into visible, repeatable coverage.</div>
+    {{end}}
+</section>

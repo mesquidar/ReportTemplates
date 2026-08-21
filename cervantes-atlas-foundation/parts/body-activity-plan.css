@@ -1,0 +1,27 @@
+.atlas-activity-table th:first-child,
+.atlas-activity-table td:first-child { width: 43%; }
+.atlas-activity-table th:nth-child(2),
+.atlas-activity-table td:nth-child(2) { width: 18%; }
+.atlas-activity-table th:nth-child(3),
+.atlas-activity-table td:nth-child(3) { width: 21%; }
+.atlas-activity-table th:last-child,
+.atlas-activity-table td:last-child { width: 18%; }
+
+.atlas-activity-name {
+    display: block;
+    color: #2D302B;
+    font-family: "Atlas Serif", Georgia, serif;
+    font-size: 10.5pt;
+}
+
+.atlas-activity-description {
+    margin-top: 3pt;
+    color: #666A62;
+    font-size: 8.5pt;
+}
+
+.atlas-activity-guidance {
+    margin-top: 22pt;
+    padding-top: 12pt;
+    border-top: 1pt solid #BBB7AA;
+}

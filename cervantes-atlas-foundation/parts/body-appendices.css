@@ -1,0 +1,41 @@
+.atlas-rating-guide th:first-child,
+.atlas-rating-guide td:first-child { width: 18%; }
+.atlas-rating-guide th:nth-child(2),
+.atlas-rating-guide td:nth-child(2) { width: 18%; }
+
+.atlas-evidence-register { font-size: 8.5pt; }
+.atlas-evidence-register th:first-child,
+.atlas-evidence-register td:first-child { width: 11%; }
+.atlas-evidence-register th:nth-child(2),
+.atlas-evidence-register td:nth-child(2) { width: 37%; }
+.atlas-evidence-register th:nth-child(3),
+.atlas-evidence-register td:nth-child(3) { width: 18%; }
+.atlas-evidence-register th:nth-child(4),
+.atlas-evidence-register td:nth-child(4) { width: 15%; }
+
+.atlas-conventions-table {
+    width: 100%;
+    margin: 12pt 0 20pt;
+    border-top: 1pt solid #66705A;
+}
+.atlas-conventions-table td {
+    padding: 9pt 8pt;
+    border-bottom: .6pt solid #D8D4C8;
+    vertical-align: top;
+}
+.atlas-conventions-table td:first-child {
+    width: 25%;
+    color: #59624E;
+    font-family: "Atlas Serif", Georgia, serif;
+    font-size: 11pt;
+    font-weight: 600;
+}
+
+.atlas-appendix-footnote {
+    margin-top: 25pt;
+    padding-top: 8pt;
+    border-top: .7pt solid #BBB7AA;
+    color: #777B72;
+    font-size: 7.5pt;
+    letter-spacing: .35pt;
+}

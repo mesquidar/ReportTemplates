@@ -1,0 +1,44 @@
+.atlas-roadmap-band {
+    margin: 0 0 18pt;
+    page-break-inside: avoid;
+}
+
+.atlas-roadmap-heading {
+    width: 100%;
+    border-top: 3pt solid #66705A;
+    border-bottom: .7pt solid #BBB7AA;
+}
+
+.atlas-roadmap-heading td { padding: 8pt 0 9pt; vertical-align: middle; }
+.atlas-roadmap-heading td:first-child { width: 65%; }
+.atlas-roadmap-heading td:last-child { color: #72766E; font-size: 8pt; text-align: right; }
+.atlas-roadmap-heading span {
+    display: inline-block;
+    width: 18mm;
+    color: #B45F43;
+    font-size: 7.5pt;
+    font-weight: 600;
+    letter-spacing: 1pt;
+    text-transform: uppercase;
+}
+.atlas-roadmap-heading strong {
+    font-family: "Atlas Serif", Georgia, serif;
+    font-size: 16pt;
+}
+
+.atlas-roadmap-now .atlas-roadmap-heading { border-top-color: #8F2D2D; }
+.atlas-roadmap-next .atlas-roadmap-heading { border-top-color: #B07A22; }
+.atlas-roadmap-later .atlas-roadmap-heading { border-top-color: #66705A; }
+
+.atlas-roadmap-item {
+    width: 100%;
+    border-bottom: .6pt solid #D8D4C8;
+}
+
+.atlas-roadmap-item td { padding: 8pt 0; vertical-align: middle; }
+.atlas-roadmap-item td:first-child { width: 18mm; color: #777B72; font-size: 8pt; }
+.atlas-roadmap-item td:last-child { width: 24mm; text-align: right; }
+.atlas-roadmap-item strong,
+.atlas-roadmap-item span { display: block; }
+.atlas-roadmap-item strong { font-family: "Atlas Serif", Georgia, serif; font-size: 10.5pt; }
+.atlas-roadmap-item td:nth-child(2) > span { color: #72766E; font-size: 8pt; }

@@ -1,0 +1,278 @@
+/* Cervantes Atlas Foundation — shared print system, compatible with iText 9.x pdfHTML. */
+
+@page {
+    size: A4;
+    margin: 25mm 21mm 23mm 21mm;
+    @top-center { content: element(header); }
+    @bottom-center { content: element(footer); }
+}
+
+@page atlas-cover-page {
+    size: A4;
+    margin: 0;
+    @top-center { content: none; }
+    @bottom-center { content: none; }
+}
+
+@page :first {
+    margin: 0;
+    @top-center { content: none; }
+    @bottom-center { content: none; }
+}
+
+* {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #FCFAF5;
+    color: #292B27;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10.25pt;
+    line-height: 1.62;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-top: 0;
+    color: #20231F;
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 600;
+    page-break-after: avoid;
+}
+
+h1 { bookmark-level: 1; bookmark-state: open; }
+h2 { bookmark-level: 2; bookmark-state: open; }
+h3 { bookmark-level: 3; bookmark-state: closed; }
+
+p {
+    margin: 0 0 10pt;
+    orphans: 3;
+    widows: 3;
+}
+
+a {
+    color: #59624E;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+code,
+pre,
+.tabular {
+    font-family: "DejaVu Sans Mono", "Courier New", monospace;
+    font-variant-numeric: tabular-nums;
+}
+
+code {
+    padding: 1.5pt 4pt;
+    background: #EEEADF;
+    color: #41463B;
+    font-size: 8.5pt;
+}
+
+pre {
+    padding: 12pt 14pt;
+    border-left: 3pt solid #B45F43;
+    background: #292D27;
+    color: #F7F4EC;
+    font-size: 8.5pt;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.page-break { page-break-after: always; }
+.no-break { page-break-inside: avoid; }
+.muted { color: #6E726A; }
+.rich-text { max-width: 132mm; }
+.rich-text img { margin: 8pt 0 12pt; }
+.rich-text table { width: 100%; margin: 10pt 0 14pt; }
+.rich-text th,
+.rich-text td { padding: 6pt 8pt; border-bottom: .6pt solid #D8D4C8; }
+
+.atlas-section {
+    padding: 0;
+}
+
+.atlas-section-heading {
+    width: 100%;
+    margin: 0 0 18pt;
+    border-bottom: 1pt solid #BBB7AA;
+}
+
+.atlas-section-heading td {
+    padding: 0 0 10pt;
+    vertical-align: bottom;
+}
+
+.atlas-section-index {
+    width: 18mm;
+    color: #B45F43;
+    font-size: 9pt;
+    font-weight: 600;
+    letter-spacing: 1.8pt;
+    text-transform: uppercase;
+}
+
+.atlas-section-title {
+    margin: 0;
+    font-size: 27pt;
+    line-height: 1.06;
+    letter-spacing: -.45pt;
+}
+
+.atlas-kicker {
+    margin: 0 0 7pt;
+    color: #66705A;
+    font-size: 8pt;
+    font-weight: 600;
+    letter-spacing: 1.8pt;
+    text-transform: uppercase;
+}
+
+.atlas-lead {
+    max-width: 132mm;
+    margin: 0 0 18pt;
+    color: #41443E;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14pt;
+    line-height: 1.45;
+}
+
+.atlas-subtitle {
+    margin: 22pt 0 9pt;
+    color: #2F332D;
+    font-size: 15pt;
+    line-height: 1.25;
+}
+
+.atlas-note {
+    margin: 15pt 0;
+    padding: 11pt 13pt 12pt;
+    border-left: 3pt solid #66705A;
+    background: #F0EDE3;
+    color: #464A42;
+}
+
+.atlas-empty {
+    margin: 15pt 0;
+    padding: 16pt 18pt 18pt;
+    border-top: 1pt solid #BBB7AA;
+    border-bottom: 1pt solid #BBB7AA;
+    color: #62665E;
+    font-family: "Atlas Serif", Georgia, serif;
+    font-size: 12pt;
+}
+
+.atlas-data-table {
+    width: 100%;
+    margin: 12pt 0 18pt;
+    font-size: 9pt;
+}
+
+.atlas-data-table th {
+    padding: 7pt 8pt;
+    border-top: 1pt solid #66705A;
+    border-bottom: 1pt solid #66705A;
+    color: #59624E;
+    font-size: 7.5pt;
+    font-weight: 600;
+    letter-spacing: .8pt;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.atlas-data-table td {
+    padding: 8pt;
+    border-bottom: .6pt solid #D8D4C8;
+    vertical-align: top;
+}
+
+.atlas-data-table tr:nth-child(even) td { background: #F7F4EC; }
+
+.atlas-meta-label {
+    color: #72766E;
+    font-size: 7.5pt;
+    font-weight: 600;
+    letter-spacing: .65pt;
+    text-transform: uppercase;
+}
+
+.atlas-meta-value {
+    color: #292B27;
+    font-weight: 600;
+}
+
+.atlas-status {
+    display: inline-block;
+    padding: 2pt 6pt;
+    border: .7pt solid #979A91;
+    color: #4D514A;
+    font-size: 7.5pt;
+    font-weight: 600;
+    letter-spacing: .4pt;
+    text-transform: uppercase;
+}
+
+.severity-badge {
+    display: inline-block;
+    min-width: 43pt;
+    padding: 3pt 7pt;
+    color: #FFFFFF;
+    font-size: 7.5pt;
+    font-weight: 600;
+    letter-spacing: .45pt;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.severity-critical { background: #8F2D2D; }
+.severity-high { background: #B34E35; }
+.severity-medium { background: #B07A22; }
+.severity-low { background: #66705A; }
+.severity-info { background: #5B7180; }
+.severity-none { background: #6E726A; }
+
+.risk-text-critical { color: #8F2D2D; }
+.risk-text-high { color: #A94430; }
+.risk-text-medium { color: #8A651F; }
+.risk-text-low { color: #59624E; }
+.risk-text-info { color: #4E6878; }
+.risk-text-none { color: #6E726A; }
+
+.atlas-two-column {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.atlas-two-column > tbody > tr > td {
+    width: 50%;
+    padding-right: 9pt;
+    vertical-align: top;
+}
+
+.atlas-two-column > tbody > tr > td:last-child {
+    padding-right: 0;
+    padding-left: 9pt;
+}
+
+.atlas-divider {
+    margin: 18pt 0;
+    border: 0;
+    border-top: .7pt solid #D8D4C8;
+}

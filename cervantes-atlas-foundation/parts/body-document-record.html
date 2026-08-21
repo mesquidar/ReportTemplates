@@ -1,0 +1,84 @@
+<div class="page-break"></div>
+<section class="atlas-section atlas-document-record">
+    <table class="atlas-section-heading" role="presentation">
+        <tr>
+            <td class="atlas-section-index">00</td>
+            <td><h1 class="atlas-section-title">Document record</h1></td>
+        </tr>
+    </table>
+
+    <p class="atlas-lead">A concise record of ownership, scope dates and the people responsible for this report.</p>
+
+    <table class="atlas-record-grid">
+        <tr>
+            <td>
+                <span class="atlas-meta-label">Document</span>
+                <span class="atlas-record-value">{{ProjectName}}</span>
+            </td>
+            <td>
+                <span class="atlas-meta-label">Report reference</span>
+                <span class="atlas-record-value tabular">{{ReportReference}}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="atlas-meta-label">Prepared for</span>
+                <span class="atlas-record-value">{{ClientName}}</span>
+            </td>
+            <td>
+                <span class="atlas-meta-label">Prepared by</span>
+                <span class="atlas-record-value">{{OrganizationName}}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="atlas-meta-label">Assessment period</span>
+                <span class="atlas-record-value tabular">{{StartDate}} — {{EndDate}}</span>
+            </td>
+            <td>
+                <span class="atlas-meta-label">Issued</span>
+                <span class="atlas-record-value">{{TodayLong}}</span>
+            </td>
+        </tr>
+    </table>
+
+    <h2 class="atlas-subtitle">Revision history</h2>
+    <table class="atlas-data-table atlas-revision-table">
+        <thead>
+        <tr>
+            <th>Version</th>
+            <th>Date</th>
+            <th>Change note</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{for doc in Documents}}
+        <tr>
+            <td class="tabular">{{doc.DocumentVersion}}</td>
+            <td class="tabular">{{doc.DocumentCreatedDate}}</td>
+            <td>{{doc.DocumentDescription}}</td>
+        </tr>
+        {{end}}
+        </tbody>
+    </table>
+
+    <h2 class="atlas-subtitle">Contributors</h2>
+    <table class="atlas-data-table atlas-contributors-table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Contact</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{for user in Users}}
+        <tr>
+            <td>{{user.UserFullName}}</td>
+            <td>{{user.UserPosition}}</td>
+            <td>{{user.UserEmail}}</td>
+        </tr>
+        {{end}}
+        </tbody>
+    </table>
+</section>

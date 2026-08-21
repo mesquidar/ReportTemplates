@@ -1,0 +1,49 @@
+<div class="page-break"></div>
+<section id="scope-approach" class="atlas-section atlas-scope-approach">
+    <table class="atlas-section-heading" role="presentation">
+        <tr>
+            <td class="atlas-section-index">02</td>
+            <td><h1 class="atlas-section-title">Scope and approach</h1></td>
+        </tr>
+    </table>
+
+    <p class="atlas-lead">The scope defines where conclusions apply. The approach explains how evidence was collected, interpreted and recorded.</p>
+
+    <h2 class="atlas-subtitle">Areas in scope</h2>
+    {{if HasTargets}}
+    <table class="atlas-data-table atlas-scope-table">
+        <thead>
+        <tr>
+            <th>Area or target</th>
+            <th>Type</th>
+            <th>Context</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{for target in Targets}}
+        <tr>
+            <td class="atlas-scope-name">{{target.TargetName}}</td>
+            <td>{{target.TargetType}}</td>
+            <td>{{target.TargetDescription}}</td>
+        </tr>
+        {{end}}
+        </tbody>
+    </table>
+    {{else}}
+    <div class="atlas-empty">No structured targets were recorded for this project. Conclusions should therefore be read as contextual guidance rather than coverage of a defined inventory.</div>
+    {{end}}
+
+    <h2 class="atlas-subtitle">Working principles</h2>
+    <table class="atlas-principles-table">
+        <tr>
+            <td><span class="atlas-principle-number">01</span><strong>Frame</strong><p>Clarify purpose, constraints and the questions the work must answer.</p></td>
+            <td><span class="atlas-principle-number">02</span><strong>Examine</strong><p>Review the selected areas through observation, discussion and structured activity.</p></td>
+        </tr>
+        <tr>
+            <td><span class="atlas-principle-number">03</span><strong>Validate</strong><p>Retain enough evidence for another reader to understand and repeat the reasoning.</p></td>
+            <td><span class="atlas-principle-number">04</span><strong>Interpret</strong><p>Translate evidence into proportionate action and explicit learning priorities.</p></td>
+        </tr>
+    </table>
+
+    <div class="atlas-note"><strong>Evidence standard.</strong> An observation should state what was examined, what was seen, why it matters and what would improve the outcome.</div>
+</section>

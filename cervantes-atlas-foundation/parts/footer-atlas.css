@@ -1,0 +1,24 @@
+footer {
+    position: running(footer);
+    width: 100%;
+    padding-top: 4mm;
+}
+
+.atlas-footer-table {
+    width: 100%;
+    border-top: .8pt solid #BBB7AA;
+}
+
+.atlas-footer-table td {
+    padding-top: 5pt;
+    color: #777B72;
+    font-size: 7pt;
+    vertical-align: middle;
+}
+
+.atlas-footer-left { width: 36%; text-align: left; }
+.atlas-footer-center { width: 38%; text-align: center; letter-spacing: .45pt; }
+.atlas-footer-right { width: 26%; text-align: right; }
+
+#current-page::before { content: counter(page); }
+#total-pages::before { content: counter(pages); }

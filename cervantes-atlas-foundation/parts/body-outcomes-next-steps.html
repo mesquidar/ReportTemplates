@@ -1,0 +1,47 @@
+<div class="page-break"></div>
+<section id="outcomes-next-steps" class="atlas-section atlas-outcomes-next-steps">
+    <table class="atlas-section-heading" role="presentation">
+        <tr>
+            <td class="atlas-section-index">08</td>
+            <td><h1 class="atlas-section-title">Outcomes and next steps</h1></td>
+        </tr>
+    </table>
+
+    {{if HasNoFindings}}
+    <p class="atlas-lead">The work established a documented baseline without recording formal findings. Continue to retain evidence and revisit the defined scope when conditions change.</p>
+    {{else}}
+    <p class="atlas-lead">The assessment recorded <strong>{{VulnTotalCount}}</strong> observations and an overall rating of <strong class="risk-text-{{OverallRiskRating | string.downcase}}">{{OverallRiskRating}}</strong>. The roadmap should now be converted into owned, verifiable work.</p>
+    {{end}}
+
+    <table class="atlas-outcome-summary">
+        <tr>
+            <td><span class="atlas-meta-label">Assessment duration</span><strong class="tabular">{{ProjectDuration}} days</strong></td>
+            <td><span class="atlas-meta-label">Areas considered</span><strong class="tabular">{{Targets | array.size}}</strong></td>
+            <td><span class="atlas-meta-label">Recorded observations</span><strong class="tabular">{{VulnTotalCount}}</strong></td>
+            <td><span class="atlas-meta-label">Average score</span><strong class="tabular">{{VulnAvgCvss}}</strong></td>
+        </tr>
+    </table>
+
+    <h2 class="atlas-subtitle">A practical review cycle</h2>
+    <table class="atlas-next-steps-table">
+        <tr>
+            <td><span>01</span><strong>Assign</strong><p>Give each action one accountable owner and a realistic target date.</p></td>
+            <td><span>02</span><strong>Evidence</strong><p>Define what will demonstrate that the action changed the observed condition.</p></td>
+            <td><span>03</span><strong>Verify</strong><p>Review completed work independently and record any residual limitation.</p></td>
+        </tr>
+    </table>
+
+    <h2 class="atlas-subtitle">Closing context</h2>
+    <div class="rich-text atlas-closing-context">{{ProjectBusinessImpact}}</div>
+
+    <table class="atlas-contact-block">
+        <tr>
+            <td>
+                <span class="atlas-kicker">Questions and follow-up</span>
+                <strong>{{OrganizationContactName}}</strong>
+                <span>{{OrganizationEmail}} · {{OrganizationPhone}}</span>
+            </td>
+            <td>{{OrganizationName}}</td>
+        </tr>
+    </table>
+</section>

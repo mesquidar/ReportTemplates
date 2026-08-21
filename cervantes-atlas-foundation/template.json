@@ -1,0 +1,131 @@
+{
+  "name": "Cervantes Atlas Foundation",
+  "description": "An editorial report template for general assessments, foundational reviews, training activities and learning outcomes.",
+  "version": "1.0.0",
+  "author": "OWASP Cervantes",
+  "language": "en",
+  "reportType": "general",
+  "tags": [
+    "cervantes",
+    "atlas",
+    "general-assessment",
+    "foundation",
+    "training",
+    "education",
+    "editorial"
+  ],
+  "parts": [
+    {
+      "key": "cover-atlas",
+      "name": "Cervantes Atlas Foundation Cover",
+      "type": "Cover",
+      "order": 0,
+      "html": "parts/cover-atlas.html",
+      "css": "parts/cover-atlas.css"
+    },
+    {
+      "key": "header-atlas",
+      "name": "Cervantes Atlas Foundation Header",
+      "type": "Header",
+      "order": 0,
+      "html": "parts/header-atlas.html",
+      "css": "parts/header-atlas.css"
+    },
+    {
+      "key": "footer-atlas",
+      "name": "Cervantes Atlas Foundation Footer",
+      "type": "Footer",
+      "order": 0,
+      "html": "parts/footer-atlas.html",
+      "css": "parts/footer-atlas.css"
+    },
+    {
+      "key": "body-document-record",
+      "name": "Cervantes Atlas Foundation Document Record",
+      "type": "Body",
+      "order": 0,
+      "html": "parts/body-document-record.html",
+      "css": "parts/body-document-record.css"
+    },
+    {
+      "key": "body-contents",
+      "name": "Cervantes Atlas Foundation Contents",
+      "type": "Body",
+      "order": 1,
+      "html": "parts/body-contents.html",
+      "css": "parts/body-contents.css"
+    },
+    {
+      "key": "body-context-objectives",
+      "name": "Cervantes Atlas Foundation Context and Objectives",
+      "type": "Body",
+      "order": 2,
+      "html": "parts/body-context-objectives.html",
+      "css": "parts/body-context-objectives.css"
+    },
+    {
+      "key": "body-scope-approach",
+      "name": "Cervantes Atlas Foundation Scope and Approach",
+      "type": "Body",
+      "order": 3,
+      "html": "parts/body-scope-approach.html",
+      "css": "parts/body-scope-approach.css"
+    },
+    {
+      "key": "body-activity-plan",
+      "name": "Cervantes Atlas Foundation Activity Plan",
+      "type": "Body",
+      "order": 4,
+      "html": "parts/body-activity-plan.html",
+      "css": "parts/body-activity-plan.css"
+    },
+    {
+      "key": "body-assessment-progress",
+      "name": "Cervantes Atlas Foundation Assessment Progress",
+      "type": "Body",
+      "order": 5,
+      "html": "parts/body-assessment-progress.html",
+      "css": "parts/body-assessment-progress.css"
+    },
+    {
+      "key": "body-observations-summary",
+      "name": "Cervantes Atlas Foundation Observations Summary",
+      "type": "Body",
+      "order": 6,
+      "html": "parts/body-observations-summary.html",
+      "css": "parts/body-observations-summary.css"
+    },
+    {
+      "key": "body-detailed-observations",
+      "name": "Cervantes Atlas Foundation Detailed Observations",
+      "type": "Body",
+      "order": 7,
+      "html": "parts/body-detailed-observations.html",
+      "css": "parts/body-detailed-observations.css"
+    },
+    {
+      "key": "body-improvement-roadmap",
+      "name": "Cervantes Atlas Foundation Improvement Roadmap",
+      "type": "Body",
+      "order": 8,
+      "html": "parts/body-improvement-roadmap.html",
+      "css": "parts/body-improvement-roadmap.css"
+    },
+    {
+      "key": "body-outcomes-next-steps",
+      "name": "Cervantes Atlas Foundation Outcomes and Next Steps",
+      "type": "Body",
+      "order": 9,
+      "html": "parts/body-outcomes-next-steps.html",
+      "css": "parts/body-outcomes-next-steps.css"
+    },
+    {
+      "key": "body-appendices",
+      "name": "Cervantes Atlas Foundation Appendices",
+      "type": "Body",
+      "order": 10,
+      "html": "parts/body-appendices.html",
+      "css": "parts/body-appendices.css"
+    }
+  ]
+}

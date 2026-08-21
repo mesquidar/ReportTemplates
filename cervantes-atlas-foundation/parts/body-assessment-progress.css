@@ -1,0 +1,40 @@
+.atlas-progress-overview {
+    width: 100%;
+    margin: 8pt 0 20pt;
+    table-layout: fixed;
+    border-top: 1pt solid #66705A;
+    border-bottom: 1pt solid #BBB7AA;
+}
+
+.atlas-progress-overview td {
+    padding: 13pt 8pt 14pt;
+    border-left: .6pt solid #D8D4C8;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.atlas-progress-overview td:first-child { border-left: 0; }
+.atlas-progress-primary { background: #66705A; color: #FFFFFF; }
+.atlas-progress-number,
+.atlas-progress-label { display: block; }
+.atlas-progress-number {
+    font-family: "Atlas Serif", Georgia, serif;
+    font-size: 22pt;
+    font-weight: 600;
+    line-height: 1;
+}
+.atlas-progress-label {
+    margin-top: 5pt;
+    font-size: 7pt;
+    letter-spacing: .55pt;
+    text-transform: uppercase;
+}
+
+.atlas-checklist-table th:first-child,
+.atlas-checklist-table td:first-child { width: 31%; }
+.atlas-checklist-table th:nth-child(2),
+.atlas-checklist-table td:nth-child(2) { width: 18%; }
+.atlas-checklist-table th:nth-child(3),
+.atlas-checklist-table td:nth-child(3) { width: 14%; }
+.atlas-checklist-table th:nth-child(4),
+.atlas-checklist-table td:nth-child(4) { width: 20%; }

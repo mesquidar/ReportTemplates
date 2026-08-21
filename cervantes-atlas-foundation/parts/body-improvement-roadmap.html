@@ -1,0 +1,50 @@
+<div class="page-break"></div>
+<section id="improvement-roadmap" class="atlas-section atlas-improvement-roadmap">
+    <table class="atlas-section-heading" role="presentation">
+        <tr>
+            <td class="atlas-section-index">07</td>
+            <td><h1 class="atlas-section-title">Improvement roadmap</h1></td>
+        </tr>
+    </table>
+
+    <p class="atlas-lead">Sequence work by consequence and dependency. Owners should confirm scope, define evidence of completion and revisit residual risk.</p>
+
+    {{if HasNoFindings}}
+    <div class="atlas-empty">No finding-led actions are available. Use the activity plan to record learning, assurance or baseline work that should continue.</div>
+    {{else}}
+    <section class="atlas-roadmap-band atlas-roadmap-now">
+        <table class="atlas-roadmap-heading" role="presentation"><tr><td><span>Now</span><strong>Stabilise</strong></td><td>Critical and high priority</td></tr></table>
+        <div class="atlas-roadmap-list">
+            {{for vuln in Vulns}}
+            {{if vuln.VulnRisk == "Critical" || vuln.VulnRisk == "High"}}
+            <table class="atlas-roadmap-item"><tr><td class="tabular">{{vuln.VulnFindingId}}</td><td><strong>{{vuln.VulnName}}</strong><span>{{vuln.VulnPriority}} priority · {{vuln.VulnComplexity}} effort</span></td><td><span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span></td></tr></table>
+            {{end}}
+            {{end}}
+        </div>
+    </section>
+
+    <section class="atlas-roadmap-band atlas-roadmap-next">
+        <table class="atlas-roadmap-heading" role="presentation"><tr><td><span>Next</span><strong>Strengthen</strong></td><td>Medium priority</td></tr></table>
+        <div class="atlas-roadmap-list">
+            {{for vuln in Vulns}}
+            {{if vuln.VulnRisk == "Medium"}}
+            <table class="atlas-roadmap-item"><tr><td class="tabular">{{vuln.VulnFindingId}}</td><td><strong>{{vuln.VulnName}}</strong><span>{{vuln.VulnPriority}} priority · {{vuln.VulnComplexity}} effort</span></td><td><span class="severity-badge severity-medium">{{vuln.VulnRisk}}</span></td></tr></table>
+            {{end}}
+            {{end}}
+        </div>
+    </section>
+
+    <section class="atlas-roadmap-band atlas-roadmap-later">
+        <table class="atlas-roadmap-heading" role="presentation"><tr><td><span>Later</span><strong>Sustain</strong></td><td>Low and informational</td></tr></table>
+        <div class="atlas-roadmap-list">
+            {{for vuln in Vulns}}
+            {{if vuln.VulnRisk == "Low" || vuln.VulnRisk == "Info"}}
+            <table class="atlas-roadmap-item"><tr><td class="tabular">{{vuln.VulnFindingId}}</td><td><strong>{{vuln.VulnName}}</strong><span>{{vuln.VulnPriority}} priority · {{vuln.VulnComplexity}} effort</span></td><td><span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span></td></tr></table>
+            {{end}}
+            {{end}}
+        </div>
+    </section>
+    {{end}}
+
+    <div class="atlas-note"><strong>Completion rule.</strong> Do not close an action on implementation alone. Record the owner, completion evidence, validation date and any remaining limitation.</div>
+</section>

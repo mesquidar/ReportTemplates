@@ -1,0 +1,31 @@
+.atlas-context-grid {
+    width: 100%;
+    margin: 8pt 0 14pt;
+    table-layout: fixed;
+    border-top: 1pt solid #66705A;
+    border-bottom: 1pt solid #D8D4C8;
+}
+
+.atlas-context-grid td {
+    width: 33.33%;
+    padding: 10pt 10pt 11pt 0;
+    vertical-align: top;
+}
+
+.atlas-context-value {
+    display: block;
+    margin-top: 3pt;
+    color: #2D302B;
+    font-family: "Atlas Serif", Georgia, serif;
+    font-size: 12pt;
+}
+
+.atlas-objectives-list {
+    margin: 0;
+    padding-left: 18pt;
+}
+
+.atlas-objectives-list li {
+    margin-bottom: 8pt;
+    padding-left: 3pt;
+}

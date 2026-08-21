@@ -1,0 +1,73 @@
+<div class="page-break"></div>
+<section id="detailed-observations" class="atlas-section atlas-detailed-observations">
+    <table class="atlas-section-heading" role="presentation">
+        <tr>
+            <td class="atlas-section-index">06</td>
+            <td><h1 class="atlas-section-title">Detailed observations</h1></td>
+        </tr>
+    </table>
+
+    <p class="atlas-lead">Each observation separates evidence from interpretation so that decisions remain traceable.</p>
+
+    {{if HasNoFindings}}
+    <div class="atlas-empty">There are no detailed observations to present.</div>
+    {{else}}
+    {{for vuln in Vulns}}
+    <article id="observation-{{vuln.VulnFindingId}}" class="atlas-observation">
+        <table class="atlas-observation-heading no-break">
+            <tr>
+                <td>
+                    <span class="atlas-observation-id tabular">Observation {{vuln.VulnFindingId}}</span>
+                    <h2>{{vuln.VulnName}}</h2>
+                </td>
+                <td class="atlas-observation-rating">
+                    <span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span>
+                </td>
+            </tr>
+        </table>
+
+        <table class="atlas-observation-meta no-break">
+            <tr>
+                <td><span class="atlas-meta-label">Category</span><strong>{{vuln.VulnCategory}}</strong></td>
+                <td><span class="atlas-meta-label">Status</span><strong>{{vuln.VulnStatus}}</strong></td>
+                <td><span class="atlas-meta-label">Affected area</span><strong>{{vuln.VulnTargets}}</strong></td>
+            </tr>
+            <tr>
+                <td><span class="atlas-meta-label">Score</span><strong class="tabular">{{vuln.VulnCvss}} · {{vuln.VulnCvssSeverity}}</strong></td>
+                <td><span class="atlas-meta-label">Priority</span><strong>{{vuln.VulnPriority}}</strong></td>
+                <td><span class="atlas-meta-label">Effort</span><strong>{{vuln.VulnComplexity}}</strong></td>
+            </tr>
+        </table>
+
+        <section class="atlas-observation-section">
+            <h3><span>01</span> Observation</h3>
+            <div class="rich-text">{{vuln.VulnDescription}}</div>
+        </section>
+
+        <section class="atlas-observation-section atlas-evidence-section">
+            <h3><span>02</span> Evidence and validation</h3>
+            <div class="rich-text">{{vuln.VulnPoc}}</div>
+        </section>
+
+        <section class="atlas-observation-section">
+            <h3><span>03</span> Impact and relevance</h3>
+            <div class="rich-text">{{vuln.VulnImpact}}</div>
+        </section>
+
+        <section class="atlas-observation-section atlas-action-section">
+            <h3><span>04</span> Recommended action</h3>
+            <div class="rich-text">{{vuln.VulnRemediation}}</div>
+        </section>
+
+        <table class="atlas-observation-references no-break">
+            <tr>
+                <td><span class="atlas-meta-label">Reference</span><code>{{vuln.VulnCve}}</code></td>
+                <td><span class="atlas-meta-label">Classification</span><code>{{vuln.VulnCwes}}</code></td>
+                <td><span class="atlas-meta-label">Vector</span><code>{{vuln.VulnCvssVector}}</code></td>
+            </tr>
+        </table>
+    </article>
+    {{if for.last == false}}<div class="page-break"></div>{{end}}
+    {{end}}
+    {{end}}
+</section>

@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Cervantes Atlas Foundation general assessment and learning report"/>
+    <title>{{ProjectName}} — Atlas Foundation Report</title>
+</head>
+<body>
+    <header>
+        <!-- report-zone:header:start -->
+        <!-- gallery-part:header-atlas:start -->
+<table class="atlas-header-table" role="presentation">
+    <tr>
+        <td class="atlas-header-brand">
+            <img src="assets/atlas-mark.png" alt="Cervantes Atlas mark" class="atlas-header-mark"/>
+            <span>Cervantes / Atlas Foundation</span>
+        </td>
+        <td class="atlas-header-project">{{ProjectName}}</td>
+        <td class="atlas-header-reference tabular">{{ReportReference}}</td>
+    </tr>
+</table>
+        <!-- gallery-part:header-atlas:end -->
+        <!-- report-zone:header:end -->
+    </header>
+    <cover>
+        <!-- report-zone:cover:start -->
+        <!-- gallery-part:cover-atlas:start -->
+<div class="atlas-cover">
+    <img class="atlas-cover-contours" src="assets/atlas-contours.png" alt="Abstract topographic contour lines"/>
+
+    <table class="atlas-cover-brand" role="presentation">
+        <tr>
+            <td class="atlas-cover-mark-cell">
+                <img class="atlas-cover-mark" src="assets/atlas-mark.png" alt="Cervantes Atlas mark"/>
+            </td>
+            <td>
+                <span class="atlas-cover-wordmark">Cervantes</span>
+                <span class="atlas-cover-series">Atlas / Foundation 01</span>
+            </td>
+        </tr>
+    </table>
+
+    <div class="atlas-cover-main">
+        <div class="atlas-cover-report-type">General assessment &amp; learning report</div>
+        <h1 class="atlas-cover-title">{{ProjectName}}</h1>
+        <div class="atlas-cover-deck">A clear record of context, activities, evidence and next steps.</div>
+    </div>
+
+    <table class="atlas-cover-metadata">
+        <tr>
+            <td>
+                <span class="atlas-cover-label">Prepared for</span>
+                <span class="atlas-cover-value">{{ClientName}}</span>
+            </td>
+            <td>
+                <span class="atlas-cover-label">Prepared by</span>
+                <span class="atlas-cover-value">{{OrganizationName}}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="atlas-cover-label">Assessment period</span>
+                <span class="atlas-cover-value tabular">{{StartDate}} — {{EndDate}}</span>
+            </td>
+            <td>
+                <span class="atlas-cover-label">Reference</span>
+                <span class="atlas-cover-value tabular">{{ReportReference}}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="atlas-cover-label">Issued</span>
+                <span class="atlas-cover-value">{{TodayLong}}</span>
+            </td>
+            <td>
+                <span class="atlas-cover-label">Version</span>
+                <span class="atlas-cover-value tabular">{{for doc in Documents}}{{if for.last}}{{doc.DocumentVersion}}{{end}}{{end}}</span>
+            </td>
+        </tr>
+    </table>
+
+    <div class="atlas-cover-folio">ATLAS—01</div>
+</div>
+        <!-- gallery-part:cover-atlas:end -->
+        <!-- report-zone:cover:end -->
+    </cover>
+    <main>
+        <!-- report-zone:body:start -->
+        <!-- gallery-part:body-document-record:start -->
+<div class="page-break"></div>
+<section class="atlas-section atlas-document-record">
+    <table class="atlas-section-heading" role="presentation">
+        <tr>
+            <td class="atlas-section-index">00</td>
+            <td><h1 class="atlas-section-title">Document record</h1></td>
+        </tr>
+    </table>
+
+    <p class="atlas-lead">A concise record of ownership, scope dates and the people responsible for this report.</p>
+
+    <table class="atlas-record-grid">
+        <tr>
+            <td>
+                <span class="atlas-meta-label">Document</span>
+                <span class="atlas-record-value">{{ProjectName}}</span>
+            </td>
+            <td>
+                <span class="atlas-meta-label">Report reference</span>
+                <span class="atlas-record-value tabular">{{ReportReference}}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="atlas-meta-label">Prepared for</span>
+                <span class="atlas-record-value">{{ClientName}}</span>
+            </td>
+            <td>
+                <span class="atlas-meta-label">Prepared by</span>
+                <span class="atlas-record-value">{{OrganizationName}}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="atlas-meta-label">Assessment period</span>
+                <span class="atlas-record-value tabular">{{StartDate}} — {{EndDate}}</span>
+            </td>
+            <td>
+                <span class="atlas-meta-label">Issued</span>
+                <span class="atlas-record-value">{{TodayLong}}</span>
+            </td>
+        </tr>
+    </table>
+
+    <h2 class="atlas-subtitle">Revision history</h2>
+    <table class="atlas-data-table atlas-revision-table">
+        <thead>
+        <tr>
+            <th>Version</th>
+            <th>Date</th>
+            <th>Change note</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{for doc in Documents}}
+        <tr>
+            <td class="tabular">{{doc.DocumentVersion}}</td>
+            <td class="tabular">{{doc.DocumentCreatedDate}}</td>
+            <td>{{doc.DocumentDescription}}</td>
+        </tr>
+        {{end}}
+        </tbody>
+    </table>
+
+    <h2 class="atlas-subtitle">Contributors</h2>
+    <table class="atlas-data-table atlas-contributors-table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Contact</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{for user in Users}}
+        <tr>
+            <td>{{user.UserFullName}}</td>
+            <td>{{user.UserPosition}}</td>
+            <td>{{user.UserEmail}}</td>
+        </tr>
+        {{end}}
+        </tbody>
+    </table>
+</section>
+        <!-- gallery-part:body-document-record:end -->
+        <!-- gallery-part:body-contents:start -->
+<div class="page-break"></div>
+<section class="atlas-section atlas-contents">
+    <table class="atlas-section-heading" role="presentation">
+        <tr>
+            <td class="atlas-section-index">Index</td>
+            <td><h1 class="atlas-section-title">Contents</h1></td>
+        </tr>
+    </table>
+
+    <nav class="atlas-toc" aria-label="Report contents">
+        <a class="atlas-toc-row" href="#context-objectives"><span>01</span><strong>Context and objectives</strong></a>
+        <a class="atlas-toc-row" href="#scope-approach"><span>02</span><strong>Scope and approach</strong></a>
+        <a class="atlas-toc-row" href="#activity-plan"><span>03</span><strong>Activity plan</strong></a>
+        <a class="atlas-toc-row" href="#assessment-progress"><span>04</span><strong>Assessment progress</strong></a>
+        <a class="atlas-toc-row" href="#observations-summary"><span>05</span><strong>Observations at a glance</strong></a>
+        <a class="atlas-toc-row" href="#detailed-observations"><span>06</span><strong>Detailed observations</strong></a>
+        <a class="atlas-toc-row" href="#improvement-roadmap"><span>07</span><strong>Improvement roadmap</strong></a>
+        <a class="atlas-toc-row" href="#outcomes-next-steps"><span>08</span><strong>Outcomes and next steps</strong></a>
+        <a class="atlas-toc-row" href="#appendices"><span>A</span><strong>Appendices</strong></a>
+    </nav>
+
+    <div class="atlas-contents-note">
+        <span class="atlas-kicker">How to read this report</span>
+        <p>Begin with context and scope, then use the activity and progress sections to understand what was examined. Observations record evidence; the roadmap turns that evidence into sequenced action.</p>
+    </div>
+</section>
+        <!-- gallery-part:body-contents:end -->
+        <!-- gallery-part:body-context-objectives:start -->
+<div class="page-break"></div>
+<section id="context-objectives" class="atlas-section atlas-context-objectives">
+    <table class="atlas-section-heading" role="presentation">
+        <tr>
+            <td class="atlas-section-index">01</td>
+            <td><h1 class="atlas-section-title">Context and objectives</h1></td>
+        </tr>
+    </table>
+
+    <div class="atlas-lead rich-text">{{ProjectExecutiveSummary}}</div>
+
+    <table class="atlas-context-grid">
+        <tr>
+            <td>
+                <span class="atlas-meta-label">Project type</span>
+                <span class="atlas-context-value">{{ProjectType}}</span>
+            </td>
+            <td>
+                <span class="atlas-meta-label">Duration</span>
+                <span class="atlas-context-value tabular">{{ProjectDuration}} days</span>
+            </td>
+            <td>
+                <span class="atlas-meta-label">Project score</span>
+                <span class="atlas-context-value tabular">{{ProjectScore}}</span>
+            </td>
+        </tr>
+    </table>
+
+    <table class="atlas-two-column">
+        <tr>
+            <td>
+                <h2 class="atlas-subtitle">Purpose</h2>
+                <div class="rich-text">{{ProjectDescription}}</div>
+            </td>
+            <td>
+                <h2 class="atlas-subtitle">Assessment objectives</h2>
+                <ol class="atlas-objectives-list">
+                    <li>Establish a shared understanding of the current context.</li>
+                    <li>Record activities and evidence in a repeatable form.</li>
+                    <li>Identify practical improvements and learning priorities.</li>
+                    <li>Provide a baseline that can be revisited over time.</li>
+                </ol>
+            </td>
+        </tr>
+    </table>
+
+    <h2 class="atlas-subtitle">Business and learning context</h2>
+    <div class="atlas-note rich-text">{{ProjectBusinessImpact}}</div>
+</section>
+        <!-- gallery-part:body-context-objectives:end -->
+        <!-- gallery-part:body-scope-approach:start -->
+<div class="page-break"></div>
+<section id="scope-approach" class="atlas-section atlas-scope-approach">
+    <table class="atlas-section-heading" role="presentation">
+        <tr>
+            <td class="atlas-section-index">02</td>
+            <td><h1 class="atlas-section-title">Scope and approach</h1></td>
+        </tr>
+    </table>
+
+    <p class="atlas-lead">The scope defines where conclusions apply. The approach explains how evidence was collected, interpreted and recorded.</p>
+
+    <h2 class="atlas-subtitle">Areas in scope</h2>
+    {{if HasTargets}}
+    <table class="atlas-data-table atlas-scope-table">
+        <thead>
+        <tr>
+            <th>Area or target</th>
+            <th>Type</th>
+            <th>Context</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{for target in Targets}}
+        <tr>
+            <td class="atlas-scope-name">{{target.TargetName}}</td>
+            <td>{{target.TargetType}}</td>
+            <td>{{target.TargetDescription}}</td>
+        </tr>
+        {{end}}
+        </tbody>
+    </table>
+    {{else}}
+    <div class="atlas-empty">No structured targets were recorded for this project. Conclusions should therefore be read as contextual guidance rather than coverage of a defined inventory.</div>
+    {{end}}
+
+    <h2 class="atlas-subtitle">Working principles</h2>
+    <table class="atlas-principles-table">
+        <tr>
+            <td><span class="atlas-principle-number">01</span><strong>Frame</strong><p>Clarify purpose, constraints and the questions the work must answer.</p></td>
+            <td><span class="atlas-principle-number">02</span><strong>Examine</strong><p>Review the selected areas through observation, discussion and structured activity.</p></td>
+        </tr>
+        <tr>
+            <td><span class="atlas-principle-number">03</span><strong>Validate</strong><p>Retain enough evidence for another reader to understand and repeat the reasoning.</p></td>
+            <td><span class="atlas-principle-number">04</span><strong>Interpret</strong><p>Translate evidence into proportionate action and explicit learning priorities.</p></td>
+        </tr>
+    </table>
+
+    <div class="atlas-note"><strong>Evidence standard.</strong> An observation should state what was examined, what was seen, why it matters and what would improve the outcome.</div>
+</section>
+        <!-- gallery-part:body-scope-approach:end -->
+        <!-- gallery-part:body-activity-plan:start -->
+<div class="page-break"></div>
+<section id="activity-plan" class="atlas-section atlas-activity-plan">
+    <table class="atlas-section-heading" role="presentation">
+        <tr>
+            <td class="atlas-section-index">03</td>
+            <td><h1 class="atlas-section-title">Activity plan</h1></td>
+        </tr>
+    </table>
+
+    <p class="atlas-lead">Activities provide the working trail behind the report: what was planned, who owned it and how far it progressed.</p>
+
+    {{if HasTasks}}
+    <table class="atlas-data-table atlas-activity-table">
+        <thead>
+        <tr>
+            <th>Activity</th>
+            <th>Owner</th>
+            <th>Window</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{for task in Tasks}}
+        <tr>
+            <td>
+                <strong class="atlas-activity-name">{{task.TaskName}}</strong>
+                <div class="atlas-activity-description">{{task.TaskDescription}}</div>
+            </td>
+            <td>{{task.TaskAssignedTo}}</td>
+            <td class="tabular">{{task.TaskStartDate}}<br/>{{task.TaskEndDate}}</td>
+            <td><span class="atlas-status">{{task.TaskStatus}}</span></td>
+        </tr>
+        {{end}}
+        </tbody>
+    </table>
+    {{else}}
+    <div class="atlas-empty"><strong>No structured activities were recorded.</strong><br/>Use Cervantes tasks when the report needs to show ownership, sequence or completion of learning and assessment work.</div>
+    {{end}}
+
+    <table class="atlas-two-column atlas-activity-guidance">
+        <tr>
+            <td>
+                <span class="atlas-kicker">For assessment work</span>
+                <p>Activities can represent interviews, reviews, workshops, validation steps or evidence requests.</p>
+            </td>
+            <td>
+                <span class="atlas-kicker">For training work</span>
+                <p>Activities can represent modules, exercises, practice sessions, reviews and learner follow-up.</p>
+            </td>
+        </tr>
+    </table>
+</section>
+        <!-- gallery-part:body-activity-plan:end -->
+        <!-- gallery-part:body-assessment-progress:start -->
+<div class="page-break"></div>
+<section id="assessment-progress" class="atlas-section atlas-assessment-progress">
+    <table class="atlas-section-heading" role="presentation">
+        <tr>
+            <td class="atlas-section-index">04</td>
+            <td><h1 class="atlas-section-title">Assessment progress</h1></td>
+        </tr>
+    </table>
+
+    <p class="atlas-lead">Structured criteria make coverage visible. They show what has been considered and where work remains incomplete.</p>
+
+    {{if HasChecklists}}
+    <table class="atlas-progress-overview" role="presentation">
+        <tr>
+            <td class="atlas-progress-primary">
+                <span class="atlas-progress-number tabular">{{ChecklistsCompletionRate}}%</span>
+                <span class="atlas-progress-label">Average completion</span>
+            </td>
+            <td>
+                <span class="atlas-progress-number tabular">{{ChecklistsTotalCount}}</span>
+                <span class="atlas-progress-label">Checklists</span>
+            </td>
+            <td>
+                <span class="atlas-progress-number tabular">{{ChecklistsInProgressCount}}</span>
+                <span class="atlas-progress-label">In progress</span>
+            </td>
+            <td>
+                <span class="atlas-progress-number tabular">{{ChecklistsCompletedCount}}</span>
+                <span class="atlas-progress-label">Completed</span>
+            </td>
+        </tr>
+    </table>
+
+    <table class="atlas-data-table atlas-checklist-table">
+        <thead>
+        <tr>
+            <th>Checklist</th>
+            <th>Subject</th>
+            <th>Progress</th>
+            <th>Result</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{for checklist in Checklists}}
+        <tr>
+            <td><strong>{{checklist.ChecklistName}}</strong><br/><span class="muted">{{checklist.ChecklistTemplateName}}</span></td>
+            <td>{{checklist.ChecklistTargetName}}</td>
+            <td class="tabular">{{checklist.ChecklistCompletionPercentage}}%</td>
+            <td class="tabular">{{checklist.ChecklistPassedItems}} passed<br/>{{checklist.ChecklistFailedItems}} flagged</td>
+            <td><span class="atlas-status">{{checklist.ChecklistStatus}}</span></td>
+        </tr>
+        {{end}}
+        </tbody>
+    </table>
+    {{else}}
+    <div class="atlas-empty"><strong>No structured assessment criteria were recorded.</strong><br/>A checklist can turn a broad review or learning programme into visible, repeatable coverage.</div>
+    {{end}}
+</section>
+        <!-- gallery-part:body-assessment-progress:end -->
+        <!-- gallery-part:body-observations-summary:start -->
+<div class="page-break"></div>
+<section id="observations-summary" class="atlas-section atlas-observations-summary">
+    <table class="atlas-section-heading" role="presentation">
+        <tr>
+            <td class="atlas-section-index">05</td>
+            <td><h1 class="atlas-section-title">Observations at a glance</h1></td>
+        </tr>
+    </table>
+
+    {{if HasNoFindings}}
+    <p class="atlas-lead">No formal observations were recorded during this reporting period.</p>
+    <div class="atlas-empty">This does not imply the absence of risk. It records that no findings were entered in Cervantes for the defined scope and period.</div>
+    {{else}}
+    <table class="atlas-risk-overview" role="presentation">
+        <tr>
+            <td class="atlas-risk-rating">
+                <span class="atlas-meta-label">Overall assessment</span>
+                <strong class="risk-text-{{OverallRiskRating | string.downcase}}">{{OverallRiskRating}}</strong>
+            </td>
+            <td class="atlas-risk-narrative">
+                {{if HasCriticalFindings}}
+                Evidence includes critical observations that require immediate ownership and validation of corrective action.
+                {{else if HasHighFindings}}
+                Evidence includes high-priority observations that should be addressed before lower-risk improvement work.
+                {{else}}
+                The recorded observations support planned improvement. Maintain proportionate ownership and verify completion over time.
+                {{end}}
+            </td>
+        </tr>
+    </table>
+
+    <table class="atlas-severity-strip" role="presentation">
+        <tr>
+            <td class="severity-critical"><strong class="tabular">{{VulnCriticalCount}}</strong><span>Critical</span></td>
+            <td class="severity-high"><strong class="tabular">{{VulnHighCount}}</strong><span>High</span></td>
+            <td class="severity-medium"><strong class="tabular">{{VulnMediumCount}}</strong><span>Medium</span></td>
+            <td class="severity-low"><strong class="tabular">{{VulnLowCount}}</strong><span>Low</span></td>
+            <td class="severity-info"><strong class="tabular">{{VulnInfoCount}}</strong><span>Info</span></td>
+        </tr>
+    </table>
+
+    <h2 class="atlas-subtitle">Observation register</h2>
+    <table class="atlas-data-table atlas-observations-table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Observation</th>
+            <th>Category</th>
+            <th>Rating</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{for vuln in Vulns}}
+        <tr>
+            <td class="tabular">{{vuln.VulnFindingId}}</td>
+            <td><a href="#observation-{{vuln.VulnFindingId}}"><strong>{{vuln.VulnName}}</strong></a></td>
+            <td>{{vuln.VulnCategory}}</td>
+            <td><span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span></td>
+            <td>{{vuln.VulnStatus}}</td>
+        </tr>
+        {{end}}
+        </tbody>
+    </table>
+    {{end}}
+</section>
+        <!-- gallery-part:body-observations-summary:end -->
+        <!-- gallery-part:body-detailed-observations:start -->
+<div class="page-break"></div>
+<section id="detailed-observations" class="atlas-section atlas-detailed-observations">
+    <table class="atlas-section-heading" role="presentation">
+        <tr>
+            <td class="atlas-section-index">06</td>
+            <td><h1 class="atlas-section-title">Detailed observations</h1></td>
+        </tr>
+    </table>
+
+    <p class="atlas-lead">Each observation separates evidence from interpretation so that decisions remain traceable.</p>
+
+    {{if HasNoFindings}}
+    <div class="atlas-empty">There are no detailed observations to present.</div>
+    {{else}}
+    {{for vuln in Vulns}}
+    <article id="observation-{{vuln.VulnFindingId}}" class="atlas-observation">
+        <table class="atlas-observation-heading no-break">
+            <tr>
+                <td>
+                    <span class="atlas-observation-id tabular">Observation {{vuln.VulnFindingId}}</span>
+                    <h2>{{vuln.VulnName}}</h2>
+                </td>
+                <td class="atlas-observation-rating">
+                    <span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span>
+                </td>
+            </tr>
+        </table>
+
+        <table class="atlas-observation-meta no-break">
+            <tr>
+                <td><span class="atlas-meta-label">Category</span><strong>{{vuln.VulnCategory}}</strong></td>
+                <td><span class="atlas-meta-label">Status</span><strong>{{vuln.VulnStatus}}</strong></td>
+                <td><span class="atlas-meta-label">Affected area</span><strong>{{vuln.VulnTargets}}</strong></td>
+            </tr>
+            <tr>
+                <td><span class="atlas-meta-label">Score</span><strong class="tabular">{{vuln.VulnCvss}} · {{vuln.VulnCvssSeverity}}</strong></td>
+                <td><span class="atlas-meta-label">Priority</span><strong>{{vuln.VulnPriority}}</strong></td>
+                <td><span class="atlas-meta-label">Effort</span><strong>{{vuln.VulnComplexity}}</strong></td>
+            </tr>
+        </table>
+
+        <section class="atlas-observation-section">
+            <h3><span>01</span> Observation</h3>
+            <div class="rich-text">{{vuln.VulnDescription}}</div>
+        </section>
+
+        <section class="atlas-observation-section atlas-evidence-section">
+            <h3><span>02</span> Evidence and validation</h3>
+            <div class="rich-text">{{vuln.VulnPoc}}</div>
+        </section>
+
+        <section class="atlas-observation-section">
+            <h3><span>03</span> Impact and relevance</h3>
+            <div class="rich-text">{{vuln.VulnImpact}}</div>
+        </section>
+
+        <section class="atlas-observation-section atlas-action-section">
+            <h3><span>04</span> Recommended action</h3>
+            <div class="rich-text">{{vuln.VulnRemediation}}</div>
+        </section>
+
+        <table class="atlas-observation-references no-break">
+            <tr>
+                <td><span class="atlas-meta-label">Reference</span><code>{{vuln.VulnCve}}</code></td>
+                <td><span class="atlas-meta-label">Classification</span><code>{{vuln.VulnCwes}}</code></td>
+                <td><span class="atlas-meta-label">Vector</span><code>{{vuln.VulnCvssVector}}</code></td>
+            </tr>
+        </table>
+    </article>
+    {{if for.last == false}}<div class="page-break"></div>{{end}}
+    {{end}}
+    {{end}}
+</section>
+        <!-- gallery-part:body-detailed-observations:end -->
+        <!-- gallery-part:body-improvement-roadmap:start -->
+<div class="page-break"></div>
+<section id="improvement-roadmap" class="atlas-section atlas-improvement-roadmap">
+    <table class="atlas-section-heading" role="presentation">
+        <tr>
+            <td class="atlas-section-index">07</td>
+            <td><h1 class="atlas-section-title">Improvement roadmap</h1></td>
+        </tr>
+    </table>
+
+    <p class="atlas-lead">Sequence work by consequence and dependency. Owners should confirm scope, define evidence of completion and revisit residual risk.</p>
+
+    {{if HasNoFindings}}
+    <div class="atlas-empty">No finding-led actions are available. Use the activity plan to record learning, assurance or baseline work that should continue.</div>
+    {{else}}
+    <section class="atlas-roadmap-band atlas-roadmap-now">
+        <table class="atlas-roadmap-heading" role="presentation"><tr><td><span>Now</span><strong>Stabilise</strong></td><td>Critical and high priority</td></tr></table>
+        <div class="atlas-roadmap-list">
+            {{for vuln in Vulns}}
+            {{if vuln.VulnRisk == "Critical" || vuln.VulnRisk == "High"}}
+            <table class="atlas-roadmap-item"><tr><td class="tabular">{{vuln.VulnFindingId}}</td><td><strong>{{vuln.VulnName}}</strong><span>{{vuln.VulnPriority}} priority · {{vuln.VulnComplexity}} effort</span></td><td><span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span></td></tr></table>
+            {{end}}
+            {{end}}
+        </div>
+    </section>
+
+    <section class="atlas-roadmap-band atlas-roadmap-next">
+        <table class="atlas-roadmap-heading" role="presentation"><tr><td><span>Next</span><strong>Strengthen</strong></td><td>Medium priority</td></tr></table>
+        <div class="atlas-roadmap-list">
+            {{for vuln in Vulns}}
+            {{if vuln.VulnRisk == "Medium"}}
+            <table class="atlas-roadmap-item"><tr><td class="tabular">{{vuln.VulnFindingId}}</td><td><strong>{{vuln.VulnName}}</strong><span>{{vuln.VulnPriority}} priority · {{vuln.VulnComplexity}} effort</span></td><td><span class="severity-badge severity-medium">{{vuln.VulnRisk}}</span></td></tr></table>
+            {{end}}
+            {{end}}
+        </div>
+    </section>
+
+    <section class="atlas-roadmap-band atlas-roadmap-later">
+        <table class="atlas-roadmap-heading" role="presentation"><tr><td><span>Later</span><strong>Sustain</strong></td><td>Low and informational</td></tr></table>
+        <div class="atlas-roadmap-list">
+            {{for vuln in Vulns}}
+            {{if vuln.VulnRisk == "Low" || vuln.VulnRisk == "Info"}}
+            <table class="atlas-roadmap-item"><tr><td class="tabular">{{vuln.VulnFindingId}}</td><td><strong>{{vuln.VulnName}}</strong><span>{{vuln.VulnPriority}} priority · {{vuln.VulnComplexity}} effort</span></td><td><span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span></td></tr></table>
+            {{end}}
+            {{end}}
+        </div>
+    </section>
+    {{end}}
+
+    <div class="atlas-note"><strong>Completion rule.</strong> Do not close an action on implementation alone. Record the owner, completion evidence, validation date and any remaining limitation.</div>
+</section>
+        <!-- gallery-part:body-improvement-roadmap:end -->
+        <!-- gallery-part:body-outcomes-next-steps:start -->
+<div class="page-break"></div>
+<section id="outcomes-next-steps" class="atlas-section atlas-outcomes-next-steps">
+    <table class="atlas-section-heading" role="presentation">
+        <tr>
+            <td class="atlas-section-index">08</td>
+            <td><h1 class="atlas-section-title">Outcomes and next steps</h1></td>
+        </tr>
+    </table>
+
+    {{if HasNoFindings}}
+    <p class="atlas-lead">The work established a documented baseline without recording formal findings. Continue to retain evidence and revisit the defined scope when conditions change.</p>
+    {{else}}
+    <p class="atlas-lead">The assessment recorded <strong>{{VulnTotalCount}}</strong> observations and an overall rating of <strong class="risk-text-{{OverallRiskRating | string.downcase}}">{{OverallRiskRating}}</strong>. The roadmap should now be converted into owned, verifiable work.</p>
+    {{end}}
+
+    <table class="atlas-outcome-summary">
+        <tr>
+            <td><span class="atlas-meta-label">Assessment duration</span><strong class="tabular">{{ProjectDuration}} days</strong></td>
+            <td><span class="atlas-meta-label">Areas considered</span><strong class="tabular">{{Targets | array.size}}</strong></td>
+            <td><span class="atlas-meta-label">Recorded observations</span><strong class="tabular">{{VulnTotalCount}}</strong></td>
+            <td><span class="atlas-meta-label">Average score</span><strong class="tabular">{{VulnAvgCvss}}</strong></td>
+        </tr>
+    </table>
+
+    <h2 class="atlas-subtitle">A practical review cycle</h2>
+    <table class="atlas-next-steps-table">
+        <tr>
+            <td><span>01</span><strong>Assign</strong><p>Give each action one accountable owner and a realistic target date.</p></td>
+            <td><span>02</span><strong>Evidence</strong><p>Define what will demonstrate that the action changed the observed condition.</p></td>
+            <td><span>03</span><strong>Verify</strong><p>Review completed work independently and record any residual limitation.</p></td>
+        </tr>
+    </table>
+
+    <h2 class="atlas-subtitle">Closing context</h2>
+    <div class="rich-text atlas-closing-context">{{ProjectBusinessImpact}}</div>
+
+    <table class="atlas-contact-block">
+        <tr>
+            <td>
+                <span class="atlas-kicker">Questions and follow-up</span>
+                <strong>{{OrganizationContactName}}</strong>
+                <span>{{OrganizationEmail}} · {{OrganizationPhone}}</span>
+            </td>
+            <td>{{OrganizationName}}</td>
+        </tr>
+    </table>
+</section>
+        <!-- gallery-part:body-outcomes-next-steps:end -->
+        <!-- gallery-part:body-appendices:start -->
+<div class="page-break"></div>
+<section id="appendices" class="atlas-section atlas-appendices">
+    <table class="atlas-section-heading" role="presentation">
+        <tr>
+            <td class="atlas-section-index">A</td>
+            <td><h1 class="atlas-section-title">Appendices</h1></td>
+        </tr>
+    </table>
+
+    <h2 class="atlas-subtitle">A.1 Rating guide</h2>
+    <p>Ratings help sequence attention. They should be considered together with context, exposure, confidence and the effort required to improve the observed condition.</p>
+
+    <table class="atlas-data-table atlas-rating-guide">
+        <thead>
+        <tr><th>Rating</th><th>Reference range</th><th>Interpretation</th></tr>
+        </thead>
+        <tbody>
+        <tr><td><span class="severity-badge severity-critical">Critical</span></td><td class="tabular">9.0–10.0</td><td>Immediate ownership is required because credible impact could be severe or widespread.</td></tr>
+        <tr><td><span class="severity-badge severity-high">High</span></td><td class="tabular">7.0–8.9</td><td>Prioritised action is required; delay materially increases exposure or weakens assurance.</td></tr>
+        <tr><td><span class="severity-badge severity-medium">Medium</span></td><td class="tabular">4.0–6.9</td><td>Plan corrective work and track it through the normal improvement cycle.</td></tr>
+        <tr><td><span class="severity-badge severity-low">Low</span></td><td class="tabular">0.1–3.9</td><td>Address as part of routine maintenance, learning or quality improvement.</td></tr>
+        <tr><td><span class="severity-badge severity-info">Info</span></td><td class="tabular">0.0</td><td>Context, good practice or an opportunity that does not represent direct risk.</td></tr>
+        </tbody>
+    </table>
+
+    {{if HasChecklists}}
+    <h2 class="atlas-subtitle">A.2 Assessment evidence register</h2>
+    <table class="atlas-data-table atlas-evidence-register">
+        <thead>
+        <tr><th>Code</th><th>Criterion</th><th>Category</th><th>Status</th><th>Reviewer</th></tr>
+        </thead>
+        <tbody>
+        {{for item in ChecklistItems}}
+        <tr>
+            <td class="tabular">{{item.ChecklistItemCode}}</td>
+            <td><strong>{{item.ChecklistItemName}}</strong><div class="muted">{{item.ChecklistItemNotes}}</div></td>
+            <td>{{item.ChecklistItemCategoryName}}</td>
+            <td><span class="atlas-status">{{item.ChecklistItemStatus}}</span></td>
+            <td>{{item.ChecklistItemTesterName}}<br/><span class="muted tabular">{{item.ChecklistItemTestedDate}}</span></td>
+        </tr>
+        {{end}}
+        </tbody>
+    </table>
+    {{end}}
+
+    <h2 class="atlas-subtitle">A.3 Report conventions</h2>
+    <table class="atlas-conventions-table">
+        <tr><td>Observation</td><td>A recorded condition supported by context and evidence. Cervantes stores these records as findings.</td></tr>
+        <tr><td>Evidence</td><td>Material that allows a reader to understand how the observation was reached.</td></tr>
+        <tr><td>Recommended action</td><td>A proportionate change intended to improve the observed condition.</td></tr>
+        <tr><td>Validation</td><td>A later review that confirms whether an action changed the condition as intended.</td></tr>
+    </table>
+
+    <div class="atlas-appendix-footnote">Generated with OWASP Cervantes · {{TodayISO}} · {{ReportReference}}</div>
+</section>
+        <!-- gallery-part:body-appendices:end -->
+        <!-- report-zone:body:end -->
+    </main>
+    <footer>
+        <!-- report-zone:footer:start -->
+        <!-- gallery-part:footer-atlas:start -->
+<table class="atlas-footer-table" role="presentation">
+    <tr>
+        <td class="atlas-footer-left">{{OrganizationName}}</td>
+        <td class="atlas-footer-center">Atlas Foundation · {{Year}}</td>
+        <td class="atlas-footer-right tabular">Page <span id="current-page"></span> / <span id="total-pages"></span></td>
+    </tr>
+</table>
+        <!-- gallery-part:footer-atlas:end -->
+        <!-- report-zone:footer:end -->
+    </footer>
+</body>
+</html>

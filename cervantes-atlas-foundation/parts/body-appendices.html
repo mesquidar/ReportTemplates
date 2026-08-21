@@ -1,0 +1,55 @@
+<div class="page-break"></div>
+<section id="appendices" class="atlas-section atlas-appendices">
+    <table class="atlas-section-heading" role="presentation">
+        <tr>
+            <td class="atlas-section-index">A</td>
+            <td><h1 class="atlas-section-title">Appendices</h1></td>
+        </tr>
+    </table>
+
+    <h2 class="atlas-subtitle">A.1 Rating guide</h2>
+    <p>Ratings help sequence attention. They should be considered together with context, exposure, confidence and the effort required to improve the observed condition.</p>
+
+    <table class="atlas-data-table atlas-rating-guide">
+        <thead>
+        <tr><th>Rating</th><th>Reference range</th><th>Interpretation</th></tr>
+        </thead>
+        <tbody>
+        <tr><td><span class="severity-badge severity-critical">Critical</span></td><td class="tabular">9.0–10.0</td><td>Immediate ownership is required because credible impact could be severe or widespread.</td></tr>
+        <tr><td><span class="severity-badge severity-high">High</span></td><td class="tabular">7.0–8.9</td><td>Prioritised action is required; delay materially increases exposure or weakens assurance.</td></tr>
+        <tr><td><span class="severity-badge severity-medium">Medium</span></td><td class="tabular">4.0–6.9</td><td>Plan corrective work and track it through the normal improvement cycle.</td></tr>
+        <tr><td><span class="severity-badge severity-low">Low</span></td><td class="tabular">0.1–3.9</td><td>Address as part of routine maintenance, learning or quality improvement.</td></tr>
+        <tr><td><span class="severity-badge severity-info">Info</span></td><td class="tabular">0.0</td><td>Context, good practice or an opportunity that does not represent direct risk.</td></tr>
+        </tbody>
+    </table>
+
+    {{if HasChecklists}}
+    <h2 class="atlas-subtitle">A.2 Assessment evidence register</h2>
+    <table class="atlas-data-table atlas-evidence-register">
+        <thead>
+        <tr><th>Code</th><th>Criterion</th><th>Category</th><th>Status</th><th>Reviewer</th></tr>
+        </thead>
+        <tbody>
+        {{for item in ChecklistItems}}
+        <tr>
+            <td class="tabular">{{item.ChecklistItemCode}}</td>
+            <td><strong>{{item.ChecklistItemName}}</strong><div class="muted">{{item.ChecklistItemNotes}}</div></td>
+            <td>{{item.ChecklistItemCategoryName}}</td>
+            <td><span class="atlas-status">{{item.ChecklistItemStatus}}</span></td>
+            <td>{{item.ChecklistItemTesterName}}<br/><span class="muted tabular">{{item.ChecklistItemTestedDate}}</span></td>
+        </tr>
+        {{end}}
+        </tbody>
+    </table>
+    {{end}}
+
+    <h2 class="atlas-subtitle">A.3 Report conventions</h2>
+    <table class="atlas-conventions-table">
+        <tr><td>Observation</td><td>A recorded condition supported by context and evidence. Cervantes stores these records as findings.</td></tr>
+        <tr><td>Evidence</td><td>Material that allows a reader to understand how the observation was reached.</td></tr>
+        <tr><td>Recommended action</td><td>A proportionate change intended to improve the observed condition.</td></tr>
+        <tr><td>Validation</td><td>A later review that confirms whether an action changed the condition as intended.</td></tr>
+    </table>
+
+    <div class="atlas-appendix-footnote">Generated with OWASP Cervantes · {{TodayISO}} · {{ReportReference}}</div>
+</section>
