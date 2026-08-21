@@ -27,6 +27,7 @@
         <!-- report-zone:cover:start -->
         <!-- gallery-part:cover-atlas:start -->
 <div class="atlas-cover">
+    <div class="atlas-cover-rail" aria-hidden="true"></div>
     <img class="atlas-cover-contours" src="assets/atlas-contours.png" alt="Abstract topographic contour lines"/>
 
     <table class="atlas-cover-brand" role="presentation">
@@ -47,40 +48,42 @@
         <div class="atlas-cover-deck">A clear record of context, activities, evidence and next steps.</div>
     </div>
 
-    <table class="atlas-cover-metadata">
-        <tr>
-            <td>
-                <span class="atlas-cover-label">Prepared for</span>
-                <span class="atlas-cover-value">{{ClientName}}</span>
-            </td>
-            <td>
-                <span class="atlas-cover-label">Prepared by</span>
-                <span class="atlas-cover-value">{{OrganizationName}}</span>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <span class="atlas-cover-label">Assessment period</span>
-                <span class="atlas-cover-value tabular">{{StartDate}} — {{EndDate}}</span>
-            </td>
-            <td>
-                <span class="atlas-cover-label">Reference</span>
-                <span class="atlas-cover-value tabular">{{ReportReference}}</span>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <span class="atlas-cover-label">Issued</span>
-                <span class="atlas-cover-value">{{TodayLong}}</span>
-            </td>
-            <td>
-                <span class="atlas-cover-label">Version</span>
-                <span class="atlas-cover-value tabular">{{for doc in Documents}}{{if for.last}}{{doc.DocumentVersion}}{{end}}{{end}}</span>
-            </td>
-        </tr>
-    </table>
+    <div class="atlas-cover-metadata">
+        <table class="atlas-cover-metadata-table" role="presentation">
+            <tr>
+                <td>
+                    <span class="atlas-cover-label">Prepared for</span>
+                    <span class="atlas-cover-value">{{ClientName}}</span>
+                </td>
+                <td>
+                    <span class="atlas-cover-label">Prepared by</span>
+                    <span class="atlas-cover-value">{{OrganizationName}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="atlas-cover-label">Assessment period</span>
+                    <span class="atlas-cover-value tabular">{{StartDate}} — {{EndDate}}</span>
+                </td>
+                <td>
+                    <span class="atlas-cover-label">Reference</span>
+                    <span class="atlas-cover-value tabular">{{ReportReference}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="atlas-cover-label">Issued</span>
+                    <span class="atlas-cover-value">{{TodayLong}}</span>
+                </td>
+                <td>
+                    <span class="atlas-cover-label">Version</span>
+                    <span class="atlas-cover-value tabular">{{for doc in Documents}}{{if for.last}}{{doc.DocumentVersion}}{{end}}{{end}}</span>
+                </td>
+            </tr>
+        </table>
+    </div>
 
-    <div class="atlas-cover-folio">ATLAS—01</div>
+    <div class="atlas-cover-folio">ATLAS-01</div>
 </div>
         <!-- gallery-part:cover-atlas:end -->
         <!-- report-zone:cover:end -->
@@ -184,15 +187,17 @@
     </table>
 
     <nav class="atlas-toc" aria-label="Report contents">
-        <a class="atlas-toc-row" href="#context-objectives"><span>01</span><strong>Context and objectives</strong></a>
-        <a class="atlas-toc-row" href="#scope-approach"><span>02</span><strong>Scope and approach</strong></a>
-        <a class="atlas-toc-row" href="#activity-plan"><span>03</span><strong>Activity plan</strong></a>
-        <a class="atlas-toc-row" href="#assessment-progress"><span>04</span><strong>Assessment progress</strong></a>
-        <a class="atlas-toc-row" href="#observations-summary"><span>05</span><strong>Observations at a glance</strong></a>
-        <a class="atlas-toc-row" href="#detailed-observations"><span>06</span><strong>Detailed observations</strong></a>
-        <a class="atlas-toc-row" href="#improvement-roadmap"><span>07</span><strong>Improvement roadmap</strong></a>
-        <a class="atlas-toc-row" href="#outcomes-next-steps"><span>08</span><strong>Outcomes and next steps</strong></a>
-        <a class="atlas-toc-row" href="#appendices"><span>A</span><strong>Appendices</strong></a>
+        <table class="atlas-toc-table">
+            <tr><td class="atlas-toc-index">01</td><td><a href="#context-objectives">Context and objectives</a></td></tr>
+            <tr><td class="atlas-toc-index">02</td><td><a href="#scope-approach">Scope and approach</a></td></tr>
+            <tr><td class="atlas-toc-index">03</td><td><a href="#activity-plan">Activity plan</a></td></tr>
+            <tr><td class="atlas-toc-index">04</td><td><a href="#assessment-progress">Assessment progress</a></td></tr>
+            <tr><td class="atlas-toc-index">05</td><td><a href="#observations-summary">Observations at a glance</a></td></tr>
+            <tr><td class="atlas-toc-index">06</td><td><a href="#detailed-observations">Detailed observations</a></td></tr>
+            <tr><td class="atlas-toc-index">07</td><td><a href="#improvement-roadmap">Improvement roadmap</a></td></tr>
+            <tr><td class="atlas-toc-index">08</td><td><a href="#outcomes-next-steps">Outcomes and next steps</a></td></tr>
+            <tr><td class="atlas-toc-index">A</td><td><a href="#appendices">Appendices</a></td></tr>
+        </table>
     </nav>
 
     <div class="atlas-contents-note">

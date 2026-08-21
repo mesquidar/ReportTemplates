@@ -290,14 +290,13 @@ cover { page: atlas-cover-page; }
     color: #20231F;
 }
 
-.atlas-cover::before {
+.atlas-cover-rail {
     position: absolute;
     top: 0;
     left: 0;
     width: 13mm;
     height: 297mm;
     background: #66705A;
-    content: "";
 }
 
 .atlas-cover-contours {
@@ -372,14 +371,19 @@ cover { page: atlas-cover-page; }
 
 .atlas-cover-metadata {
     position: absolute;
-    bottom: 30mm;
+    top: 218mm;
     left: 29mm;
     width: 158mm;
-    table-layout: fixed;
-    border-top: 1pt solid #8F9389;
 }
 
-.atlas-cover-metadata td {
+.atlas-cover-metadata-table {
+    width: 100%;
+    table-layout: fixed;
+    border-top: 1pt solid #8F9389;
+    border-collapse: collapse;
+}
+
+.atlas-cover-metadata-table td {
     width: 50%;
     padding: 8pt 10pt 9pt 0;
     border-bottom: .6pt solid #D1CDC1;
@@ -406,8 +410,8 @@ cover { page: atlas-cover-page; }
 
 .atlas-cover-folio {
     position: absolute;
+    top: 281mm;
     right: 23mm;
-    bottom: 12mm;
     color: #66705A;
     font-size: 7pt;
     font-weight: 600;
@@ -525,18 +529,19 @@ footer {
 /* gallery-part:body-contents:start */
 .atlas-toc { margin-top: 6pt; }
 
-.atlas-toc-row {
-    display: table;
+.atlas-toc-table {
     width: 100%;
-    padding: 9pt 0;
-    border-bottom: .7pt solid #D8D4C8;
-    color: #292B27;
+    border-collapse: collapse;
+    table-layout: fixed;
 }
 
-.atlas-toc-row > span,
-.atlas-toc-row > strong { display: table-cell; vertical-align: baseline; }
+.atlas-toc-table td {
+    padding: 9pt 0;
+    border-bottom: .7pt solid #D8D4C8;
+    vertical-align: baseline;
+}
 
-.atlas-toc-row > span {
+.atlas-toc-table .atlas-toc-index {
     width: 18mm;
     color: #B45F43;
     font-size: 8pt;
@@ -544,18 +549,12 @@ footer {
     letter-spacing: 1pt;
 }
 
-.atlas-toc-row > strong {
+.atlas-toc-table a {
+    color: #292B27;
     font-family: "Atlas Serif", Georgia, serif;
     font-size: 14pt;
     font-weight: 400;
-}
-
-.atlas-toc-row > strong::after {
-    float: right;
-    color: #777B72;
-    font-family: "Atlas Sans", Arial, sans-serif;
-    font-size: 8pt;
-    content: target-counter(attr(href), page);
+    text-decoration: none;
 }
 
 .atlas-contents-note {

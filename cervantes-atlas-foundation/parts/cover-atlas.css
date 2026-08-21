@@ -10,14 +10,13 @@ cover { page: atlas-cover-page; }
     color: #20231F;
 }
 
-.atlas-cover::before {
+.atlas-cover-rail {
     position: absolute;
     top: 0;
     left: 0;
     width: 13mm;
     height: 297mm;
     background: #66705A;
-    content: "";
 }
 
 .atlas-cover-contours {
@@ -92,14 +91,19 @@ cover { page: atlas-cover-page; }
 
 .atlas-cover-metadata {
     position: absolute;
-    bottom: 30mm;
+    top: 218mm;
     left: 29mm;
     width: 158mm;
-    table-layout: fixed;
-    border-top: 1pt solid #8F9389;
 }
 
-.atlas-cover-metadata td {
+.atlas-cover-metadata-table {
+    width: 100%;
+    table-layout: fixed;
+    border-top: 1pt solid #8F9389;
+    border-collapse: collapse;
+}
+
+.atlas-cover-metadata-table td {
     width: 50%;
     padding: 8pt 10pt 9pt 0;
     border-bottom: .6pt solid #D1CDC1;
@@ -126,8 +130,8 @@ cover { page: atlas-cover-page; }
 
 .atlas-cover-folio {
     position: absolute;
+    top: 281mm;
     right: 23mm;
-    bottom: 12mm;
     color: #66705A;
     font-size: 7pt;
     font-weight: 600;
