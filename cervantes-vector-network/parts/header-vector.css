@@ -1,8 +1,26 @@
-header { position: running(header); width: 100%; }
+header { position: running(header); width: 100%; padding-bottom: 4mm; background: #FFFFFF; }
 .vector-header-table { width: 100%; border-collapse: collapse; border-bottom: .7pt solid #8FB2BA; table-layout: fixed; }
-.vector-header-spacer td { height: 4mm; padding: 0; border: 0; font-size: 1pt; line-height: 4mm; }
+.vector-header-spacer td { height: 5mm; padding: 0; border: 0; font-size: 1pt; line-height: 5mm; }
 .vector-header-table td { padding: 0 0 6pt; vertical-align: middle; }
-.vector-header-brand { width: 36%; color: #0F3B49; font-size: 7pt; font-weight: 700; letter-spacing: .7pt; text-transform: uppercase; }
-.vector-header-mark { display: inline-block; margin-right: 6pt; padding: 1.5pt 3pt; border: .7pt solid #25B9D1; color: #087F96; font-family: "DejaVu Sans Mono", Consolas, monospace; font-size: 7pt; }
+.vector-header-brand { width: 36%; }
+.vector-header-brand-table { width: 100%; border-collapse: collapse; }
+.vector-header-brand-table td { padding: 0; border: 0; vertical-align: middle; }
+.vector-header-mark-cell { width: 19pt; }
+.vector-header-mark {
+    display: block;
+    width: 14pt;
+    height: 14pt;
+    border: .7pt solid #25B9D1;
+    color: #087F96;
+    font-family: "DejaVu Sans Mono", Consolas, monospace;
+    font-size: 6.5pt;
+    font-weight: 700;
+    line-height: 14pt;
+    text-align: center;
+}
+.vector-header-wordmark,
+.vector-header-series { display: block; }
+.vector-header-wordmark { color: #0F3B49; font-size: 6.8pt; font-weight: 700; letter-spacing: .15pt; }
+.vector-header-series { margin-top: 1pt; color: #087F96; font-family: "DejaVu Sans Mono", Consolas, monospace; font-size: 5.5pt; font-weight: 700; letter-spacing: .55pt; text-transform: uppercase; }
 .vector-header-project { width: 42%; color: #587681; font-size: 7pt; text-align: center; }
 .vector-header-reference { width: 22%; color: #0F3B49; font-size: 6.5pt; text-align: right; }

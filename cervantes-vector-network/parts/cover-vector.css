@@ -16,7 +16,7 @@ cover { page: vector-cover-page; }
 .vector-cover-grid table { width: 100%; height: 100%; table-layout: fixed; border-collapse: collapse; }
 .vector-cover-grid td { border: .45pt solid #C7DADF; }
 
-.vector-cover-brand { position: absolute; top: 24mm; left: 15mm; width: 168mm; }
+.vector-cover-brand { position: absolute; top: 25mm; left: 71mm; width: 117mm; }
 .vector-cover-brand-table { width: 100%; border-collapse: collapse; }
 .vector-cover-brand-table td { vertical-align: middle; }
 .vector-cover-mark-cell { width: 18mm; }
@@ -34,10 +34,10 @@ cover { page: vector-cover-page; }
 }
 .vector-cover-wordmark,
 .vector-cover-series { display: block; }
-.vector-cover-wordmark { color: #F3F8F9; font-size: 14pt; font-weight: 700; letter-spacing: -.15pt; }
-.vector-cover-series { color: #7FD8E5; font-family: "DejaVu Sans Mono", Consolas, monospace; font-size: 6.7pt; font-weight: 700; letter-spacing: 1pt; text-transform: uppercase; }
+.vector-cover-wordmark { color: #071B26; font-size: 14pt; font-weight: 700; letter-spacing: -.15pt; }
+.vector-cover-series { color: #087F96; font-family: "DejaVu Sans Mono", Consolas, monospace; font-size: 6.7pt; font-weight: 700; letter-spacing: 1pt; text-transform: uppercase; }
 
-.vector-cover-coordinates { position: absolute; top: 68mm; left: 15mm; width: 34mm; color: #66818B; font-size: 6.3pt; letter-spacing: .6pt; }
+.vector-cover-coordinates { position: absolute; top: 62mm; left: 71mm; width: 117mm; color: #587681; font-size: 6.3pt; letter-spacing: .6pt; text-align: right; }
 
 .vector-cover-main { position: absolute; top: 78mm; left: 71mm; width: 117mm; }
 .vector-cover-report-type { margin-bottom: 10pt; color: #087F96; font-family: "DejaVu Sans Mono", Consolas, monospace; font-size: 7.2pt; font-weight: 700; letter-spacing: 1.15pt; text-transform: uppercase; }
