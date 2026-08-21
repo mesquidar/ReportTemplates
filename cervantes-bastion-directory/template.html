@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Cervantes Bastion Directory identity security report"/>
+    <title>{{ProjectName}} | Bastion Directory Report</title>
+</head>
+<body>
+    <header>
+        <!-- report-zone:header:start -->
+        <!-- gallery-part:header-bastion:start -->
+<table class="bastion-header-table" role="presentation">
+    <tr class="bastion-header-spacer"><td colspan="3"></td></tr>
+    <tr>
+        <td class="bastion-header-brand">
+            <table class="bastion-header-brand-table" role="presentation">
+                <tr>
+                    <td class="bastion-header-mark-cell"><span class="bastion-header-mark">B</span></td>
+                    <td class="bastion-header-brand-copy"><span>Cervantes</span><small>Bastion / Directory</small></td>
+                </tr>
+            </table>
+        </td>
+        <td class="bastion-header-project">{{ProjectName}}</td>
+        <td class="bastion-header-reference tabular">{{ReportReference}}</td>
+    </tr>
+</table>
+        <!-- gallery-part:header-bastion:end -->
+        <!-- report-zone:header:end -->
+    </header>
+    <cover>
+        <!-- report-zone:cover:start -->
+        <!-- gallery-part:cover-bastion:start -->
+<div class="bastion-cover">
+    <div class="bastion-cover-edge"></div>
+
+    <div class="bastion-cover-brand">
+        <table class="bastion-cover-brand-table" role="presentation">
+            <tr>
+                <td class="bastion-cover-mark-cell"><span class="bastion-cover-mark">B</span></td>
+                <td><span class="bastion-cover-wordmark">Cervantes</span><span class="bastion-cover-series">Bastion / Directory</span></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="bastion-cover-plan">
+        <div class="bastion-plan-caption">Identity trust architecture</div>
+        <div class="bastion-plan-outer">
+            <div class="bastion-plan-inner">
+                <table class="bastion-plan-route" role="presentation">
+                    <tr><td><span class="bastion-node">EXT</span><strong>Ingress</strong></td><td class="bastion-route-link">&gt;</td><td><span class="bastion-node">DIR</span><strong>Domain</strong></td></tr>
+                    <tr><td><span class="bastion-node">SVC</span><strong>Services</strong></td><td class="bastion-route-link">&gt;</td><td><span class="bastion-node bastion-node-core">T0</span><strong>Tier 0</strong></td></tr>
+                    <tr><td><span class="bastion-node">ADM</span><strong>Admin plane</strong></td><td class="bastion-route-link">&gt;</td><td><span class="bastion-node bastion-node-core">KEY</span><strong>Crown assets</strong></td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="bastion-cover-main">
+        <div class="bastion-cover-report-type">Active Directory and identity security assessment</div>
+        <h1 class="bastion-cover-title">{{ProjectName}}</h1>
+        <div class="bastion-cover-deck">Trust boundaries, privilege routes and controls that protect administrative authority.</div>
+    </div>
+
+    <div class="bastion-cover-metadata">
+        <table class="bastion-cover-metadata-table" role="presentation">
+            <tr>
+                <td><span class="bastion-cover-label">Client</span><span class="bastion-cover-value">{{ClientName}}</span></td>
+                <td><span class="bastion-cover-label">Assessment window</span><span class="bastion-cover-value tabular">{{StartDate}} - {{EndDate}}</span></td>
+                <td><span class="bastion-cover-label">Reference</span><span class="bastion-cover-value tabular">{{ReportReference}}</span></td>
+            </tr>
+            <tr>
+                <td><span class="bastion-cover-label">Prepared by</span><span class="bastion-cover-value">{{OrganizationName}}</span></td>
+                <td><span class="bastion-cover-label">Issued</span><span class="bastion-cover-value">{{TodayLong}}</span></td>
+                <td><span class="bastion-cover-label">Version</span><span class="bastion-cover-value tabular">{{for doc in Documents}}{{if for.last}}{{doc.DocumentVersion}}{{end}}{{end}}</span></td>
+            </tr>
+        </table>
+        <div class="bastion-cover-classification">CONFIDENTIAL</div>
+    </div>
+</div>
+        <!-- gallery-part:cover-bastion:end -->
+        <!-- report-zone:cover:end -->
+    </cover>
+    <main>
+        <!-- report-zone:body:start -->
+        <!-- gallery-part:body-document-record:start -->
+<div class="page-break"></div>
+<section class="bastion-section bastion-record">
+    <table class="bastion-section-heading" role="presentation">
+        <tr><td class="bastion-keystone"><span></span></td><td><h1 id="document-record" class="bastion-section-title">Document Record</h1></td></tr>
+    </table>
+    <p class="bastion-lead">Control information for the identity security assessment, its custodians and revision history.</p>
+
+    <table class="bastion-record-register">
+        <tr><th>Document</th><td>{{ProjectName}}</td><th>Reference</th><td class="tabular">{{ReportReference}}</td></tr>
+        <tr><th>Client</th><td>{{ClientName}}</td><th>Prepared by</th><td>{{OrganizationName}}</td></tr>
+        <tr><th>Assessment window</th><td class="tabular">{{StartDate}} - {{EndDate}}</td><th>Issued</th><td>{{TodayLong}}</td></tr>
+        <tr><th>Classification</th><td>Confidential</td><th>Assessment type</th><td>Active Directory and identity security</td></tr>
+    </table>
+
+    <h2 class="bastion-subtitle"><span>Revision</span> ledger</h2>
+    <table class="bastion-data-table">
+        <thead><tr><th>Version</th><th>Date</th><th>Change record</th></tr></thead>
+        <tbody>
+            {{for doc in Documents}}
+            <tr><td class="tabular">{{doc.DocumentVersion}}</td><td class="tabular">{{doc.DocumentCreatedDate}}</td><td>{{doc.DocumentDescription}}</td></tr>
+            {{end}}
+        </tbody>
+    </table>
+
+    <h2 class="bastion-subtitle"><span>Assessment</span> custodians</h2>
+    <table class="bastion-data-table">
+        <thead><tr><th>Name</th><th>Role</th><th>Contact</th></tr></thead>
+        <tbody>
+            {{for user in Users}}
+            <tr><td><strong>{{user.UserFullName}}</strong></td><td>{{user.UserPosition}}</td><td>{{user.UserEmail}}</td></tr>
+            {{end}}
+        </tbody>
+    </table>
+
+    <div class="bastion-record-notice"><strong>Handling instruction</strong><span>Distribute only to personnel responsible for identity operations, remediation and risk acceptance.</span></div>
+</section>
+        <!-- gallery-part:body-document-record:end -->
+        <!-- gallery-part:body-contents:start -->
+<div class="page-break"></div>
+<section class="bastion-section bastion-contents">
+    <table class="bastion-section-heading" role="presentation">
+        <tr><td class="bastion-keystone"><span></span></td><td><h1 id="contents" class="bastion-section-title">Contents</h1></td></tr>
+    </table>
+    <p class="bastion-lead">A route through the assessment from identity context to control recovery.</p>
+
+    <table class="bastion-contents-map">
+        <tr><td class="bastion-contents-marker">BRIEF</td><td><a href="#executive-summary">Executive Summary</a><span>Material exposure and decision context</span></td></tr>
+        <tr><td class="bastion-contents-marker">BOUNDARY</td><td><a href="#environment-trust-boundaries">Environment and Trust Boundaries</a><span>Directory scope, assets and administrative planes</span></td></tr>
+        <tr><td class="bastion-contents-marker">MODEL</td><td><a href="#identity-attack-model">Identity Attack Model</a><span>Adversary movement across trust relationships</span></td></tr>
+        <tr><td class="bastion-contents-marker">REGISTER</td><td><a href="#findings-overview">Findings Overview</a><span>Severity, ownership and current state</span></td></tr>
+        <tr><td class="bastion-contents-marker">EVIDENCE</td><td><a href="#detailed-identity-findings">Detailed Identity Findings</a><span>Verified conditions, impact and remediation</span></td></tr>
+        <tr><td class="bastion-contents-marker">ROUTES</td><td><a href="#privilege-path-analysis">Privilege Path Analysis</a><span>Control relationships and Tier 0 reachability</span></td></tr>
+        <tr><td class="bastion-contents-marker">HARDEN</td><td><a href="#hardening-roadmap">Hardening Roadmap</a><span>Containment and structural improvement</span></td></tr>
+        <tr><td class="bastion-contents-marker">ASSURE</td><td><a href="#validation-recovery">Validation and Recovery Readiness</a><span>Retest evidence and identity restoration</span></td></tr>
+        <tr><td class="bastion-contents-marker">ANNEX</td><td><a href="#appendices">Appendices</a><span>Rating model and report coordinates</span></td></tr>
+    </table>
+
+    <div class="bastion-contents-key">
+        <strong>How to read the architecture</strong>
+        <p>Boundaries show where authority changes. Nodes identify identity control points. Copper routes indicate the relationships that deserve the closest operational attention.</p>
+    </div>
+</section>
+        <!-- gallery-part:body-contents:end -->
+        <!-- gallery-part:body-executive-summary:start -->
+<div class="page-break"></div>
+<section class="bastion-section bastion-executive">
+    <table class="bastion-section-heading" role="presentation">
+        <tr><td class="bastion-keystone"><span></span></td><td><h1 id="executive-summary" class="bastion-section-title">Executive Summary</h1></td></tr>
+    </table>
+    <p class="bastion-lead">A decision view of how identity weaknesses affect administrative authority, service continuity and recovery options.</p>
+
+    <table class="bastion-risk-command" role="presentation">
+        <tr>
+            <td class="bastion-risk-rating"><span>Overall identity risk</span><strong class="risk-text-{{OverallRiskRating | string.downcase}}">{{OverallRiskRating}}</strong></td>
+            <td class="bastion-risk-reading">{{if HasCriticalFindings}}A critical condition exposes a credible route to high-trust identity control. Immediate containment is required before structural remediation.{{else if HasHighFindings}}High-risk conditions create meaningful paths toward privileged identity compromise and require accelerated control work.{{else}}No critical privilege route was verified. Preserve the controls that held and address the recorded weaknesses through normal governance.{{end}}</td>
+        </tr>
+    </table>
+
+    <table class="bastion-severity-ledger" role="presentation">
+        <tr>
+            <td><strong>{{VulnCriticalCount}}</strong><span>Critical</span></td>
+            <td><strong>{{VulnHighCount}}</strong><span>High</span></td>
+            <td><strong>{{VulnMediumCount}}</strong><span>Medium</span></td>
+            <td><strong>{{VulnLowCount}}</strong><span>Low</span></td>
+            <td><strong>{{VulnInfoCount}}</strong><span>Info</span></td>
+        </tr>
+    </table>
+
+    <table class="bastion-two-column bastion-executive-columns" role="presentation">
+        <tr>
+            <td>
+                <h2 class="bastion-subtitle"><span>Assessment</span> narrative</h2>
+                <div class="rich-text">{{ProjectExecutiveSummary}}</div>
+            </td>
+            <td>
+                <h2 class="bastion-subtitle"><span>Control</span> coordinates</h2>
+                <table class="bastion-executive-facts">
+                    <tr><th>Client</th><td>{{ClientName}}</td></tr>
+                    <tr><th>Window</th><td class="tabular">{{StartDate}} - {{EndDate}}</td></tr>
+                    <tr><th>Findings</th><td class="tabular">{{VulnTotalCount}}</td></tr>
+                    <tr><th>Mean CVSS</th><td class="tabular">{{VulnAvgCvss}}</td></tr>
+                    <tr><th>Authority</th><td>{{OrganizationName}}</td></tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</section>
+        <!-- gallery-part:body-executive-summary:end -->
+        <!-- gallery-part:body-environment-trust-boundaries:start -->
+<div class="page-break"></div>
+<section class="bastion-section bastion-boundaries">
+    <table class="bastion-section-heading" role="presentation">
+        <tr><td class="bastion-keystone"><span></span></td><td><h1 id="environment-trust-boundaries" class="bastion-section-title">Environment and Trust Boundaries</h1></td></tr>
+    </table>
+    <p class="bastion-lead">The identity environment is treated as a set of authority boundaries, not a flat collection of systems.</p>
+
+    <div class="rich-text bastion-boundary-scope">{{ProjectDescription}}</div>
+
+    <h2 class="bastion-subtitle"><span>Authority</span> architecture</h2>
+    <table class="bastion-boundary-plan" role="presentation">
+        <tr>
+            <td class="bastion-boundary-external"><span>External identities</span><strong>Partners, remote access and federated trust</strong></td>
+            <td class="bastion-boundary-arrow">&gt;</td>
+            <td class="bastion-boundary-enterprise">
+                <span>Enterprise identity plane</span>
+                <table role="presentation">
+                    <tr><td>Endpoints</td><td>Services</td></tr>
+                    <tr><td>Users</td><td>Administration</td></tr>
+                </table>
+            </td>
+            <td class="bastion-boundary-arrow">&gt;</td>
+            <td class="bastion-boundary-core"><span>Tier 0 boundary</span><strong>Directory, keys and recovery authority</strong></td>
+        </tr>
+    </table>
+
+    <div class="bastion-boundary-rule"><strong>Boundary rule</strong><span>Every route that changes administrative authority must be explicit, constrained, monitored and recoverable.</span></div>
+
+    <h2 class="bastion-subtitle"><span>In-scope</span> identity assets</h2>
+    {{if HasTargets}}
+    <table class="bastion-data-table bastion-target-register">
+        <thead><tr><th>Asset or boundary</th><th>Type</th><th>Assessment context</th></tr></thead>
+        <tbody>
+            {{for target in Targets}}
+            <tr><td class="bastion-mono"><strong>{{target.TargetName}}</strong></td><td><span class="bastion-status">{{target.TargetType}}</span></td><td>{{target.TargetDescription}}</td></tr>
+            {{end}}
+        </tbody>
+    </table>
+    {{else}}
+    <div class="bastion-empty">No target register was attached to this report. Confirm directory, federation, endpoint and administrative boundaries before remediation begins.</div>
+    {{end}}
+</section>
+        <!-- gallery-part:body-environment-trust-boundaries:end -->
+        <!-- gallery-part:body-identity-attack-model:start -->
+<div class="page-break"></div>
+<section class="bastion-section bastion-attack-model">
+    <table class="bastion-section-heading" role="presentation">
+        <tr><td class="bastion-keystone"><span></span></td><td><h1 id="identity-attack-model" class="bastion-section-title">Identity Attack Model</h1></td></tr>
+    </table>
+    <p class="bastion-lead">The model follows changes in identity authority: how access is obtained, expanded, transferred and converted into control.</p>
+
+    <table class="bastion-route-model" role="presentation">
+        <tr>
+            <td><span class="bastion-route-node">FOOTHOLD</span><strong>Initial identity</strong><small>Valid session, endpoint or service context</small></td>
+            <td class="bastion-route-joint">&gt;</td>
+            <td><span class="bastion-route-node">EXPAND</span><strong>Credential reach</strong><small>Secrets, tickets, tokens and delegated rights</small></td>
+            <td class="bastion-route-joint">&gt;</td>
+            <td><span class="bastion-route-node">CONTROL</span><strong>Privileged authority</strong><small>Administrative action across a trust boundary</small></td>
+        </tr>
+    </table>
+
+    <table class="bastion-model-lenses">
+        <tr><th>Identity material</th><td>Passwords, hashes, tickets, tokens, certificates, keys and recovery secrets.</td></tr>
+        <tr><th>Control relationships</th><td>Group membership, delegation, service control, policy rights, ACLs and federation claims.</td></tr>
+        <tr><th>Administrative surfaces</th><td>Management hosts, remote protocols, automation accounts, backup systems and identity consoles.</td></tr>
+        <tr><th>Evidence required</th><td>A reproducible relationship between a starting principal, an exposed control and a protected authority.</td></tr>
+    </table>
+
+    <h2 class="bastion-subtitle"><span>Assessment</span> questions</h2>
+    <table class="bastion-question-grid" role="presentation">
+        <tr><td><strong>Can authority cross a boundary?</strong><span>Review paths from standard access to administrative or recovery roles.</span></td><td><strong>Can identity material be reused?</strong><span>Review credential placement, session isolation and delegation constraints.</span></td></tr>
+        <tr><td><strong>Can control changes be observed?</strong><span>Review telemetry for group, policy, trust and credential events.</span></td><td><strong>Can the identity plane be restored?</strong><span>Review protected backups, emergency access and trusted rebuild procedures.</span></td></tr>
+    </table>
+
+    <div class="bastion-callout"><strong>Business consequence</strong><br/><span>{{ProjectBusinessImpact}}</span></div>
+</section>
+        <!-- gallery-part:body-identity-attack-model:end -->
+        <!-- gallery-part:body-findings-overview:start -->
+<div class="page-break"></div>
+<section class="bastion-section bastion-findings-overview">
+    <table class="bastion-section-heading" role="presentation">
+        <tr><td class="bastion-keystone"><span></span></td><td><h1 id="findings-overview" class="bastion-section-title">Findings Overview</h1></td></tr>
+    </table>
+    <p class="bastion-lead">Verified identity conditions are recorded as control breaks and ranked by their contribution to authority compromise.</p>
+
+    <table class="bastion-overview-command" role="presentation">
+        <tr>
+            <td><span>Total findings</span><strong class="tabular">{{VulnTotalCount}}</strong></td>
+            <td><span>Mean CVSS</span><strong class="tabular">{{VulnAvgCvss}}</strong></td>
+            <td><span>Overall rating</span><strong class="risk-text-{{OverallRiskRating | string.downcase}}">{{OverallRiskRating}}</strong></td>
+        </tr>
+    </table>
+
+    {{if HasNoFindings}}
+    <div class="bastion-empty">No findings were recorded. This is not a guarantee that every identity route is closed; preserve evidence of the controls that were validated.</div>
+    {{else}}
+    <table class="bastion-data-table bastion-findings-register">
+        <thead><tr><th>ID</th><th>Identity condition</th><th>Risk</th><th>CVSS</th><th>Status</th></tr></thead>
+        <tbody>
+            {{for vuln in Vulns}}
+            <tr>
+                <td class="bastion-mono">{{vuln.VulnFindingId}}</td>
+                <td><a href="#vuln-{{vuln.VulnFindingId}}"><strong>{{vuln.VulnName}}</strong></a><br/><span class="muted">{{vuln.VulnCategory}}</span></td>
+                <td><span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span></td>
+                <td class="bastion-mono">{{vuln.VulnCvss}}</td>
+                <td><span class="bastion-status">{{vuln.VulnStatus}}</span></td>
+            </tr>
+            {{end}}
+        </tbody>
+    </table>
+    {{end}}
+
+    <div class="bastion-overview-note">Prioritisation considers severity together with privilege reach, reuse potential, affected identity tier and the quality of compensating controls.</div>
+</section>
+        <!-- gallery-part:body-findings-overview:end -->
+        <!-- gallery-part:body-detailed-findings:start -->
+<div class="page-break"></div>
+<section class="bastion-section bastion-detailed-findings">
+    <table class="bastion-section-heading" role="presentation">
+        <tr><td class="bastion-keystone"><span></span></td><td><h1 id="detailed-identity-findings" class="bastion-section-title">Detailed Identity Findings</h1></td></tr>
+    </table>
+    <p class="bastion-lead">Each finding connects the observed identity condition to its authority impact, evidence and required control change.</p>
+
+    {{if HasNoFindings}}
+    <div class="bastion-empty">No detailed findings are available for this assessment.</div>
+    {{else}}
+    {{for vuln in Vulns}}
+    <article class="bastion-finding" id="vuln-{{vuln.VulnFindingId}}">
+        <table class="bastion-finding-heading severity-border-{{vuln.VulnRisk | string.downcase}}" role="presentation">
+            <tr>
+                <td class="bastion-finding-id"><span>Identity finding</span><strong class="bastion-mono">{{vuln.VulnFindingId}}</strong></td>
+                <td class="bastion-finding-title"><h2>{{vuln.VulnName}}</h2><span>{{vuln.VulnCategory}}</span></td>
+                <td class="bastion-finding-rating"><span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span><strong class="bastion-mono">{{vuln.VulnCvss}}</strong></td>
+            </tr>
+        </table>
+
+        <table class="bastion-finding-coordinates">
+            <tr><th>Affected identities or assets</th><td>{{vuln.VulnTargets}}</td><th>Status</th><td>{{vuln.VulnStatus}}</td></tr>
+            <tr><th>CVSS vector</th><td colspan="3"><code>{{vuln.VulnCvssVector}}</code></td></tr>
+            {{if vuln.VulnCve != ""}}
+            <tr><th>CVE</th><td class="bastion-mono">{{vuln.VulnCve}}</td><th>CWE</th><td class="bastion-mono">{{vuln.VulnCwes}}</td></tr>
+            {{end}}
+        </table>
+
+        <div class="bastion-finding-block">
+            <h3>Observed condition</h3>
+            <div class="rich-text">{{vuln.VulnDescription}}</div>
+        </div>
+        <div class="bastion-finding-block bastion-finding-impact">
+            <h3>Identity and authority impact</h3>
+            <div class="rich-text">{{vuln.VulnImpact}}</div>
+        </div>
+        <div class="bastion-finding-block">
+            <h3>Verification evidence</h3>
+            <div class="rich-text">{{vuln.VulnPoc}}</div>
+        </div>
+        <div class="bastion-finding-block bastion-finding-remediation">
+            <h3>Required control change</h3>
+            <div class="rich-text">{{vuln.VulnRemediation}}</div>
+            <table role="presentation"><tr><td><span>Priority</span><strong>{{vuln.VulnPriority}}</strong></td><td><span>Complexity</span><strong>{{vuln.VulnComplexity}}</strong></td></tr></table>
+        </div>
+    </article>
+    {{if for.last == false}}<div class="page-break"></div>{{end}}
+    {{end}}
+    {{end}}
+</section>
+        <!-- gallery-part:body-detailed-findings:end -->
+        <!-- gallery-part:body-privilege-path-analysis:start -->
+<div class="page-break"></div>
+<section class="bastion-section bastion-privilege-paths">
+    <table class="bastion-section-heading" role="presentation">
+        <tr><td class="bastion-keystone"><span></span></td><td><h1 id="privilege-path-analysis" class="bastion-section-title">Privilege Path Analysis</h1></td></tr>
+    </table>
+    <p class="bastion-lead">Privilege is analysed as a route through principals, control relationships and administrative boundaries.</p>
+
+    <div class="bastion-path-shell">
+        <div class="bastion-path-boundary-label">Protected authority boundary</div>
+        <table class="bastion-path-architecture" role="presentation">
+            <tr>
+                <td><span class="bastion-path-node">USER</span><strong>Starting principal</strong><small>Standard or service identity</small></td>
+                <td class="bastion-path-link">&gt;</td>
+                <td><span class="bastion-path-node">CTRL</span><strong>Control edge</strong><small>Delegation, ACL, token or credential</small></td>
+                <td class="bastion-path-link">&gt;</td>
+                <td class="bastion-path-core"><span class="bastion-path-node">T0</span><strong>Protected authority</strong><small>Directory, keys or recovery control</small></td>
+            </tr>
+        </table>
+    </div>
+
+    <table class="bastion-path-measures" role="presentation">
+        <tr>
+            <td><span>Scoped identities</span><strong class="tabular">{{Targets | array.size}}</strong></td>
+            <td><span>Verified conditions</span><strong class="tabular">{{VulnTotalCount}}</strong></td>
+            <td><span>Assessment duration</span><strong class="tabular">{{ProjectDuration}} days</strong></td>
+        </tr>
+    </table>
+
+    <h2 class="bastion-subtitle"><span>Priority</span> route contributors</h2>
+    {{if HasNoFindings}}
+    <div class="bastion-empty">No finding was available to associate with a privilege route.</div>
+    {{else}}
+    <table class="bastion-data-table bastion-path-contributors">
+        <thead><tr><th>ID</th><th>Control break</th><th>Affected route</th><th>Risk</th></tr></thead>
+        <tbody>
+            {{for vuln in Vulns}}
+            {{if vuln.VulnRisk == "Critical" || vuln.VulnRisk == "High"}}
+            <tr><td class="bastion-mono">{{vuln.VulnFindingId}}</td><td><strong>{{vuln.VulnName}}</strong></td><td>{{vuln.VulnTargets}}</td><td><span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span></td></tr>
+            {{end}}
+            {{end}}
+        </tbody>
+    </table>
+    {{end}}
+
+    <div class="bastion-path-interpretation"><strong>Interpretation</strong><p>A path becomes material when the control edge is practical, the destination changes authority and existing monitoring or isolation cannot reliably interrupt the route.</p></div>
+</section>
+        <!-- gallery-part:body-privilege-path-analysis:end -->
+        <!-- gallery-part:body-hardening-roadmap:start -->
+<div class="page-break"></div>
+<section class="bastion-section bastion-hardening-roadmap">
+    <table class="bastion-section-heading" role="presentation">
+        <tr><td class="bastion-keystone"><span></span></td><td><h1 id="hardening-roadmap" class="bastion-section-title">Hardening Roadmap</h1></td></tr>
+    </table>
+    <p class="bastion-lead">Remediation should first interrupt dangerous authority routes, then reduce structural exposure and finally strengthen assurance.</p>
+
+    {{if HasNoFindings}}
+    <div class="bastion-empty">No findings require a remediation sequence. Continue routine identity hygiene, route review and recovery exercises.</div>
+    {{else}}
+    <div class="bastion-roadmap-band bastion-roadmap-contain">
+        <table role="presentation"><tr><td class="bastion-roadmap-intent"><span>Contain</span><strong>Interrupt privileged routes</strong><small>Remove immediate access to protected authority and preserve evidence.</small></td><td>
+            <table class="bastion-roadmap-findings"><tbody>
+                {{for vuln in Vulns}}{{if vuln.VulnRisk == "Critical" || vuln.VulnRisk == "High"}}
+                <tr><td class="bastion-mono">{{vuln.VulnFindingId}}</td><td><strong>{{vuln.VulnName}}</strong><span>{{vuln.VulnPriority}} priority | {{vuln.VulnComplexity}} complexity</span></td><td><span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span></td></tr>
+                {{end}}{{end}}
+            </tbody></table>
+        </td></tr></table>
+    </div>
+
+    <div class="bastion-roadmap-band">
+        <table role="presentation"><tr><td class="bastion-roadmap-intent"><span>Reduce</span><strong>Change the trust structure</strong><small>Limit delegation, credential reach and administrative surface.</small></td><td>
+            <table class="bastion-roadmap-findings"><tbody>
+                {{for vuln in Vulns}}{{if vuln.VulnRisk == "Medium"}}
+                <tr><td class="bastion-mono">{{vuln.VulnFindingId}}</td><td><strong>{{vuln.VulnName}}</strong><span>{{vuln.VulnPriority}} priority | {{vuln.VulnComplexity}} complexity</span></td><td><span class="severity-badge severity-medium">{{vuln.VulnRisk}}</span></td></tr>
+                {{end}}{{end}}
+            </tbody></table>
+        </td></tr></table>
+    </div>
+
+    <div class="bastion-roadmap-band">
+        <table role="presentation"><tr><td class="bastion-roadmap-intent"><span>Strengthen</span><strong>Improve assurance and visibility</strong><small>Harden the baseline, expand detection and prove recovery.</small></td><td>
+            <table class="bastion-roadmap-findings"><tbody>
+                {{for vuln in Vulns}}{{if vuln.VulnRisk == "Low" || vuln.VulnRisk == "Info"}}
+                <tr><td class="bastion-mono">{{vuln.VulnFindingId}}</td><td><strong>{{vuln.VulnName}}</strong><span>{{vuln.VulnPriority}} priority | {{vuln.VulnComplexity}} complexity</span></td><td><span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span></td></tr>
+                {{end}}{{end}}
+            </tbody></table>
+        </td></tr></table>
+    </div>
+    {{end}}
+
+    <table class="bastion-roadmap-gates">
+        <tr><th>Ownership gate</th><td>Every control change has a named service or identity owner.</td></tr>
+        <tr><th>Evidence gate</th><td>Closure includes configuration evidence and route-based retest results.</td></tr>
+        <tr><th>Recovery gate</th><td>Changes to Tier 0 and authentication services include rollback and restoration procedures.</td></tr>
+    </table>
+</section>
+        <!-- gallery-part:body-hardening-roadmap:end -->
+        <!-- gallery-part:body-validation-recovery:start -->
+<div class="page-break"></div>
+<section class="bastion-section bastion-validation">
+    <table class="bastion-section-heading" role="presentation">
+        <tr><td class="bastion-keystone"><span></span></td><td><h1 id="validation-recovery" class="bastion-section-title">Validation and Recovery Readiness</h1></td></tr>
+    </table>
+    <p class="bastion-lead">Identity control work is complete only when the dangerous route is closed, the closure is observable and trusted authority can be restored.</p>
+
+    <table class="bastion-assurance-chain" role="presentation">
+        <tr>
+            <td><span>RETEST</span><strong>Route closed</strong><small>The original identity relationship no longer yields the verified authority.</small></td>
+            <td class="bastion-assurance-link">&gt;</td>
+            <td><span>OBSERVE</span><strong>Control visible</strong><small>Expected identity events reach the responsible monitoring function.</small></td>
+            <td class="bastion-assurance-link">&gt;</td>
+            <td><span>RESTORE</span><strong>Authority recoverable</strong><small>Protected backups and emergency identities support a trusted recovery.</small></td>
+        </tr>
+    </table>
+
+    <h2 class="bastion-subtitle"><span>Closure</span> evidence standard</h2>
+    <table class="bastion-validation-matrix">
+        <thead><tr><th>Control claim</th><th>Evidence expected</th><th>Acceptance condition</th></tr></thead>
+        <tbody>
+            <tr><td>Privilege route removed</td><td>Configuration export, relationship query and failed reproduction</td><td>The original principal cannot cross the documented authority boundary.</td></tr>
+            <tr><td>Credential reach reduced</td><td>Session placement, secret rotation and protected-use evidence</td><td>High-trust identity material is absent from lower-trust systems.</td></tr>
+            <tr><td>Detection operating</td><td>Test event, alert record and response ownership</td><td>The control change and suspicious reuse are visible within the agreed response window.</td></tr>
+            <tr><td>Recovery trusted</td><td>Restore record, integrity check and emergency access exercise</td><td>Directory authority can be recovered without relying on the compromised trust path.</td></tr>
+        </tbody>
+    </table>
+
+    <table class="bastion-recovery-readiness" role="presentation">
+        <tr>
+            <td class="bastion-recovery-heading"><span>Identity recovery position</span><strong>{{if HasCriticalFindings}}Priority exercise required{{else if HasHighFindings}}Accelerated review required{{else}}Maintain scheduled assurance{{end}}</strong></td>
+            <td><p>Protect recovery credentials, verify directory backups independently and maintain a documented clean-room route for rebuilding trusted identity services.</p></td>
+        </tr>
+    </table>
+
+    <h2 class="bastion-subtitle"><span>Assessment</span> contact</h2>
+    <table class="bastion-contact-register">
+        <tr><th>Name</th><td>{{OrganizationContactName}}</td><th>Organisation</th><td>{{OrganizationName}}</td></tr>
+        <tr><th>Email</th><td>{{OrganizationEmail}}</td><th>Phone</th><td>{{OrganizationPhone}}</td></tr>
+    </table>
+</section>
+        <!-- gallery-part:body-validation-recovery:end -->
+        <!-- gallery-part:body-appendices:start -->
+<div class="page-break"></div>
+<section class="bastion-section bastion-appendices">
+    <table class="bastion-section-heading" role="presentation">
+        <tr><td class="bastion-keystone"><span></span></td><td><h1 id="appendices" class="bastion-section-title">Cervantes Bastion Directory Appendices</h1></td></tr>
+    </table>
+    <p class="bastion-lead">Supporting definitions and report coordinates for interpreting and maintaining the assessment record.</p>
+
+    <h2 class="bastion-subtitle"><span>Risk</span> interpretation</h2>
+    <table class="bastion-severity-model">
+        <thead><tr><th>Rating</th><th>Identity interpretation</th><th>Expected response</th></tr></thead>
+        <tbody>
+            <tr><td><span class="severity-badge severity-critical">Critical</span></td><td>Direct or highly reliable path to protected administrative authority, identity-wide compromise or loss of trusted recovery.</td><td>Contain immediately and govern as an active identity security risk.</td></tr>
+            <tr><td><span class="severity-badge severity-high">High</span></td><td>Practical path to significant privilege, reusable high-value credentials or broad identity control.</td><td>Accelerate remediation and validate route closure.</td></tr>
+            <tr><td><span class="severity-badge severity-medium">Medium</span></td><td>Meaningful control weakness that requires preconditions or contributes to a larger privilege route.</td><td>Remediate through planned identity hardening.</td></tr>
+            <tr><td><span class="severity-badge severity-low">Low</span></td><td>Limited identity exposure or hygiene weakness with constrained authority impact.</td><td>Address during baseline improvement.</td></tr>
+            <tr><td><span class="severity-badge severity-info">Info</span></td><td>Observation that supports assurance, visibility or architectural understanding.</td><td>Track as context or control maturity work.</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="bastion-subtitle"><span>Evidence</span> handling</h2>
+    <table class="bastion-appendix-notes">
+        <tr><th>Minimise</th><td>Retain only the identity material required to support a finding. Redact secrets, tokens and personal data wherever possible.</td></tr>
+        <tr><th>Protect</th><td>Store report evidence in an access-controlled location with an owner, retention period and disposal method.</td></tr>
+        <tr><th>Trace</th><td>Preserve enough context to connect each artefact to the affected identity, control relationship and assessment action.</td></tr>
+        <tr><th>Validate</th><td>Retest using controlled identities and record both the expected denial and the monitoring outcome.</td></tr>
+    </table>
+
+    <h2 class="bastion-subtitle"><span>Report</span> coordinates</h2>
+    <table class="bastion-report-coordinates">
+        <tr><th>Project</th><td>{{ProjectName}}</td><th>Reference</th><td class="bastion-mono">{{ReportReference}}</td></tr>
+        <tr><th>Client</th><td>{{ClientName}}</td><th>Generated</th><td class="bastion-mono">{{TodayISO}}</td></tr>
+        <tr><th>Assessment window</th><td class="bastion-mono">{{StartDate}} - {{EndDate}}</td><th>Findings</th><td class="bastion-mono">{{VulnTotalCount}}</td></tr>
+        <tr><th>Prepared by</th><td>{{OrganizationName}}</td><th>Overall rating</th><td class="risk-text-{{OverallRiskRating | string.downcase}}"><strong>{{OverallRiskRating}}</strong></td></tr>
+    </table>
+
+    <table class="bastion-final-mark" role="presentation"><tr><td class="bastion-final-glyph">B</td><td><strong>Cervantes Bastion</strong><small>Identity authority, trust and recovery</small></td></tr></table>
+</section>
+        <!-- gallery-part:body-appendices:end -->
+        <!-- report-zone:body:end -->
+    </main>
+    <footer>
+        <!-- report-zone:footer:start -->
+        <!-- gallery-part:footer-bastion:start -->
+<table class="bastion-footer-table" role="presentation">
+    <tr>
+        <td class="bastion-footer-left">CONFIDENTIAL | {{OrganizationName}}</td>
+        <td class="bastion-footer-center">IDENTITY ARCHITECTURE REPORT</td>
+        <td class="bastion-footer-right"><span id="current-page"></span> / <span id="total-pages"></span></td>
+    </tr>
+</table>
+        <!-- gallery-part:footer-bastion:end -->
+        <!-- report-zone:footer:end -->
+    </footer>
+</body>
+</html>

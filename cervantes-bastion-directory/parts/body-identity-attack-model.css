@@ -1,0 +1,21 @@
+.bastion-route-model { width: 100%; margin: 5pt 0 19pt; table-layout: fixed; }
+.bastion-route-model td { padding: 13pt 8pt; border: 1pt solid #817970; vertical-align: top; text-align: center; }
+.bastion-route-model td:not(.bastion-route-joint) { width: 28%; background: #DFDAD2; }
+.bastion-route-model .bastion-route-joint { width: 8%; padding: 26pt 0 0; border: 0; color: #A86443; font-size: 15pt; font-weight: 700; }
+.bastion-route-node,
+.bastion-route-model strong,
+.bastion-route-model small { display: block; }
+.bastion-route-node { margin-bottom: 7pt; color: #8C4F33; font-family: "DejaVu Sans Mono", Consolas, monospace; font-size: 6.4pt; font-weight: 700; letter-spacing: .45pt; }
+.bastion-route-model strong { color: #2E322F; font-size: 9.5pt; }
+.bastion-route-model small { margin-top: 4pt; color: #676862; font-size: 6.7pt; line-height: 1.35; }
+.bastion-model-lenses { width: 100%; border-top: 2pt solid #303532; }
+.bastion-model-lenses th,
+.bastion-model-lenses td { padding: 8pt; border-bottom: .7pt solid #BDB5AC; text-align: left; vertical-align: top; }
+.bastion-model-lenses th { width: 28%; color: #8C4F33; font-size: 7pt; letter-spacing: .35pt; }
+.bastion-model-lenses td { color: #4E514D; font-size: 8.2pt; }
+.bastion-question-grid { width: 100%; table-layout: fixed; }
+.bastion-question-grid td { width: 50%; padding: 10pt 13pt; border-left: 3pt solid #A86443; vertical-align: top; }
+.bastion-question-grid strong,
+.bastion-question-grid span { display: block; }
+.bastion-question-grid strong { color: #343835; font-size: 8.2pt; }
+.bastion-question-grid span { margin-top: 3pt; color: #676862; font-size: 7.4pt; line-height: 1.4; }

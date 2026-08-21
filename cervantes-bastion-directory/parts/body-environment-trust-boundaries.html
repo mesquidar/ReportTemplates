@@ -1,0 +1,42 @@
+<div class="page-break"></div>
+<section class="bastion-section bastion-boundaries">
+    <table class="bastion-section-heading" role="presentation">
+        <tr><td class="bastion-keystone"><span></span></td><td><h1 id="environment-trust-boundaries" class="bastion-section-title">Environment and Trust Boundaries</h1></td></tr>
+    </table>
+    <p class="bastion-lead">The identity environment is treated as a set of authority boundaries, not a flat collection of systems.</p>
+
+    <div class="rich-text bastion-boundary-scope">{{ProjectDescription}}</div>
+
+    <h2 class="bastion-subtitle"><span>Authority</span> architecture</h2>
+    <table class="bastion-boundary-plan" role="presentation">
+        <tr>
+            <td class="bastion-boundary-external"><span>External identities</span><strong>Partners, remote access and federated trust</strong></td>
+            <td class="bastion-boundary-arrow">&gt;</td>
+            <td class="bastion-boundary-enterprise">
+                <span>Enterprise identity plane</span>
+                <table role="presentation">
+                    <tr><td>Endpoints</td><td>Services</td></tr>
+                    <tr><td>Users</td><td>Administration</td></tr>
+                </table>
+            </td>
+            <td class="bastion-boundary-arrow">&gt;</td>
+            <td class="bastion-boundary-core"><span>Tier 0 boundary</span><strong>Directory, keys and recovery authority</strong></td>
+        </tr>
+    </table>
+
+    <div class="bastion-boundary-rule"><strong>Boundary rule</strong><span>Every route that changes administrative authority must be explicit, constrained, monitored and recoverable.</span></div>
+
+    <h2 class="bastion-subtitle"><span>In-scope</span> identity assets</h2>
+    {{if HasTargets}}
+    <table class="bastion-data-table bastion-target-register">
+        <thead><tr><th>Asset or boundary</th><th>Type</th><th>Assessment context</th></tr></thead>
+        <tbody>
+            {{for target in Targets}}
+            <tr><td class="bastion-mono"><strong>{{target.TargetName}}</strong></td><td><span class="bastion-status">{{target.TargetType}}</span></td><td>{{target.TargetDescription}}</td></tr>
+            {{end}}
+        </tbody>
+    </table>
+    {{else}}
+    <div class="bastion-empty">No target register was attached to this report. Confirm directory, federation, endpoint and administrative boundaries before remediation begins.</div>
+    {{end}}
+</section>

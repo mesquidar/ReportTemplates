@@ -1,0 +1,41 @@
+<div class="page-break"></div>
+<section class="bastion-section bastion-validation">
+    <table class="bastion-section-heading" role="presentation">
+        <tr><td class="bastion-keystone"><span></span></td><td><h1 id="validation-recovery" class="bastion-section-title">Validation and Recovery Readiness</h1></td></tr>
+    </table>
+    <p class="bastion-lead">Identity control work is complete only when the dangerous route is closed, the closure is observable and trusted authority can be restored.</p>
+
+    <table class="bastion-assurance-chain" role="presentation">
+        <tr>
+            <td><span>RETEST</span><strong>Route closed</strong><small>The original identity relationship no longer yields the verified authority.</small></td>
+            <td class="bastion-assurance-link">&gt;</td>
+            <td><span>OBSERVE</span><strong>Control visible</strong><small>Expected identity events reach the responsible monitoring function.</small></td>
+            <td class="bastion-assurance-link">&gt;</td>
+            <td><span>RESTORE</span><strong>Authority recoverable</strong><small>Protected backups and emergency identities support a trusted recovery.</small></td>
+        </tr>
+    </table>
+
+    <h2 class="bastion-subtitle"><span>Closure</span> evidence standard</h2>
+    <table class="bastion-validation-matrix">
+        <thead><tr><th>Control claim</th><th>Evidence expected</th><th>Acceptance condition</th></tr></thead>
+        <tbody>
+            <tr><td>Privilege route removed</td><td>Configuration export, relationship query and failed reproduction</td><td>The original principal cannot cross the documented authority boundary.</td></tr>
+            <tr><td>Credential reach reduced</td><td>Session placement, secret rotation and protected-use evidence</td><td>High-trust identity material is absent from lower-trust systems.</td></tr>
+            <tr><td>Detection operating</td><td>Test event, alert record and response ownership</td><td>The control change and suspicious reuse are visible within the agreed response window.</td></tr>
+            <tr><td>Recovery trusted</td><td>Restore record, integrity check and emergency access exercise</td><td>Directory authority can be recovered without relying on the compromised trust path.</td></tr>
+        </tbody>
+    </table>
+
+    <table class="bastion-recovery-readiness" role="presentation">
+        <tr>
+            <td class="bastion-recovery-heading"><span>Identity recovery position</span><strong>{{if HasCriticalFindings}}Priority exercise required{{else if HasHighFindings}}Accelerated review required{{else}}Maintain scheduled assurance{{end}}</strong></td>
+            <td><p>Protect recovery credentials, verify directory backups independently and maintain a documented clean-room route for rebuilding trusted identity services.</p></td>
+        </tr>
+    </table>
+
+    <h2 class="bastion-subtitle"><span>Assessment</span> contact</h2>
+    <table class="bastion-contact-register">
+        <tr><th>Name</th><td>{{OrganizationContactName}}</td><th>Organisation</th><td>{{OrganizationName}}</td></tr>
+        <tr><th>Email</th><td>{{OrganizationEmail}}</td><th>Phone</th><td>{{OrganizationPhone}}</td></tr>
+    </table>
+</section>

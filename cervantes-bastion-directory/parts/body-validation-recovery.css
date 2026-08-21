@@ -1,0 +1,27 @@
+.bastion-assurance-chain { width: 100%; margin: 4pt 0 19pt; table-layout: fixed; }
+.bastion-assurance-chain td { padding: 12pt 8pt; border: 1pt solid #8F877D; vertical-align: top; text-align: center; }
+.bastion-assurance-chain td:not(.bastion-assurance-link) { width: 28%; }
+.bastion-assurance-chain .bastion-assurance-link { width: 8%; padding: 22pt 0 0; border: 0; color: #A86443; font-size: 14pt; font-weight: 700; }
+.bastion-assurance-chain span,
+.bastion-assurance-chain strong,
+.bastion-assurance-chain small { display: block; }
+.bastion-assurance-chain span { margin-bottom: 6pt; color: #8C4F33; font-family: "DejaVu Sans Mono", Consolas, monospace; font-size: 6.3pt; font-weight: 700; }
+.bastion-assurance-chain strong { color: #303431; font-size: 8.8pt; }
+.bastion-assurance-chain small { margin-top: 4pt; color: #6A6B65; font-size: 6.5pt; line-height: 1.35; }
+.bastion-validation-matrix { width: 100%; margin-bottom: 19pt; font-size: 7.7pt; }
+.bastion-validation-matrix th { padding: 8pt; background: #303532; color: #EEE9E1; font-size: 6.2pt; letter-spacing: .45pt; text-align: left; text-transform: uppercase; }
+.bastion-validation-matrix td { padding: 8pt; border-bottom: .7pt solid #BEB6AC; vertical-align: top; }
+.bastion-validation-matrix td:first-child { width: 24%; color: #8C4F33; font-weight: 700; }
+.bastion-recovery-readiness { width: 100%; margin: 13pt 0 17pt; border: 2pt solid #A86443; table-layout: fixed; }
+.bastion-recovery-readiness td { padding: 12pt; vertical-align: middle; }
+.bastion-recovery-heading { width: 35%; background: #DAD4CC; }
+.bastion-recovery-heading span,
+.bastion-recovery-heading strong { display: block; }
+.bastion-recovery-heading span { color: #776F67; font-size: 6.3pt; font-weight: 700; letter-spacing: .5pt; text-transform: uppercase; }
+.bastion-recovery-heading strong { margin-top: 4pt; color: #8C4F33; font-size: 10pt; line-height: 1.2; }
+.bastion-recovery-readiness p { margin: 0; color: #4F524E; font-size: 8.2pt; }
+.bastion-contact-register { width: 100%; border-top: 2pt solid #303532; }
+.bastion-contact-register th,
+.bastion-contact-register td { padding: 8pt; border-bottom: .7pt solid #C0B8AE; text-align: left; }
+.bastion-contact-register th { width: 16%; color: #777169; font-size: 6.2pt; letter-spacing: .45pt; text-transform: uppercase; }
+.bastion-contact-register td { width: 34%; color: #303431; font-size: 8pt; font-weight: 700; }

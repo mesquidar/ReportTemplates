@@ -1,0 +1,32 @@
+<div class="page-break"></div>
+<section class="bastion-section bastion-attack-model">
+    <table class="bastion-section-heading" role="presentation">
+        <tr><td class="bastion-keystone"><span></span></td><td><h1 id="identity-attack-model" class="bastion-section-title">Identity Attack Model</h1></td></tr>
+    </table>
+    <p class="bastion-lead">The model follows changes in identity authority: how access is obtained, expanded, transferred and converted into control.</p>
+
+    <table class="bastion-route-model" role="presentation">
+        <tr>
+            <td><span class="bastion-route-node">FOOTHOLD</span><strong>Initial identity</strong><small>Valid session, endpoint or service context</small></td>
+            <td class="bastion-route-joint">&gt;</td>
+            <td><span class="bastion-route-node">EXPAND</span><strong>Credential reach</strong><small>Secrets, tickets, tokens and delegated rights</small></td>
+            <td class="bastion-route-joint">&gt;</td>
+            <td><span class="bastion-route-node">CONTROL</span><strong>Privileged authority</strong><small>Administrative action across a trust boundary</small></td>
+        </tr>
+    </table>
+
+    <table class="bastion-model-lenses">
+        <tr><th>Identity material</th><td>Passwords, hashes, tickets, tokens, certificates, keys and recovery secrets.</td></tr>
+        <tr><th>Control relationships</th><td>Group membership, delegation, service control, policy rights, ACLs and federation claims.</td></tr>
+        <tr><th>Administrative surfaces</th><td>Management hosts, remote protocols, automation accounts, backup systems and identity consoles.</td></tr>
+        <tr><th>Evidence required</th><td>A reproducible relationship between a starting principal, an exposed control and a protected authority.</td></tr>
+    </table>
+
+    <h2 class="bastion-subtitle"><span>Assessment</span> questions</h2>
+    <table class="bastion-question-grid" role="presentation">
+        <tr><td><strong>Can authority cross a boundary?</strong><span>Review paths from standard access to administrative or recovery roles.</span></td><td><strong>Can identity material be reused?</strong><span>Review credential placement, session isolation and delegation constraints.</span></td></tr>
+        <tr><td><strong>Can control changes be observed?</strong><span>Review telemetry for group, policy, trust and credential events.</span></td><td><strong>Can the identity plane be restored?</strong><span>Review protected backups, emergency access and trusted rebuild procedures.</span></td></tr>
+    </table>
+
+    <div class="bastion-callout"><strong>Business consequence</strong><br/><span>{{ProjectBusinessImpact}}</span></div>
+</section>

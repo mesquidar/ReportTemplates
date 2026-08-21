@@ -1,0 +1,8 @@
+.bastion-contents-map { width: 100%; margin-top: 2pt; border-top: 2pt solid #303532; }
+.bastion-contents-map td { padding: 9pt 8pt; border-bottom: .7pt solid #BDB6AD; vertical-align: top; }
+.bastion-contents-marker { width: 25mm; color: #A86443; font-family: "DejaVu Sans Mono", Consolas, monospace; font-size: 6.7pt; font-weight: 700; letter-spacing: .6pt; }
+.bastion-contents-map a { display: block; margin-bottom: 1pt; color: #292D2B; font-family: "Arial Narrow", Arial, sans-serif; font-size: 12pt; font-weight: 700; }
+.bastion-contents-map span { display: block; color: #73716B; font-size: 7.8pt; }
+.bastion-contents-key { width: 106mm; margin: 22pt 0 0 26mm; padding: 12pt 14pt; border-left: 3pt solid #A86443; background: #DFDAD2; }
+.bastion-contents-key strong { color: #313532; font-size: 7pt; letter-spacing: .7pt; text-transform: uppercase; }
+.bastion-contents-key p { margin: 5pt 0 0; color: #535650; font-size: 8.5pt; }

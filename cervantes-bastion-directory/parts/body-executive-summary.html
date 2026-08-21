@@ -1,0 +1,43 @@
+<div class="page-break"></div>
+<section class="bastion-section bastion-executive">
+    <table class="bastion-section-heading" role="presentation">
+        <tr><td class="bastion-keystone"><span></span></td><td><h1 id="executive-summary" class="bastion-section-title">Executive Summary</h1></td></tr>
+    </table>
+    <p class="bastion-lead">A decision view of how identity weaknesses affect administrative authority, service continuity and recovery options.</p>
+
+    <table class="bastion-risk-command" role="presentation">
+        <tr>
+            <td class="bastion-risk-rating"><span>Overall identity risk</span><strong class="risk-text-{{OverallRiskRating | string.downcase}}">{{OverallRiskRating}}</strong></td>
+            <td class="bastion-risk-reading">{{if HasCriticalFindings}}A critical condition exposes a credible route to high-trust identity control. Immediate containment is required before structural remediation.{{else if HasHighFindings}}High-risk conditions create meaningful paths toward privileged identity compromise and require accelerated control work.{{else}}No critical privilege route was verified. Preserve the controls that held and address the recorded weaknesses through normal governance.{{end}}</td>
+        </tr>
+    </table>
+
+    <table class="bastion-severity-ledger" role="presentation">
+        <tr>
+            <td><strong>{{VulnCriticalCount}}</strong><span>Critical</span></td>
+            <td><strong>{{VulnHighCount}}</strong><span>High</span></td>
+            <td><strong>{{VulnMediumCount}}</strong><span>Medium</span></td>
+            <td><strong>{{VulnLowCount}}</strong><span>Low</span></td>
+            <td><strong>{{VulnInfoCount}}</strong><span>Info</span></td>
+        </tr>
+    </table>
+
+    <table class="bastion-two-column bastion-executive-columns" role="presentation">
+        <tr>
+            <td>
+                <h2 class="bastion-subtitle"><span>Assessment</span> narrative</h2>
+                <div class="rich-text">{{ProjectExecutiveSummary}}</div>
+            </td>
+            <td>
+                <h2 class="bastion-subtitle"><span>Control</span> coordinates</h2>
+                <table class="bastion-executive-facts">
+                    <tr><th>Client</th><td>{{ClientName}}</td></tr>
+                    <tr><th>Window</th><td class="tabular">{{StartDate}} - {{EndDate}}</td></tr>
+                    <tr><th>Findings</th><td class="tabular">{{VulnTotalCount}}</td></tr>
+                    <tr><th>Mean CVSS</th><td class="tabular">{{VulnAvgCvss}}</td></tr>
+                    <tr><th>Authority</th><td>{{OrganizationName}}</td></tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</section>

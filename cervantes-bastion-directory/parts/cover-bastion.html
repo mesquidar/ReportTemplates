@@ -1,0 +1,47 @@
+<div class="bastion-cover">
+    <div class="bastion-cover-edge"></div>
+
+    <div class="bastion-cover-brand">
+        <table class="bastion-cover-brand-table" role="presentation">
+            <tr>
+                <td class="bastion-cover-mark-cell"><span class="bastion-cover-mark">B</span></td>
+                <td><span class="bastion-cover-wordmark">Cervantes</span><span class="bastion-cover-series">Bastion / Directory</span></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="bastion-cover-plan">
+        <div class="bastion-plan-caption">Identity trust architecture</div>
+        <div class="bastion-plan-outer">
+            <div class="bastion-plan-inner">
+                <table class="bastion-plan-route" role="presentation">
+                    <tr><td><span class="bastion-node">EXT</span><strong>Ingress</strong></td><td class="bastion-route-link">&gt;</td><td><span class="bastion-node">DIR</span><strong>Domain</strong></td></tr>
+                    <tr><td><span class="bastion-node">SVC</span><strong>Services</strong></td><td class="bastion-route-link">&gt;</td><td><span class="bastion-node bastion-node-core">T0</span><strong>Tier 0</strong></td></tr>
+                    <tr><td><span class="bastion-node">ADM</span><strong>Admin plane</strong></td><td class="bastion-route-link">&gt;</td><td><span class="bastion-node bastion-node-core">KEY</span><strong>Crown assets</strong></td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="bastion-cover-main">
+        <div class="bastion-cover-report-type">Active Directory and identity security assessment</div>
+        <h1 class="bastion-cover-title">{{ProjectName}}</h1>
+        <div class="bastion-cover-deck">Trust boundaries, privilege routes and controls that protect administrative authority.</div>
+    </div>
+
+    <div class="bastion-cover-metadata">
+        <table class="bastion-cover-metadata-table" role="presentation">
+            <tr>
+                <td><span class="bastion-cover-label">Client</span><span class="bastion-cover-value">{{ClientName}}</span></td>
+                <td><span class="bastion-cover-label">Assessment window</span><span class="bastion-cover-value tabular">{{StartDate}} - {{EndDate}}</span></td>
+                <td><span class="bastion-cover-label">Reference</span><span class="bastion-cover-value tabular">{{ReportReference}}</span></td>
+            </tr>
+            <tr>
+                <td><span class="bastion-cover-label">Prepared by</span><span class="bastion-cover-value">{{OrganizationName}}</span></td>
+                <td><span class="bastion-cover-label">Issued</span><span class="bastion-cover-value">{{TodayLong}}</span></td>
+                <td><span class="bastion-cover-label">Version</span><span class="bastion-cover-value tabular">{{for doc in Documents}}{{if for.last}}{{doc.DocumentVersion}}{{end}}{{end}}</span></td>
+            </tr>
+        </table>
+        <div class="bastion-cover-classification">CONFIDENTIAL</div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+.bastion-roadmap-band { margin: 0 0 11pt; border-top: 2pt solid #3A3F3C; background: #E1DDD6; }
+.bastion-roadmap-contain { border-top: 4pt solid #A86443; }
+.bastion-roadmap-band > table { width: 100%; table-layout: fixed; }
+.bastion-roadmap-band > table > tbody > tr > td { padding: 10pt; vertical-align: top; }
+.bastion-roadmap-intent { width: 30%; border-right: 1pt solid #B7AFA5; }
+.bastion-roadmap-intent span,
+.bastion-roadmap-intent strong,
+.bastion-roadmap-intent small { display: block; }
+.bastion-roadmap-intent span { margin-bottom: 5pt; color: #8C4F33; font-size: 6.5pt; font-weight: 700; letter-spacing: .65pt; text-transform: uppercase; }
+.bastion-roadmap-intent strong { color: #2E322F; font-size: 9.5pt; line-height: 1.2; }
+.bastion-roadmap-intent small { margin-top: 4pt; color: #696A64; font-size: 6.7pt; line-height: 1.4; }
+.bastion-roadmap-findings { width: 100%; }
+.bastion-roadmap-findings td { padding: 6pt 5pt; border-bottom: .7pt solid #C1B9B0; vertical-align: top; font-size: 7.5pt; }
+.bastion-roadmap-findings td:first-child { width: 15%; color: #8C4F33; }
+.bastion-roadmap-findings td:last-child { width: 22%; text-align: right; }
+.bastion-roadmap-findings strong,
+.bastion-roadmap-findings span { display: block; }
+.bastion-roadmap-findings span { margin-top: 2pt; color: #747068; font-size: 6.2pt; }
+.bastion-roadmap-gates { width: 76%; margin: 19pt 0 0 24%; border-top: 2pt solid #303532; }
+.bastion-roadmap-gates th,
+.bastion-roadmap-gates td { padding: 8pt; border-bottom: .7pt solid #BDB5AC; text-align: left; vertical-align: top; }
+.bastion-roadmap-gates th { width: 30%; color: #8C4F33; font-size: 6.5pt; letter-spacing: .4pt; }
+.bastion-roadmap-gates td { color: #555852; font-size: 7.7pt; }

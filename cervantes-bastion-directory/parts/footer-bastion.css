@@ -1,0 +1,8 @@
+footer { position: running(footer); width: 100%; background: #ECEAE5; }
+.bastion-footer-table { width: 100%; border-collapse: collapse; border-top: 1pt solid #887F75; table-layout: fixed; }
+.bastion-footer-table td { padding: 6pt 0 0; color: #77736C; font-size: 6.2pt; letter-spacing: .35pt; vertical-align: middle; }
+.bastion-footer-left { width: 40%; text-align: left; }
+.bastion-footer-center { width: 40%; color: #8C4F33; text-align: center; }
+.bastion-footer-right { width: 20%; text-align: right; }
+#current-page::before { content: counter(page); }
+#total-pages::before { content: counter(pages); }

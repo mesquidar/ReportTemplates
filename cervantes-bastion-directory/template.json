@@ -1,0 +1,34 @@
+{
+  "name": "Cervantes Bastion Directory",
+  "description": "An architectural security report template for Active Directory, identity systems, privilege paths and control validation.",
+  "version": "1.0.0",
+  "author": "OWASP Cervantes",
+  "language": "en",
+  "reportType": "general",
+  "preview": "preview.png",
+  "tags": [
+    "cervantes",
+    "bastion",
+    "active-directory",
+    "identity-security",
+    "privilege-paths",
+    "attack-paths",
+    "architecture"
+  ],
+  "parts": [
+    { "key": "cover-bastion", "name": "Cervantes Bastion Directory Cover", "type": "Cover", "order": 0, "html": "parts/cover-bastion.html", "css": "parts/cover-bastion.css" },
+    { "key": "header-bastion", "name": "Cervantes Bastion Directory Header", "type": "Header", "order": 0, "html": "parts/header-bastion.html", "css": "parts/header-bastion.css" },
+    { "key": "footer-bastion", "name": "Cervantes Bastion Directory Footer", "type": "Footer", "order": 0, "html": "parts/footer-bastion.html", "css": "parts/footer-bastion.css" },
+    { "key": "body-document-record", "name": "Cervantes Bastion Directory Document Record", "type": "Body", "order": 0, "html": "parts/body-document-record.html", "css": "parts/body-document-record.css" },
+    { "key": "body-contents", "name": "Cervantes Bastion Directory Contents", "type": "Body", "order": 1, "html": "parts/body-contents.html", "css": "parts/body-contents.css" },
+    { "key": "body-executive-summary", "name": "Cervantes Bastion Directory Executive Summary", "type": "Body", "order": 2, "html": "parts/body-executive-summary.html", "css": "parts/body-executive-summary.css" },
+    { "key": "body-environment-trust-boundaries", "name": "Cervantes Bastion Directory Environment and Trust Boundaries", "type": "Body", "order": 3, "html": "parts/body-environment-trust-boundaries.html", "css": "parts/body-environment-trust-boundaries.css" },
+    { "key": "body-identity-attack-model", "name": "Cervantes Bastion Directory Identity Attack Model", "type": "Body", "order": 4, "html": "parts/body-identity-attack-model.html", "css": "parts/body-identity-attack-model.css" },
+    { "key": "body-findings-overview", "name": "Cervantes Bastion Directory Findings Overview", "type": "Body", "order": 5, "html": "parts/body-findings-overview.html", "css": "parts/body-findings-overview.css" },
+    { "key": "body-detailed-findings", "name": "Cervantes Bastion Directory Detailed Identity Findings", "type": "Body", "order": 6, "html": "parts/body-detailed-findings.html", "css": "parts/body-detailed-findings.css" },
+    { "key": "body-privilege-path-analysis", "name": "Cervantes Bastion Directory Privilege Path Analysis", "type": "Body", "order": 7, "html": "parts/body-privilege-path-analysis.html", "css": "parts/body-privilege-path-analysis.css" },
+    { "key": "body-hardening-roadmap", "name": "Cervantes Bastion Directory Hardening Roadmap", "type": "Body", "order": 8, "html": "parts/body-hardening-roadmap.html", "css": "parts/body-hardening-roadmap.css" },
+    { "key": "body-validation-recovery", "name": "Cervantes Bastion Directory Validation and Recovery Readiness", "type": "Body", "order": 9, "html": "parts/body-validation-recovery.html", "css": "parts/body-validation-recovery.css" },
+    { "key": "body-appendices", "name": "Cervantes Bastion Directory Appendices", "type": "Body", "order": 10, "html": "parts/body-appendices.html", "css": "parts/body-appendices.css" }
+  ]
+}

@@ -1,0 +1,21 @@
+.bastion-risk-command { width: 100%; margin: 2pt 0 0; table-layout: fixed; border-top: 3pt solid #303532; border-bottom: 1pt solid #8E857B; }
+.bastion-risk-command td { padding: 13pt 12pt; vertical-align: middle; }
+.bastion-risk-rating { width: 34%; background: #DCD6CE; }
+.bastion-risk-rating span,
+.bastion-risk-rating strong { display: block; }
+.bastion-risk-rating span { margin-bottom: 3pt; color: #746E66; font-size: 6.7pt; font-weight: 700; letter-spacing: .65pt; text-transform: uppercase; }
+.bastion-risk-rating strong { font-family: "Arial Narrow", Arial, sans-serif; font-size: 24pt; line-height: 1; text-transform: uppercase; }
+.bastion-risk-reading { color: #454945; font-size: 9.4pt; line-height: 1.45; }
+.bastion-severity-ledger { width: 100%; margin: 12pt 0 20pt; table-layout: fixed; }
+.bastion-severity-ledger td { padding: 7pt 9pt; border-left: 1pt solid #B6AEA4; vertical-align: top; }
+.bastion-severity-ledger td:first-child { border-left: 3pt solid #A86443; }
+.bastion-severity-ledger strong,
+.bastion-severity-ledger span { display: block; }
+.bastion-severity-ledger strong { color: #2C302D; font-family: "DejaVu Sans Mono", Consolas, monospace; font-size: 15pt; }
+.bastion-severity-ledger span { color: #77726A; font-size: 6.5pt; font-weight: 700; letter-spacing: .45pt; text-transform: uppercase; }
+.bastion-executive-columns .bastion-subtitle { margin-top: 4pt; }
+.bastion-executive-facts { width: 100%; border-top: 2pt solid #303532; }
+.bastion-executive-facts th,
+.bastion-executive-facts td { padding: 7pt 5pt; border-bottom: .7pt solid #C4BDB4; text-align: left; }
+.bastion-executive-facts th { width: 37%; color: #7A746D; font-size: 6.5pt; letter-spacing: .45pt; text-transform: uppercase; }
+.bastion-executive-facts td { color: #303431; font-size: 8pt; font-weight: 700; }

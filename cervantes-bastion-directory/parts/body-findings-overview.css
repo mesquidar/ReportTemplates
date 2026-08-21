@@ -1,0 +1,13 @@
+.bastion-overview-command { width: 100%; margin: 1pt 0 18pt; table-layout: fixed; border-top: 3pt solid #303532; border-bottom: 1pt solid #8F877D; }
+.bastion-overview-command td { width: 33.333%; padding: 12pt 10pt; border-left: 1pt solid #B8B0A7; vertical-align: top; }
+.bastion-overview-command td:first-child { border-left: 0; }
+.bastion-overview-command span,
+.bastion-overview-command strong { display: block; }
+.bastion-overview-command span { color: #767069; font-size: 6.5pt; font-weight: 700; letter-spacing: .55pt; text-transform: uppercase; }
+.bastion-overview-command strong { margin-top: 3pt; font-family: "Arial Narrow", Arial, sans-serif; font-size: 18pt; line-height: 1; text-transform: uppercase; }
+.bastion-findings-register th:nth-child(1) { width: 12%; }
+.bastion-findings-register th:nth-child(2) { width: 43%; }
+.bastion-findings-register th:nth-child(3) { width: 15%; }
+.bastion-findings-register th:nth-child(4) { width: 12%; }
+.bastion-findings-register th:nth-child(5) { width: 18%; }
+.bastion-overview-note { margin: 18pt 0 0 22%; padding: 10pt 12pt; border-left: 3pt solid #A86443; color: #565954; font-size: 8.2pt; }

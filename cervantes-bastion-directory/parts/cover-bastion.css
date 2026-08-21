@@ -1,0 +1,40 @@
+cover { page: bastion-cover-page; }
+
+.bastion-cover { position: relative; width: 210mm; height: 297mm; margin: 0; overflow: hidden; background: #ECEAE5; color: #252927; }
+.bastion-cover-edge { position: absolute; top: 0; right: 0; width: 8mm; height: 297mm; background: #A86443; }
+
+.bastion-cover-brand { position: absolute; top: 22mm; left: 24mm; width: 66mm; }
+.bastion-cover-brand-table { width: 100%; border-collapse: collapse; }
+.bastion-cover-brand-table td { vertical-align: middle; }
+.bastion-cover-mark-cell { width: 17mm; }
+.bastion-cover-mark { display: block; width: 12mm; height: 12mm; border: 2pt solid #2A302D; color: #A86443; font-family: "Arial Narrow", Arial, sans-serif; font-size: 15pt; font-weight: 700; line-height: 12mm; text-align: center; }
+.bastion-cover-wordmark,
+.bastion-cover-series { display: block; }
+.bastion-cover-wordmark { color: #252927; font-size: 15pt; font-weight: 700; letter-spacing: -.2pt; }
+.bastion-cover-series { margin-top: 2pt; color: #8C4F33; font-size: 6.8pt; font-weight: 700; letter-spacing: 1pt; text-transform: uppercase; }
+
+.bastion-cover-plan { position: absolute; top: 25mm; left: 98mm; width: 82mm; }
+.bastion-plan-caption { margin-bottom: 6pt; color: #6D6963; font-size: 6.5pt; font-weight: 700; letter-spacing: .7pt; text-transform: uppercase; }
+.bastion-plan-outer { padding: 7mm; border: 2pt solid #343936; }
+.bastion-plan-inner { padding: 6mm; border: 1pt solid #A86443; }
+.bastion-plan-route { width: 100%; table-layout: fixed; }
+.bastion-plan-route td { padding: 5pt 3pt; vertical-align: middle; text-align: center; }
+.bastion-plan-route td:not(.bastion-route-link) { border: .7pt solid #9E978D; background: #E1DDD6; }
+.bastion-plan-route strong { display: block; margin-top: 3pt; color: #4A4C48; font-size: 6.2pt; font-weight: 700; }
+.bastion-node { display: block; color: #8C4F33; font-family: "DejaVu Sans Mono", Consolas, monospace; font-size: 7pt; font-weight: 700; }
+.bastion-node-core { color: #542E21; }
+.bastion-route-link { width: 7mm; color: #A86443; font-size: 12pt; font-weight: 700; }
+
+.bastion-cover-main { position: absolute; top: 142mm; left: 24mm; width: 158mm; }
+.bastion-cover-report-type { margin-bottom: 10pt; color: #8C4F33; font-size: 7.5pt; font-weight: 700; letter-spacing: 1.25pt; text-transform: uppercase; }
+.bastion-cover-title { max-width: 148mm; margin: 0 0 12pt; font-size: 37pt; line-height: 1; letter-spacing: -1.1pt; }
+.bastion-cover-deck { max-width: 110mm; color: #535650; font-size: 11.5pt; line-height: 1.42; }
+
+.bastion-cover-metadata { position: absolute; top: 224mm; left: 24mm; width: 158mm; }
+.bastion-cover-metadata-table { width: 100%; table-layout: fixed; border-top: 2pt solid #343936; }
+.bastion-cover-metadata-table td { width: 33.333%; padding: 8pt 10pt 9pt 0; border-bottom: .7pt solid #BDB5AB; vertical-align: top; }
+.bastion-cover-label,
+.bastion-cover-value { display: block; }
+.bastion-cover-label { margin-bottom: 2pt; color: #7A756E; font-size: 6.4pt; font-weight: 700; letter-spacing: .65pt; text-transform: uppercase; }
+.bastion-cover-value { color: #2A2E2C; font-size: 8.5pt; font-weight: 700; }
+.bastion-cover-classification { margin-top: 10mm; color: #8C4F33; font-size: 6.5pt; font-weight: 700; letter-spacing: 1.4pt; text-align: right; }

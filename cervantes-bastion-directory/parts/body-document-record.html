@@ -1,0 +1,36 @@
+<div class="page-break"></div>
+<section class="bastion-section bastion-record">
+    <table class="bastion-section-heading" role="presentation">
+        <tr><td class="bastion-keystone"><span></span></td><td><h1 id="document-record" class="bastion-section-title">Document Record</h1></td></tr>
+    </table>
+    <p class="bastion-lead">Control information for the identity security assessment, its custodians and revision history.</p>
+
+    <table class="bastion-record-register">
+        <tr><th>Document</th><td>{{ProjectName}}</td><th>Reference</th><td class="tabular">{{ReportReference}}</td></tr>
+        <tr><th>Client</th><td>{{ClientName}}</td><th>Prepared by</th><td>{{OrganizationName}}</td></tr>
+        <tr><th>Assessment window</th><td class="tabular">{{StartDate}} - {{EndDate}}</td><th>Issued</th><td>{{TodayLong}}</td></tr>
+        <tr><th>Classification</th><td>Confidential</td><th>Assessment type</th><td>Active Directory and identity security</td></tr>
+    </table>
+
+    <h2 class="bastion-subtitle"><span>Revision</span> ledger</h2>
+    <table class="bastion-data-table">
+        <thead><tr><th>Version</th><th>Date</th><th>Change record</th></tr></thead>
+        <tbody>
+            {{for doc in Documents}}
+            <tr><td class="tabular">{{doc.DocumentVersion}}</td><td class="tabular">{{doc.DocumentCreatedDate}}</td><td>{{doc.DocumentDescription}}</td></tr>
+            {{end}}
+        </tbody>
+    </table>
+
+    <h2 class="bastion-subtitle"><span>Assessment</span> custodians</h2>
+    <table class="bastion-data-table">
+        <thead><tr><th>Name</th><th>Role</th><th>Contact</th></tr></thead>
+        <tbody>
+            {{for user in Users}}
+            <tr><td><strong>{{user.UserFullName}}</strong></td><td>{{user.UserPosition}}</td><td>{{user.UserEmail}}</td></tr>
+            {{end}}
+        </tbody>
+    </table>
+
+    <div class="bastion-record-notice"><strong>Handling instruction</strong><span>Distribute only to personnel responsible for identity operations, remediation and risk acceptance.</span></div>
+</section>

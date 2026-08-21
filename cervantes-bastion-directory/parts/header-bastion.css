@@ -1,0 +1,15 @@
+header { position: running(header); width: 100%; padding-bottom: 4mm; background: #ECEAE5; }
+.bastion-header-table { width: 100%; border-collapse: collapse; border-bottom: 1pt solid #887F75; table-layout: fixed; }
+.bastion-header-spacer td { height: 5mm; padding: 0; border: 0; font-size: 1pt; line-height: 5mm; }
+.bastion-header-table td { padding: 0 0 6pt; vertical-align: middle; }
+.bastion-header-brand { width: 36%; }
+.bastion-header-brand-table { width: auto; border-collapse: collapse; }
+.bastion-header-brand-table td { padding: 0; border: 0; vertical-align: middle; }
+.bastion-header-mark-cell { width: 19pt; }
+.bastion-header-mark { display: block; width: 13pt; height: 13pt; border: 1pt solid #A86443; color: #8C4F33; font-size: 7pt; line-height: 13pt; text-align: center; }
+.bastion-header-brand-copy span,
+.bastion-header-brand-copy small { display: block; }
+.bastion-header-brand-copy span { color: #3C403D; font-size: 6.8pt; font-weight: 700; letter-spacing: .45pt; text-transform: uppercase; }
+.bastion-header-brand-copy small { margin-top: 1pt; color: #8C4F33; font-size: 5.2pt; font-weight: 700; letter-spacing: .55pt; text-transform: uppercase; }
+.bastion-header-project { width: 43%; color: #696861; font-size: 7pt; text-align: center; }
+.bastion-header-reference { width: 21%; color: #8C4F33; font-size: 6.5pt; text-align: right; }

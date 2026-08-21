@@ -1,0 +1,37 @@
+<div class="page-break"></div>
+<section class="bastion-section bastion-appendices">
+    <table class="bastion-section-heading" role="presentation">
+        <tr><td class="bastion-keystone"><span></span></td><td><h1 id="appendices" class="bastion-section-title">Cervantes Bastion Directory Appendices</h1></td></tr>
+    </table>
+    <p class="bastion-lead">Supporting definitions and report coordinates for interpreting and maintaining the assessment record.</p>
+
+    <h2 class="bastion-subtitle"><span>Risk</span> interpretation</h2>
+    <table class="bastion-severity-model">
+        <thead><tr><th>Rating</th><th>Identity interpretation</th><th>Expected response</th></tr></thead>
+        <tbody>
+            <tr><td><span class="severity-badge severity-critical">Critical</span></td><td>Direct or highly reliable path to protected administrative authority, identity-wide compromise or loss of trusted recovery.</td><td>Contain immediately and govern as an active identity security risk.</td></tr>
+            <tr><td><span class="severity-badge severity-high">High</span></td><td>Practical path to significant privilege, reusable high-value credentials or broad identity control.</td><td>Accelerate remediation and validate route closure.</td></tr>
+            <tr><td><span class="severity-badge severity-medium">Medium</span></td><td>Meaningful control weakness that requires preconditions or contributes to a larger privilege route.</td><td>Remediate through planned identity hardening.</td></tr>
+            <tr><td><span class="severity-badge severity-low">Low</span></td><td>Limited identity exposure or hygiene weakness with constrained authority impact.</td><td>Address during baseline improvement.</td></tr>
+            <tr><td><span class="severity-badge severity-info">Info</span></td><td>Observation that supports assurance, visibility or architectural understanding.</td><td>Track as context or control maturity work.</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="bastion-subtitle"><span>Evidence</span> handling</h2>
+    <table class="bastion-appendix-notes">
+        <tr><th>Minimise</th><td>Retain only the identity material required to support a finding. Redact secrets, tokens and personal data wherever possible.</td></tr>
+        <tr><th>Protect</th><td>Store report evidence in an access-controlled location with an owner, retention period and disposal method.</td></tr>
+        <tr><th>Trace</th><td>Preserve enough context to connect each artefact to the affected identity, control relationship and assessment action.</td></tr>
+        <tr><th>Validate</th><td>Retest using controlled identities and record both the expected denial and the monitoring outcome.</td></tr>
+    </table>
+
+    <h2 class="bastion-subtitle"><span>Report</span> coordinates</h2>
+    <table class="bastion-report-coordinates">
+        <tr><th>Project</th><td>{{ProjectName}}</td><th>Reference</th><td class="bastion-mono">{{ReportReference}}</td></tr>
+        <tr><th>Client</th><td>{{ClientName}}</td><th>Generated</th><td class="bastion-mono">{{TodayISO}}</td></tr>
+        <tr><th>Assessment window</th><td class="bastion-mono">{{StartDate}} - {{EndDate}}</td><th>Findings</th><td class="bastion-mono">{{VulnTotalCount}}</td></tr>
+        <tr><th>Prepared by</th><td>{{OrganizationName}}</td><th>Overall rating</th><td class="risk-text-{{OverallRiskRating | string.downcase}}"><strong>{{OverallRiskRating}}</strong></td></tr>
+    </table>
+
+    <table class="bastion-final-mark" role="presentation"><tr><td class="bastion-final-glyph">B</td><td><strong>Cervantes Bastion</strong><small>Identity authority, trust and recovery</small></td></tr></table>
+</section>

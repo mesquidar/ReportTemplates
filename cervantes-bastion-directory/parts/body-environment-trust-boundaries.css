@@ -1,0 +1,19 @@
+.bastion-boundary-scope { margin-bottom: 16pt; }
+.bastion-boundary-plan { width: 100%; margin: 4pt 0 13pt; table-layout: fixed; }
+.bastion-boundary-plan > tbody > tr > td { padding: 8pt; vertical-align: middle; text-align: center; }
+.bastion-boundary-external { width: 21%; border: 1pt solid #8E867D; }
+.bastion-boundary-enterprise { width: 38%; padding: 7pt 9pt 9pt !important; border: 2pt solid #343936; }
+.bastion-boundary-core { width: 21%; border: 2pt solid #A86443; background: #DAD4CC; }
+.bastion-boundary-arrow { width: 10%; color: #A86443; font-size: 15pt; font-weight: 700; }
+.bastion-boundary-plan span,
+.bastion-boundary-plan strong { display: block; }
+.bastion-boundary-plan span { margin-bottom: 4pt; color: #8C4F33; font-size: 6.3pt; font-weight: 700; letter-spacing: .55pt; text-transform: uppercase; }
+.bastion-boundary-plan strong { color: #3E423F; font-size: 7.2pt; line-height: 1.35; }
+.bastion-boundary-enterprise table { width: 100%; margin-top: 6pt; }
+.bastion-boundary-enterprise table td { padding: 5pt 3pt; border: .7pt solid #AAA299; color: #4D504C; font-size: 6.5pt; }
+.bastion-boundary-rule { margin: 0 0 17pt 20%; padding: 9pt 12pt; border-left: 3pt solid #A86443; }
+.bastion-boundary-rule strong,
+.bastion-boundary-rule span { display: block; }
+.bastion-boundary-rule strong { color: #8C4F33; font-size: 6.5pt; letter-spacing: .55pt; text-transform: uppercase; }
+.bastion-boundary-rule span { margin-top: 2pt; color: #555852; font-size: 8.2pt; }
+.bastion-target-register td:first-child { width: 28%; }

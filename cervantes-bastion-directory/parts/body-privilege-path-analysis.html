@@ -1,0 +1,46 @@
+<div class="page-break"></div>
+<section class="bastion-section bastion-privilege-paths">
+    <table class="bastion-section-heading" role="presentation">
+        <tr><td class="bastion-keystone"><span></span></td><td><h1 id="privilege-path-analysis" class="bastion-section-title">Privilege Path Analysis</h1></td></tr>
+    </table>
+    <p class="bastion-lead">Privilege is analysed as a route through principals, control relationships and administrative boundaries.</p>
+
+    <div class="bastion-path-shell">
+        <div class="bastion-path-boundary-label">Protected authority boundary</div>
+        <table class="bastion-path-architecture" role="presentation">
+            <tr>
+                <td><span class="bastion-path-node">USER</span><strong>Starting principal</strong><small>Standard or service identity</small></td>
+                <td class="bastion-path-link">&gt;</td>
+                <td><span class="bastion-path-node">CTRL</span><strong>Control edge</strong><small>Delegation, ACL, token or credential</small></td>
+                <td class="bastion-path-link">&gt;</td>
+                <td class="bastion-path-core"><span class="bastion-path-node">T0</span><strong>Protected authority</strong><small>Directory, keys or recovery control</small></td>
+            </tr>
+        </table>
+    </div>
+
+    <table class="bastion-path-measures" role="presentation">
+        <tr>
+            <td><span>Scoped identities</span><strong class="tabular">{{Targets | array.size}}</strong></td>
+            <td><span>Verified conditions</span><strong class="tabular">{{VulnTotalCount}}</strong></td>
+            <td><span>Assessment duration</span><strong class="tabular">{{ProjectDuration}} days</strong></td>
+        </tr>
+    </table>
+
+    <h2 class="bastion-subtitle"><span>Priority</span> route contributors</h2>
+    {{if HasNoFindings}}
+    <div class="bastion-empty">No finding was available to associate with a privilege route.</div>
+    {{else}}
+    <table class="bastion-data-table bastion-path-contributors">
+        <thead><tr><th>ID</th><th>Control break</th><th>Affected route</th><th>Risk</th></tr></thead>
+        <tbody>
+            {{for vuln in Vulns}}
+            {{if vuln.VulnRisk == "Critical" || vuln.VulnRisk == "High"}}
+            <tr><td class="bastion-mono">{{vuln.VulnFindingId}}</td><td><strong>{{vuln.VulnName}}</strong></td><td>{{vuln.VulnTargets}}</td><td><span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span></td></tr>
+            {{end}}
+            {{end}}
+        </tbody>
+    </table>
+    {{end}}
+
+    <div class="bastion-path-interpretation"><strong>Interpretation</strong><p>A path becomes material when the control edge is practical, the destination changes authority and existing monitoring or isolation cannot reliably interrupt the route.</p></div>
+</section>

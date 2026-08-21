@@ -1,0 +1,50 @@
+<div class="page-break"></div>
+<section class="bastion-section bastion-detailed-findings">
+    <table class="bastion-section-heading" role="presentation">
+        <tr><td class="bastion-keystone"><span></span></td><td><h1 id="detailed-identity-findings" class="bastion-section-title">Detailed Identity Findings</h1></td></tr>
+    </table>
+    <p class="bastion-lead">Each finding connects the observed identity condition to its authority impact, evidence and required control change.</p>
+
+    {{if HasNoFindings}}
+    <div class="bastion-empty">No detailed findings are available for this assessment.</div>
+    {{else}}
+    {{for vuln in Vulns}}
+    <article class="bastion-finding" id="vuln-{{vuln.VulnFindingId}}">
+        <table class="bastion-finding-heading severity-border-{{vuln.VulnRisk | string.downcase}}" role="presentation">
+            <tr>
+                <td class="bastion-finding-id"><span>Identity finding</span><strong class="bastion-mono">{{vuln.VulnFindingId}}</strong></td>
+                <td class="bastion-finding-title"><h2>{{vuln.VulnName}}</h2><span>{{vuln.VulnCategory}}</span></td>
+                <td class="bastion-finding-rating"><span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span><strong class="bastion-mono">{{vuln.VulnCvss}}</strong></td>
+            </tr>
+        </table>
+
+        <table class="bastion-finding-coordinates">
+            <tr><th>Affected identities or assets</th><td>{{vuln.VulnTargets}}</td><th>Status</th><td>{{vuln.VulnStatus}}</td></tr>
+            <tr><th>CVSS vector</th><td colspan="3"><code>{{vuln.VulnCvssVector}}</code></td></tr>
+            {{if vuln.VulnCve != ""}}
+            <tr><th>CVE</th><td class="bastion-mono">{{vuln.VulnCve}}</td><th>CWE</th><td class="bastion-mono">{{vuln.VulnCwes}}</td></tr>
+            {{end}}
+        </table>
+
+        <div class="bastion-finding-block">
+            <h3>Observed condition</h3>
+            <div class="rich-text">{{vuln.VulnDescription}}</div>
+        </div>
+        <div class="bastion-finding-block bastion-finding-impact">
+            <h3>Identity and authority impact</h3>
+            <div class="rich-text">{{vuln.VulnImpact}}</div>
+        </div>
+        <div class="bastion-finding-block">
+            <h3>Verification evidence</h3>
+            <div class="rich-text">{{vuln.VulnPoc}}</div>
+        </div>
+        <div class="bastion-finding-block bastion-finding-remediation">
+            <h3>Required control change</h3>
+            <div class="rich-text">{{vuln.VulnRemediation}}</div>
+            <table role="presentation"><tr><td><span>Priority</span><strong>{{vuln.VulnPriority}}</strong></td><td><span>Complexity</span><strong>{{vuln.VulnComplexity}}</strong></td></tr></table>
+        </div>
+    </article>
+    {{if for.last == false}}<div class="page-break"></div>{{end}}
+    {{end}}
+    {{end}}
+</section>

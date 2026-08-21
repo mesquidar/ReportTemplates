@@ -1,0 +1,10 @@
+.bastion-record-register { width: 100%; margin: 4pt 0 19pt; table-layout: fixed; border-top: 2pt solid #303532; }
+.bastion-record-register th,
+.bastion-record-register td { padding: 9pt 8pt; border-bottom: .7pt solid #C1B9AF; vertical-align: top; }
+.bastion-record-register th { width: 17%; color: #7B746C; font-size: 6.6pt; letter-spacing: .5pt; text-align: left; text-transform: uppercase; }
+.bastion-record-register td { width: 33%; color: #2D302E; font-weight: 700; }
+.bastion-record-notice { margin-top: 21pt; padding: 11pt 0 11pt 13pt; border-left: 4pt solid #A86443; }
+.bastion-record-notice strong,
+.bastion-record-notice span { display: block; }
+.bastion-record-notice strong { margin-bottom: 3pt; color: #8C4F33; font-size: 7pt; letter-spacing: .6pt; text-transform: uppercase; }
+.bastion-record-notice span { max-width: 120mm; color: #555852; }

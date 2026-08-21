@@ -1,0 +1,22 @@
+.bastion-severity-model { width: 100%; margin-bottom: 19pt; font-size: 7.7pt; }
+.bastion-severity-model th { padding: 8pt; background: #303532; color: #EEE9E1; font-size: 6.2pt; letter-spacing: .45pt; text-align: left; text-transform: uppercase; }
+.bastion-severity-model td { padding: 8pt; border-bottom: .7pt solid #BDB5AC; vertical-align: top; }
+.bastion-severity-model td:first-child { width: 18%; }
+.bastion-severity-model td:nth-child(2) { width: 49%; }
+.bastion-appendix-notes { width: 100%; border-top: 2pt solid #303532; }
+.bastion-appendix-notes th,
+.bastion-appendix-notes td { padding: 8pt; border-bottom: .7pt solid #BDB5AC; text-align: left; vertical-align: top; }
+.bastion-appendix-notes th { width: 18%; color: #8C4F33; font-size: 6.5pt; letter-spacing: .5pt; text-transform: uppercase; }
+.bastion-appendix-notes td { color: #50534F; font-size: 7.8pt; }
+.bastion-report-coordinates { width: 100%; border-top: 2pt solid #303532; table-layout: fixed; }
+.bastion-report-coordinates th,
+.bastion-report-coordinates td { padding: 8pt; border-bottom: .7pt solid #BDB5AC; text-align: left; vertical-align: top; }
+.bastion-report-coordinates th { width: 18%; color: #777169; font-size: 6.2pt; letter-spacing: .45pt; text-transform: uppercase; }
+.bastion-report-coordinates td { width: 32%; color: #303431; font-size: 7.8pt; }
+.bastion-final-mark { width: 70mm; margin: 25pt 0 0 auto; border-left: 4pt solid #A86443; }
+.bastion-final-mark td { padding: 10pt 0 10pt 11pt; vertical-align: middle; }
+.bastion-final-mark .bastion-final-glyph { width: 13mm; height: 13mm; padding: 0; border: 1.5pt solid #303532; color: #A86443; font-family: "Arial Narrow", Arial, sans-serif; font-size: 15pt; font-weight: 700; line-height: 13mm; text-align: center; }
+.bastion-final-mark strong,
+.bastion-final-mark small { display: block; }
+.bastion-final-mark strong { color: #303431; font-size: 10pt; }
+.bastion-final-mark small { margin-top: 2pt; color: #777169; font-size: 6pt; letter-spacing: .35pt; text-transform: uppercase; }

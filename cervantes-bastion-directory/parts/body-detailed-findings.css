@@ -1,0 +1,33 @@
+.bastion-finding { margin: 3pt 0 24pt; }
+.bastion-finding-heading { width: 100%; table-layout: fixed; border-top: 4pt solid #A86443; border-bottom: 1pt solid #857D74; page-break-after: avoid; }
+.bastion-finding-heading td { padding: 10pt 8pt; vertical-align: top; }
+.bastion-finding-id { width: 19%; background: #2C312E; color: #EEE9E1; }
+.bastion-finding-id span,
+.bastion-finding-id strong { display: block; }
+.bastion-finding-id span { margin-bottom: 4pt; color: #C6BDB2; font-size: 5.8pt; font-weight: 700; letter-spacing: .5pt; text-transform: uppercase; }
+.bastion-finding-id strong { color: #FFFFFF; font-size: 9pt; }
+.bastion-finding-title { width: 61%; }
+.bastion-finding-title h2 { margin: 0 0 3pt; font-size: 17pt; line-height: 1.08; }
+.bastion-finding-title span { color: #777169; font-size: 7pt; }
+.bastion-finding-rating { width: 20%; text-align: right; }
+.bastion-finding-rating strong { display: block; margin-top: 5pt; color: #353936; font-size: 9pt; }
+.severity-border-critical { border-top-color: #852E2E; }
+.severity-border-high { border-top-color: #A94C35; }
+.severity-border-medium { border-top-color: #A36F2E; }
+.severity-border-low { border-top-color: #6D705C; }
+.severity-border-info { border-top-color: #626F70; }
+.bastion-finding-coordinates { width: 100%; margin: 9pt 0 15pt; }
+.bastion-finding-coordinates th,
+.bastion-finding-coordinates td { padding: 7pt 8pt; border-bottom: .7pt solid #C0B8AE; text-align: left; vertical-align: top; }
+.bastion-finding-coordinates th { width: 22%; color: #7A746C; font-size: 6.2pt; letter-spacing: .45pt; text-transform: uppercase; }
+.bastion-finding-coordinates td { color: #343835; font-size: 8pt; font-weight: 700; }
+.bastion-finding-block { margin: 12pt 0; padding-left: 11pt; border-left: 2pt solid #8E867C; }
+.bastion-finding-block h3 { margin: 0 0 6pt; color: #3B3F3C; font-size: 10pt; letter-spacing: .2pt; }
+.bastion-finding-impact { border-left-color: #A86443; }
+.bastion-finding-remediation { padding: 11pt 13pt; border-left: 4pt solid #A86443; background: #DDD8D0; }
+.bastion-finding-remediation table { width: 100%; margin-top: 9pt; border-top: 1pt solid #ABA298; }
+.bastion-finding-remediation td { width: 50%; padding: 7pt 0 0; }
+.bastion-finding-remediation td span,
+.bastion-finding-remediation td strong { display: block; }
+.bastion-finding-remediation td span { color: #777068; font-size: 6pt; font-weight: 700; letter-spacing: .5pt; text-transform: uppercase; }
+.bastion-finding-remediation td strong { color: #323633; font-size: 8pt; }

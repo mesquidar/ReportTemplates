@@ -1,0 +1,36 @@
+<div class="page-break"></div>
+<section class="bastion-section bastion-findings-overview">
+    <table class="bastion-section-heading" role="presentation">
+        <tr><td class="bastion-keystone"><span></span></td><td><h1 id="findings-overview" class="bastion-section-title">Findings Overview</h1></td></tr>
+    </table>
+    <p class="bastion-lead">Verified identity conditions are recorded as control breaks and ranked by their contribution to authority compromise.</p>
+
+    <table class="bastion-overview-command" role="presentation">
+        <tr>
+            <td><span>Total findings</span><strong class="tabular">{{VulnTotalCount}}</strong></td>
+            <td><span>Mean CVSS</span><strong class="tabular">{{VulnAvgCvss}}</strong></td>
+            <td><span>Overall rating</span><strong class="risk-text-{{OverallRiskRating | string.downcase}}">{{OverallRiskRating}}</strong></td>
+        </tr>
+    </table>
+
+    {{if HasNoFindings}}
+    <div class="bastion-empty">No findings were recorded. This is not a guarantee that every identity route is closed; preserve evidence of the controls that were validated.</div>
+    {{else}}
+    <table class="bastion-data-table bastion-findings-register">
+        <thead><tr><th>ID</th><th>Identity condition</th><th>Risk</th><th>CVSS</th><th>Status</th></tr></thead>
+        <tbody>
+            {{for vuln in Vulns}}
+            <tr>
+                <td class="bastion-mono">{{vuln.VulnFindingId}}</td>
+                <td><a href="#vuln-{{vuln.VulnFindingId}}"><strong>{{vuln.VulnName}}</strong></a><br/><span class="muted">{{vuln.VulnCategory}}</span></td>
+                <td><span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span></td>
+                <td class="bastion-mono">{{vuln.VulnCvss}}</td>
+                <td><span class="bastion-status">{{vuln.VulnStatus}}</span></td>
+            </tr>
+            {{end}}
+        </tbody>
+    </table>
+    {{end}}
+
+    <div class="bastion-overview-note">Prioritisation considers severity together with privilege reach, reuse potential, affected identity tier and the quality of compensating controls.</div>
+</section>

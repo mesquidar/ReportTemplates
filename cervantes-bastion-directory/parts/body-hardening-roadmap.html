@@ -1,0 +1,47 @@
+<div class="page-break"></div>
+<section class="bastion-section bastion-hardening-roadmap">
+    <table class="bastion-section-heading" role="presentation">
+        <tr><td class="bastion-keystone"><span></span></td><td><h1 id="hardening-roadmap" class="bastion-section-title">Hardening Roadmap</h1></td></tr>
+    </table>
+    <p class="bastion-lead">Remediation should first interrupt dangerous authority routes, then reduce structural exposure and finally strengthen assurance.</p>
+
+    {{if HasNoFindings}}
+    <div class="bastion-empty">No findings require a remediation sequence. Continue routine identity hygiene, route review and recovery exercises.</div>
+    {{else}}
+    <div class="bastion-roadmap-band bastion-roadmap-contain">
+        <table role="presentation"><tr><td class="bastion-roadmap-intent"><span>Contain</span><strong>Interrupt privileged routes</strong><small>Remove immediate access to protected authority and preserve evidence.</small></td><td>
+            <table class="bastion-roadmap-findings"><tbody>
+                {{for vuln in Vulns}}{{if vuln.VulnRisk == "Critical" || vuln.VulnRisk == "High"}}
+                <tr><td class="bastion-mono">{{vuln.VulnFindingId}}</td><td><strong>{{vuln.VulnName}}</strong><span>{{vuln.VulnPriority}} priority | {{vuln.VulnComplexity}} complexity</span></td><td><span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span></td></tr>
+                {{end}}{{end}}
+            </tbody></table>
+        </td></tr></table>
+    </div>
+
+    <div class="bastion-roadmap-band">
+        <table role="presentation"><tr><td class="bastion-roadmap-intent"><span>Reduce</span><strong>Change the trust structure</strong><small>Limit delegation, credential reach and administrative surface.</small></td><td>
+            <table class="bastion-roadmap-findings"><tbody>
+                {{for vuln in Vulns}}{{if vuln.VulnRisk == "Medium"}}
+                <tr><td class="bastion-mono">{{vuln.VulnFindingId}}</td><td><strong>{{vuln.VulnName}}</strong><span>{{vuln.VulnPriority}} priority | {{vuln.VulnComplexity}} complexity</span></td><td><span class="severity-badge severity-medium">{{vuln.VulnRisk}}</span></td></tr>
+                {{end}}{{end}}
+            </tbody></table>
+        </td></tr></table>
+    </div>
+
+    <div class="bastion-roadmap-band">
+        <table role="presentation"><tr><td class="bastion-roadmap-intent"><span>Strengthen</span><strong>Improve assurance and visibility</strong><small>Harden the baseline, expand detection and prove recovery.</small></td><td>
+            <table class="bastion-roadmap-findings"><tbody>
+                {{for vuln in Vulns}}{{if vuln.VulnRisk == "Low" || vuln.VulnRisk == "Info"}}
+                <tr><td class="bastion-mono">{{vuln.VulnFindingId}}</td><td><strong>{{vuln.VulnName}}</strong><span>{{vuln.VulnPriority}} priority | {{vuln.VulnComplexity}} complexity</span></td><td><span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span></td></tr>
+                {{end}}{{end}}
+            </tbody></table>
+        </td></tr></table>
+    </div>
+    {{end}}
+
+    <table class="bastion-roadmap-gates">
+        <tr><th>Ownership gate</th><td>Every control change has a named service or identity owner.</td></tr>
+        <tr><th>Evidence gate</th><td>Closure includes configuration evidence and route-based retest results.</td></tr>
+        <tr><th>Recovery gate</th><td>Changes to Tier 0 and authentication services include rollback and restoration procedures.</td></tr>
+    </table>
+</section>

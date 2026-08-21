@@ -1,0 +1,27 @@
+.bastion-path-shell { margin: 3pt 0 0; padding: 9pt; border: 2pt solid #333835; }
+.bastion-path-boundary-label { margin-bottom: 7pt; color: #8C4F33; font-size: 6.2pt; font-weight: 700; letter-spacing: .65pt; text-transform: uppercase; }
+.bastion-path-architecture { width: 100%; table-layout: fixed; }
+.bastion-path-architecture td { padding: 11pt 7pt; border: .7pt solid #9C948A; vertical-align: middle; text-align: center; }
+.bastion-path-architecture td:not(.bastion-path-link) { width: 28%; }
+.bastion-path-architecture .bastion-path-link { width: 8%; padding: 20pt 0 0; border: 0; color: #A86443; font-size: 14pt; font-weight: 700; }
+.bastion-path-core { border: 2pt solid #A86443 !important; background: #DDD7CF; }
+.bastion-path-node,
+.bastion-path-architecture strong,
+.bastion-path-architecture small { display: block; }
+.bastion-path-node { margin-bottom: 5pt; color: #8C4F33; font-family: "DejaVu Sans Mono", Consolas, monospace; font-size: 6.5pt; font-weight: 700; }
+.bastion-path-architecture strong { color: #343835; font-size: 8.3pt; }
+.bastion-path-architecture small { margin-top: 3pt; color: #6C6D67; font-size: 6.3pt; line-height: 1.35; }
+.bastion-path-measures { width: 100%; margin: 9pt 0 18pt; table-layout: fixed; border-bottom: 1pt solid #A59D93; }
+.bastion-path-measures td { width: 33.333%; padding: 8pt 10pt; border-left: 1pt solid #BBB3A9; }
+.bastion-path-measures td:first-child { border-left: 3pt solid #A86443; }
+.bastion-path-measures span,
+.bastion-path-measures strong { display: block; }
+.bastion-path-measures span { color: #767068; font-size: 6.2pt; font-weight: 700; letter-spacing: .45pt; text-transform: uppercase; }
+.bastion-path-measures strong { margin-top: 2pt; color: #303431; font-size: 10pt; }
+.bastion-path-contributors th:nth-child(1) { width: 12%; }
+.bastion-path-contributors th:nth-child(2) { width: 36%; }
+.bastion-path-contributors th:nth-child(3) { width: 34%; }
+.bastion-path-contributors th:nth-child(4) { width: 18%; }
+.bastion-path-interpretation { margin: 18pt 0 0 24%; padding: 10pt 12pt; border-left: 3pt solid #A86443; }
+.bastion-path-interpretation strong { color: #8C4F33; font-size: 6.5pt; letter-spacing: .55pt; text-transform: uppercase; }
+.bastion-path-interpretation p { margin: 4pt 0 0; color: #555852; font-size: 8pt; }
