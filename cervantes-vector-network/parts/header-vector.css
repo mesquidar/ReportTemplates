@@ -1,0 +1,8 @@
+header { position: running(header); width: 100%; }
+.vector-header-table { width: 100%; border-collapse: collapse; border-bottom: .7pt solid #8FB2BA; table-layout: fixed; }
+.vector-header-spacer td { height: 4mm; padding: 0; border: 0; font-size: 1pt; line-height: 4mm; }
+.vector-header-table td { padding: 0 0 6pt; vertical-align: middle; }
+.vector-header-brand { width: 36%; color: #0F3B49; font-size: 7pt; font-weight: 700; letter-spacing: .7pt; text-transform: uppercase; }
+.vector-header-mark { display: inline-block; margin-right: 6pt; padding: 1.5pt 3pt; border: .7pt solid #25B9D1; color: #087F96; font-family: "DejaVu Sans Mono", Consolas, monospace; font-size: 7pt; }
+.vector-header-project { width: 42%; color: #587681; font-size: 7pt; text-align: center; }
+.vector-header-reference { width: 22%; color: #0F3B49; font-size: 6.5pt; text-align: right; }

@@ -1,0 +1,9 @@
+.vector-remediation-lane { margin: 0 0 17pt; page-break-inside: avoid; }
+.vector-remediation-lane h2 { margin: 0; padding: 8pt 10pt; border-left: 4pt solid #25B9D1; background: #DCEBED; color: #102D39; font-size: 11pt; }
+.vector-remediation-lane h2 span { display: inline-block; width: 49pt; margin-right: 7pt; color: #087F96; font-family: "DejaVu Sans Mono", Consolas, monospace; font-size: 6.5pt; letter-spacing: .5pt; }
+.vector-remediation-lane .vector-data-table { margin-top: 0; margin-bottom: 0; }
+.vector-remediation-lane th:first-child { width: 16%; }
+.vector-remediation-lane th:last-child { width: 18%; }
+.vector-lane-now h2 { border-left-color: #C6532F; }
+.vector-lane-next h2 { border-left-color: #B8821F; }
+.vector-lane-harden h2 { border-left-color: #25B9D1; }

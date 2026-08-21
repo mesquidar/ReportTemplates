@@ -1,0 +1,34 @@
+<div class="page-break"></div>
+<section class="vector-section vector-appendices">
+    <table class="vector-section-heading" role="presentation">
+        <tr><td class="vector-section-code">REF / A</td><td><h1 id="appendices" class="vector-section-title">Appendices</h1></td></tr>
+    </table>
+    <p class="vector-lead">Reference material for severity interpretation, evidence handling and repeatable technical review.</p>
+
+    <h2 class="vector-subtitle">A. Severity model</h2>
+    <table class="vector-data-table vector-severity-table">
+        <thead><tr><th>Severity</th><th>CVSS</th><th>Interpretation</th></tr></thead>
+        <tbody>
+            <tr><td><span class="severity-badge severity-critical">Critical</span></td><td class="vector-mono">9.0–10.0</td><td>Direct or highly reliable route to material compromise, broad control or sensitive data exposure.</td></tr>
+            <tr><td><span class="severity-badge severity-high">High</span></td><td class="vector-mono">7.0–8.9</td><td>Serious weakness with credible impact that should enter an accelerated remediation cycle.</td></tr>
+            <tr><td><span class="severity-badge severity-medium">Medium</span></td><td class="vector-mono">4.0–6.9</td><td>Meaningful weakness with constrained impact, reachability or required preconditions.</td></tr>
+            <tr><td><span class="severity-badge severity-low">Low</span></td><td class="vector-mono">0.1–3.9</td><td>Limited direct impact; often valuable as part of a wider route or hardening programme.</td></tr>
+            <tr><td><span class="severity-badge severity-info">Info</span></td><td class="vector-mono">0.0</td><td>Observed condition or defensive improvement without a verified standalone exploit.</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="vector-subtitle">B. Evidence handling</h2>
+    <table class="vector-evidence-table" role="presentation">
+        <tr><td class="vector-mono">CAPTURE</td><td>Record time, target, operator and the minimum output needed to support the finding.</td></tr>
+        <tr><td class="vector-mono">REDACT</td><td>Remove secrets and unrelated personal or client data before distributing the report.</td></tr>
+        <tr><td class="vector-mono">PROTECT</td><td>Store evidence with access controls appropriate to confidential security material.</td></tr>
+        <tr><td class="vector-mono">DISPOSE</td><td>Delete working copies according to the agreed retention period and engagement rules.</td></tr>
+    </table>
+
+    <h2 class="vector-subtitle">C. Report coordinates</h2>
+    <table class="vector-data-table">
+        <tr><td class="vector-meta-label">Reference</td><td class="vector-mono">{{ReportReference}}</td></tr>
+        <tr><td class="vector-meta-label">Generated</td><td class="vector-mono">{{TodayISO}}</td></tr>
+        <tr><td class="vector-meta-label">Series</td><td class="vector-mono">CERVANTES / VECTOR / NETWORK 01</td></tr>
+    </table>
+</section>

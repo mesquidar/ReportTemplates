@@ -1,0 +1,12 @@
+.vector-path-diagram { width: 100%; margin: 3pt 0 18pt; border: 1pt solid #0B4352; table-layout: fixed; }
+.vector-path-axis td { padding: 5pt 8pt; border-right: .6pt solid #49727D; background: #071B26; color: #7FD8E5; font-family: "DejaVu Sans Mono", Consolas, monospace; font-size: 6.2pt; font-weight: 700; letter-spacing: .65pt; }
+.vector-path-diagram tr:last-child td { padding: 12pt 9pt; border-right: .6pt solid #9CBAC1; background: #E3EFF1; vertical-align: top; }
+.vector-path-diagram td:last-child { border-right: 0; }
+.vector-path-node,
+.vector-path-diagram strong,
+.vector-path-diagram small { display: block; }
+.vector-path-node { margin-bottom: 14pt; color: #087F96; font-family: "DejaVu Sans Mono", Consolas, monospace; font-size: 8pt; font-weight: 700; }
+.vector-path-diagram strong { margin-bottom: 5pt; color: #102D39; font-size: 8.7pt; }
+.vector-path-diagram small { color: #5A7680; font-size: 7pt; line-height: 1.35; }
+.vector-path-register th:first-child { width: 16%; }
+.vector-path-register th:last-child { width: 18%; }

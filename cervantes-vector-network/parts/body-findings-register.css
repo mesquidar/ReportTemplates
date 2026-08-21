@@ -1,0 +1,13 @@
+.vector-findings-table th:first-child { width: 12%; }
+.vector-findings-table th:nth-child(2) { width: 40%; }
+.vector-findings-table th:nth-child(3) { width: 16%; }
+.vector-findings-table th:nth-child(4) { width: 12%; }
+.vector-findings-table th:nth-child(5) { width: 20%; }
+.vector-finding-id { color: #087F96; font-weight: 700; }
+.vector-cvss { color: #102D39; font-weight: 700; text-align: center; }
+.vector-register-summary { width: 100%; margin-top: 18pt; border-top: 2pt solid #071B26; table-layout: fixed; }
+.vector-register-summary td { padding: 10pt; border-right: .7pt solid #B8CFD4; vertical-align: top; }
+.vector-register-summary td:last-child { border-right: 0; }
+.vector-register-summary span,
+.vector-register-summary strong { display: block; }
+.vector-register-summary strong { margin-top: 4pt; color: #102D39; font-size: 13pt; }

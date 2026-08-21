@@ -1,0 +1,34 @@
+<div class="page-break"></div>
+<section class="vector-section vector-attack-path">
+    <table class="vector-section-heading" role="presentation">
+        <tr><td class="vector-section-code">PTH / 06</td><td><h1 id="attack-path-analysis" class="vector-section-title">Attack path analysis</h1></td></tr>
+    </table>
+    <p class="vector-lead">Individual weaknesses become materially important when they connect an exposed entry point to identity, control or sensitive data.</p>
+
+    <table class="vector-path-diagram" role="presentation">
+        <tr class="vector-path-axis"><td>ENTRY</td><td>ACCESS</td><td>CONTROL</td><td>IMPACT</td></tr>
+        <tr>
+            <td><span class="vector-path-node">01</span><strong>Scoped surface</strong><small class="vector-mono">{{Targets | array.size}} target(s)</small></td>
+            <td><span class="vector-path-node">02</span><strong>Verified weakness</strong><small class="vector-mono">{{VulnTotalCount}} signal(s)</small></td>
+            <td><span class="vector-path-node">03</span><strong>Privilege or trust</strong><small>Identity, service or application boundary</small></td>
+            <td><span class="vector-path-node">04</span><strong>Business consequence</strong><small>{{ProjectBusinessImpact}}</small></td>
+        </tr>
+    </table>
+
+    <h2 class="vector-subtitle">Priority route candidates</h2>
+    {{if HasNoFindings}}
+    <div class="vector-empty">No findings are available to construct an attack route.</div>
+    {{else}}
+    <table class="vector-data-table vector-path-register">
+        <thead><tr><th>Signal</th><th>Potential route contribution</th><th>Priority</th></tr></thead>
+        <tbody>
+        {{for vuln in Vulns}}
+        {{if vuln.VulnRisk == "Critical" || vuln.VulnRisk == "High"}}
+        <tr><td class="vector-mono">{{vuln.VulnFindingId}}</td><td><strong>{{vuln.VulnName}}</strong><br/><span class="muted">Affected: {{vuln.VulnTargets}}</span></td><td><span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span></td></tr>
+        {{end}}
+        {{end}}
+        </tbody>
+    </table>
+    {{end}}
+    <div class="vector-note"><strong>Interpretation.</strong> Confirm each route against the detailed evidence. Shared identity, reachable management interfaces and reused trust relationships often connect findings that appear isolated in a flat register.</div>
+</section>

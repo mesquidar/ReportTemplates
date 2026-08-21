@@ -1,0 +1,41 @@
+<div class="page-break"></div>
+<section class="vector-section vector-validation">
+    <table class="vector-section-heading" role="presentation">
+        <tr><td class="vector-section-code">VAL / 08</td><td><h1 id="validation-next-steps" class="vector-section-title">Validation &amp; next steps</h1></td></tr>
+    </table>
+    <p class="vector-lead">Closure requires evidence that the affected control changed and that the previously verified attack route no longer works.</p>
+
+    <table class="vector-validation-summary" role="presentation">
+        <tr>
+            <td><span class="vector-meta-label">Assessment duration</span><strong class="vector-mono">{{ProjectDuration}} days</strong></td>
+            <td><span class="vector-meta-label">Targets assessed</span><strong class="vector-mono">{{Targets | array.size}}</strong></td>
+            <td><span class="vector-meta-label">Findings to track</span><strong class="vector-mono">{{VulnTotalCount}}</strong></td>
+            <td><span class="vector-meta-label">Mean CVSS</span><strong class="vector-mono">{{VulnAvgCvss}}</strong></td>
+        </tr>
+    </table>
+
+    <h2 class="vector-subtitle">Retest protocol</h2>
+    <table class="vector-data-table">
+        <thead><tr><th>Stage</th><th>Validation condition</th><th>Output</th></tr></thead>
+        <tbody>
+            <tr><td class="vector-mono">01 / CHANGE</td><td>Confirm the intended configuration, code or architecture change is present on the affected target.</td><td>Implementation evidence</td></tr>
+            <tr><td class="vector-mono">02 / REPLAY</td><td>Repeat the original proof using the same preconditions and a controlled test identity.</td><td>Pass / fail record</td></tr>
+            <tr><td class="vector-mono">03 / BYPASS</td><td>Check reasonable alternate routes and adjacent trust boundaries for regression or partial fixes.</td><td>Residual-risk note</td></tr>
+            <tr><td class="vector-mono">04 / CLOSE</td><td>Record the retest date, operator, evidence and accepted residual risk.</td><td>Closure decision</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="vector-subtitle">Engagement outcome</h2>
+    {{if HasNoFindings}}
+    <p>No exploitable weakness was recorded in the selected data. Maintain the tested controls and repeat the assessment when the attack surface materially changes.</p>
+    {{else}}
+    <p>The assessment recorded <strong>{{VulnTotalCount}}</strong> finding(s) and an overall exposure rating of <strong class="risk-text-{{OverallRiskRating | string.downcase}}">{{OverallRiskRating}}</strong>. Remediation should follow the route-based priority defined in this report.</p>
+    {{end}}
+
+    <div class="vector-contact-block">
+        <table role="presentation">
+            <tr><td><span>Assessment contact</span><strong>{{OrganizationContactName}}</strong></td><td><span>Email</span><strong>{{OrganizationEmail}}</strong></td></tr>
+            <tr><td><span>Organisation</span><strong>{{OrganizationName}}</strong></td><td><span>Phone</span><strong>{{OrganizationPhone}}</strong></td></tr>
+        </table>
+    </div>
+</section>

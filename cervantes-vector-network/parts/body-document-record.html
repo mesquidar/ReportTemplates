@@ -1,0 +1,38 @@
+<div class="page-break"></div>
+<section class="vector-section vector-document-record">
+    <table class="vector-section-heading" role="presentation">
+        <tr><td class="vector-section-code">SYS / 00</td><td><h1 id="document-record" class="vector-section-title">Document record</h1></td></tr>
+    </table>
+    <p class="vector-lead">Control data for the authorised test window, report issue and assessment team.</p>
+
+    <h2 class="vector-subtitle">Report parameters</h2>
+    <table class="vector-data-table vector-record-table">
+        <tr><td class="vector-meta-label">Document</td><td class="vector-meta-value">{{ProjectName}} — Network &amp; Application Penetration Test</td></tr>
+        <tr><td class="vector-meta-label">Client</td><td class="vector-meta-value">{{ClientName}}</td></tr>
+        <tr><td class="vector-meta-label">Prepared by</td><td class="vector-meta-value">{{OrganizationName}}</td></tr>
+        <tr><td class="vector-meta-label">Test window</td><td class="vector-meta-value tabular">{{StartDate}} — {{EndDate}}</td></tr>
+        <tr><td class="vector-meta-label">Reference</td><td class="vector-meta-value tabular">{{ReportReference}}</td></tr>
+        <tr><td class="vector-meta-label">Issued</td><td class="vector-meta-value">{{TodayLong}}</td></tr>
+        <tr><td class="vector-meta-label">Handling</td><td class="vector-meta-value">Confidential — authorised recipients only</td></tr>
+    </table>
+
+    <h2 class="vector-subtitle">Revision channel</h2>
+    <table class="vector-data-table vector-revision-table">
+        <thead><tr><th>Version</th><th>Issued</th><th>Change record</th></tr></thead>
+        <tbody>
+        {{for doc in Documents}}
+        <tr><td class="tabular">{{doc.DocumentVersion}}</td><td class="tabular">{{doc.DocumentCreatedDate}}</td><td>{{doc.DocumentDescription}}</td></tr>
+        {{end}}
+        </tbody>
+    </table>
+
+    <h2 class="vector-subtitle">Assessment team</h2>
+    <table class="vector-data-table vector-team-table">
+        <thead><tr><th>Operator</th><th>Role</th><th>Contact</th></tr></thead>
+        <tbody>
+        {{for user in Users}}
+        <tr><td class="vector-meta-value">{{user.UserFullName}}</td><td>{{user.UserPosition}}</td><td>{{user.UserEmail}}</td></tr>
+        {{end}}
+        </tbody>
+    </table>
+</section>

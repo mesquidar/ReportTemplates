@@ -1,0 +1,34 @@
+.vector-finding { margin: 0 0 22pt; }
+.vector-finding-header { width: 100%; table-layout: fixed; border-left: 4pt solid #25B9D1; background: #071B26; }
+.severity-border-critical { border-left-color: #9E2935; }
+.severity-border-high { border-left-color: #C6532F; }
+.severity-border-medium { border-left-color: #B8821F; }
+.severity-border-low { border-left-color: #17859A; }
+.severity-border-info { border-left-color: #536F7A; }
+.vector-finding-header td { padding: 11pt 10pt; vertical-align: middle; }
+.vector-finding-key { width: 22mm; color: #7FD8E5; font-family: "DejaVu Sans Mono", Consolas, monospace; }
+.vector-finding-key span,
+.vector-finding-key strong { display: block; }
+.vector-finding-key span { color: #718E98; font-size: 5.8pt; letter-spacing: .65pt; }
+.vector-finding-key strong { margin-top: 3pt; font-size: 8pt; }
+.vector-finding-header h2 { margin: 0 0 2pt; color: #F1F7F8; font-size: 14pt; line-height: 1.16; }
+.vector-finding-category { color: #87A4AD; font-size: 7.2pt; }
+.vector-finding-risk { width: 24mm; text-align: right; }
+.vector-finding-risk strong { display: block; margin-top: 5pt; color: #D7E8EB; font-size: 8pt; }
+
+.vector-finding-meta { width: 100%; margin-bottom: 13pt; table-layout: fixed; background: #DDECEF; }
+.vector-finding-meta td { width: 50%; padding: 7pt 9pt; border-bottom: .6pt solid #B8CFD4; vertical-align: top; }
+.vector-finding-meta .vector-meta-label,
+.vector-finding-meta .vector-meta-value { display: block; }
+.vector-finding-meta code { display: inline-block; margin-top: 3pt; }
+
+.vector-finding-block { margin: 11pt 0; padding: 10pt 12pt 11pt; border-left: 2pt solid #7B9EA7; background: #ECF4F5; page-break-inside: avoid; }
+.vector-finding-block h3 { margin: 0 0 8pt; color: #102D39; font-size: 10pt; letter-spacing: .1pt; }
+.vector-finding-block h3 span { display: inline-block; width: 20pt; margin-right: 5pt; color: #087F96; font-family: "DejaVu Sans Mono", Consolas, monospace; font-size: 7pt; }
+.vector-finding-block .rich-text { font-size: 9pt; }
+.vector-impact-block { border-left-color: #C6532F; }
+.vector-evidence-block { border-left-color: #087F96; background: #E4F0F2; }
+.vector-remediation-block { border-left-color: #25B9D1; }
+.vector-remediation-meta { width: 100%; margin-top: 9pt; border-top: .6pt solid #B5CDD2; table-layout: fixed; }
+.vector-remediation-meta td { padding: 6pt 0 0; color: #5D7882; font-size: 7.2pt; }
+.vector-remediation-meta strong { color: #153744; }

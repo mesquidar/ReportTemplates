@@ -1,0 +1,13 @@
+.vector-validation-summary { width: 100%; margin: 0 0 18pt; border-top: 2pt solid #071B26; table-layout: fixed; }
+.vector-validation-summary td { padding: 10pt 8pt; border-right: .6pt solid #B8CFD4; background: #E5F1F3; vertical-align: top; }
+.vector-validation-summary td:last-child { border-right: 0; }
+.vector-validation-summary span,
+.vector-validation-summary strong { display: block; }
+.vector-validation-summary strong { margin-top: 5pt; color: #102D39; font-size: 11pt; }
+.vector-contact-block { margin-top: 20pt; padding: 12pt 14pt; border-left: 3pt solid #25B9D1; background: #071B26; }
+.vector-contact-block table { width: 100%; table-layout: fixed; }
+.vector-contact-block td { padding: 6pt 8pt; color: #F0F7F8; vertical-align: top; }
+.vector-contact-block span,
+.vector-contact-block strong { display: block; }
+.vector-contact-block span { color: #77959E; font-family: "DejaVu Sans Mono", Consolas, monospace; font-size: 6.2pt; letter-spacing: .5pt; text-transform: uppercase; }
+.vector-contact-block strong { margin-top: 2pt; font-size: 8.5pt; }

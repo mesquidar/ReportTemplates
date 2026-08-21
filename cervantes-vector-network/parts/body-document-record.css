@@ -1,0 +1,5 @@
+.vector-record-table td:first-child { width: 29%; }
+.vector-revision-table th:first-child { width: 16%; }
+.vector-revision-table th:nth-child(2) { width: 24%; }
+.vector-team-table th:first-child { width: 30%; }
+.vector-team-table th:nth-child(2) { width: 25%; }

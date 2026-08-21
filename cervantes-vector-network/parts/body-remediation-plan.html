@@ -1,0 +1,33 @@
+<div class="page-break"></div>
+<section class="vector-section vector-remediation-plan">
+    <table class="vector-section-heading" role="presentation">
+        <tr><td class="vector-section-code">FIX / 07</td><td><h1 id="remediation-plan" class="vector-section-title">Remediation plan</h1></td></tr>
+    </table>
+    <p class="vector-lead">Prioritisation follows reachability and impact: break critical routes first, then reduce exposed surface and strengthen durable controls.</p>
+
+    <div class="vector-remediation-lane vector-lane-now">
+        <h2><span>LANE 01</span>Contain and break the route</h2>
+        <table class="vector-data-table">
+            <thead><tr><th>ID</th><th>Action candidate</th><th>Severity</th></tr></thead>
+            <tbody>{{for vuln in Vulns}}{{if vuln.VulnRisk == "Critical" || vuln.VulnRisk == "High"}}<tr><td class="vector-mono">{{vuln.VulnFindingId}}</td><td>{{vuln.VulnName}}</td><td><span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span></td></tr>{{end}}{{end}}</tbody>
+        </table>
+    </div>
+
+    <div class="vector-remediation-lane vector-lane-next">
+        <h2><span>LANE 02</span>Reduce reachable exposure</h2>
+        <table class="vector-data-table">
+            <thead><tr><th>ID</th><th>Action candidate</th><th>Severity</th></tr></thead>
+            <tbody>{{for vuln in Vulns}}{{if vuln.VulnRisk == "Medium"}}<tr><td class="vector-mono">{{vuln.VulnFindingId}}</td><td>{{vuln.VulnName}}</td><td><span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span></td></tr>{{end}}{{end}}</tbody>
+        </table>
+    </div>
+
+    <div class="vector-remediation-lane vector-lane-harden">
+        <h2><span>LANE 03</span>Harden and observe</h2>
+        <table class="vector-data-table">
+            <thead><tr><th>ID</th><th>Action candidate</th><th>Severity</th></tr></thead>
+            <tbody>{{for vuln in Vulns}}{{if vuln.VulnRisk == "Low" || vuln.VulnRisk == "Info"}}<tr><td class="vector-mono">{{vuln.VulnFindingId}}</td><td>{{vuln.VulnName}}</td><td><span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span></td></tr>{{end}}{{end}}</tbody>
+        </table>
+    </div>
+
+    <div class="vector-note">Assign each action an owner, target date and evidence requirement in the remediation tracker. A finding is not closed until the original test path no longer succeeds.</div>
+</section>

@@ -1,0 +1,32 @@
+<div class="page-break"></div>
+<section class="vector-section vector-scope">
+    <table class="vector-section-heading" role="presentation">
+        <tr><td class="vector-section-code">SCP / 02</td><td><h1 id="scope-attack-surface" class="vector-section-title">Scope &amp; attack surface</h1></td></tr>
+    </table>
+    <p class="vector-lead">The authorised boundary defines what could be tested, from which perspective and under which operational constraints.</p>
+
+    <h2 class="vector-subtitle">Engagement context</h2>
+    <div class="rich-text">{{ProjectDescription}}</div>
+
+    <h2 class="vector-subtitle">Target register</h2>
+    {{if HasTargets}}
+    <table class="vector-data-table vector-target-table">
+        <thead><tr><th>Asset / endpoint</th><th>Type</th><th>Test context</th></tr></thead>
+        <tbody>
+        {{for target in Targets}}
+        <tr><td class="vector-meta-value vector-mono">{{target.TargetName}}</td><td><span class="vector-status">{{target.TargetType}}</span></td><td>{{target.TargetDescription}}</td></tr>
+        {{end}}
+        </tbody>
+    </table>
+    {{else}}
+    <div class="vector-empty">No target records were available when this report was generated. Confirm the authorised asset list before testing or retesting.</div>
+    {{end}}
+
+    <table class="vector-boundary-table" role="presentation">
+        <tr>
+            <td><span class="vector-boundary-code">IN</span><strong>Authorised surface</strong><p>Named network ranges, hosts, applications, APIs and identities in the target register.</p></td>
+            <td><span class="vector-boundary-code">GUARD</span><strong>Operational constraints</strong><p>Testing window, rate limits, safety rules, exclusions and escalation contacts.</p></td>
+            <td><span class="vector-boundary-code">OUT</span><strong>Excluded surface</strong><p>Third-party systems and any asset not explicitly authorised remain outside the test boundary.</p></td>
+        </tr>
+    </table>
+</section>

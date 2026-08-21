@@ -1,0 +1,44 @@
+<div class="page-break"></div>
+<section class="vector-section vector-executive-brief">
+    <table class="vector-section-heading" role="presentation">
+        <tr><td class="vector-section-code">BRF / 01</td><td><h1 id="executive-brief" class="vector-section-title">Executive brief</h1></td></tr>
+    </table>
+    <p class="vector-lead">A decision-focused view of exposure, verified weaknesses and the first actions required to reduce reachable risk.</p>
+
+    <table class="vector-risk-band risk-band-{{OverallRiskRating | string.downcase}}" role="presentation">
+        <tr>
+            <td class="vector-risk-label"><span>Overall exposure</span><strong class="risk-text-{{OverallRiskRating | string.downcase}}">{{OverallRiskRating}}</strong></td>
+            <td class="vector-risk-context">
+                {{if HasCriticalFindings}}Critical weaknesses create a credible route to material compromise and require immediate containment.{{else if HasHighFindings}}High-impact attack routes were verified and should enter an accelerated remediation cycle.{{else}}No critical route was verified; address the recorded weaknesses and preserve the tested controls.{{end}}
+            </td>
+        </tr>
+    </table>
+
+    <table class="vector-metric-table" role="presentation">
+        <tr>
+            <td><span class="vector-metric-value">{{VulnCriticalCount}}</span><span class="vector-metric-label">Critical</span></td>
+            <td><span class="vector-metric-value">{{VulnHighCount}}</span><span class="vector-metric-label">High</span></td>
+            <td><span class="vector-metric-value">{{VulnMediumCount}}</span><span class="vector-metric-label">Medium</span></td>
+            <td><span class="vector-metric-value">{{VulnLowCount}}</span><span class="vector-metric-label">Low</span></td>
+            <td><span class="vector-metric-value">{{VulnInfoCount}}</span><span class="vector-metric-label">Info</span></td>
+        </tr>
+    </table>
+
+    <table class="vector-two-column" role="presentation">
+        <tr>
+            <td>
+                <h2 class="vector-subtitle">Assessment statement</h2>
+                <div class="rich-text">{{ProjectExecutiveSummary}}</div>
+            </td>
+            <td>
+                <h2 class="vector-subtitle">Operational context</h2>
+                <table class="vector-signal-table">
+                    <tr><td>Window</td><td class="tabular">{{StartDate}} — {{EndDate}}</td></tr>
+                    <tr><td>Total findings</td><td class="tabular">{{VulnTotalCount}}</td></tr>
+                    <tr><td>Client</td><td>{{ClientName}}</td></tr>
+                    <tr><td>Operator</td><td>{{OrganizationName}}</td></tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</section>

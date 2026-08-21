@@ -1,0 +1,50 @@
+<div class="page-break"></div>
+<section class="vector-section vector-detailed-findings">
+    <table class="vector-section-heading" role="presentation">
+        <tr><td class="vector-section-code">EVD / 05</td><td><h1 id="detailed-findings" class="vector-section-title">Detailed findings</h1></td></tr>
+    </table>
+    <p class="vector-lead">Each finding separates the verified condition, reachable impact, evidence and the control change required to close it.</p>
+
+    {{if HasNoFindings}}
+    <div class="vector-empty">No detailed findings were available for this report.</div>
+    {{else}}
+    {{for vuln in Vulns}}
+    <article class="vector-finding" id="vuln-{{vuln.VulnFindingId}}">
+        <table class="vector-finding-header severity-border-{{vuln.VulnRisk | string.downcase}}" role="presentation">
+            <tr>
+                <td class="vector-finding-key"><span>FINDING</span><strong>{{vuln.VulnFindingId}}</strong></td>
+                <td><h2>{{vuln.VulnName}}</h2><span class="vector-finding-category">{{vuln.VulnCategory}}</span></td>
+                <td class="vector-finding-risk"><span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span><strong class="vector-mono">{{vuln.VulnCvss}}</strong></td>
+            </tr>
+        </table>
+
+        <table class="vector-finding-meta">
+            <tr><td><span class="vector-meta-label">Targets</span><span class="vector-meta-value">{{vuln.VulnTargets}}</span></td><td><span class="vector-meta-label">Status</span><span class="vector-meta-value">{{vuln.VulnStatus}}</span></td></tr>
+            <tr><td colspan="2"><span class="vector-meta-label">CVSS vector</span><code>{{vuln.VulnCvssVector}}</code></td></tr>
+            {{if vuln.VulnCve != ""}}
+            <tr><td><span class="vector-meta-label">CVE</span><span class="vector-meta-value vector-mono">{{vuln.VulnCve}}</span></td><td><span class="vector-meta-label">CWE</span><span class="vector-meta-value vector-mono">{{vuln.VulnCwes}}</span></td></tr>
+            {{end}}
+        </table>
+
+        <div class="vector-finding-block">
+            <h3><span>01</span>Condition</h3>
+            <div class="rich-text">{{vuln.VulnDescription}}</div>
+        </div>
+        <div class="vector-finding-block vector-impact-block">
+            <h3><span>02</span>Reachable impact</h3>
+            <div class="rich-text">{{vuln.VulnImpact}}</div>
+        </div>
+        <div class="vector-finding-block vector-evidence-block">
+            <h3><span>03</span>Verification evidence</h3>
+            <div class="rich-text">{{vuln.VulnPoc}}</div>
+        </div>
+        <div class="vector-finding-block vector-remediation-block">
+            <h3><span>04</span>Control change</h3>
+            <div class="rich-text">{{vuln.VulnRemediation}}</div>
+            <table class="vector-remediation-meta" role="presentation"><tr><td>Priority <strong>{{vuln.VulnPriority}}</strong></td><td>Complexity <strong>{{vuln.VulnComplexity}}</strong></td></tr></table>
+        </div>
+    </article>
+    {{if for.last == false}}<div class="page-break"></div>{{end}}
+    {{end}}
+    {{end}}
+</section>

@@ -1,0 +1,7 @@
+.vector-method-route { width: 100%; margin: 5pt 0 18pt; table-layout: fixed; border-collapse: separate; border-spacing: 4pt; }
+.vector-method-route td { padding: 10pt; border-top: 1pt solid #25B9D1; background: #E4F0F2; vertical-align: top; }
+.vector-method-route span,
+.vector-method-route strong { display: block; }
+.vector-method-route span { margin-bottom: 12pt; color: #087F96; font-family: "DejaVu Sans Mono", Consolas, monospace; font-size: 7pt; font-weight: 700; }
+.vector-method-route strong { margin-bottom: 4pt; color: #102D39; font-size: 10pt; }
+.vector-method-route p { margin: 0; color: #587681; font-size: 7.7pt; line-height: 1.42; }

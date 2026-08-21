@@ -1,0 +1,132 @@
+{
+  "name": "Cervantes Vector Network",
+  "description": "A technical report template for network and application penetration tests, attack-path analysis and remediation validation.",
+  "version": "1.0.0",
+  "author": "OWASP Cervantes",
+  "language": "en",
+  "reportType": "general",
+  "preview": "preview.png",
+  "tags": [
+    "cervantes",
+    "vector",
+    "network-pentesting",
+    "application-security",
+    "attack-path",
+    "penetration-testing",
+    "technical"
+  ],
+  "parts": [
+    {
+      "key": "cover-vector",
+      "name": "Cervantes Vector Network Cover",
+      "type": "Cover",
+      "order": 0,
+      "html": "parts/cover-vector.html",
+      "css": "parts/cover-vector.css"
+    },
+    {
+      "key": "header-vector",
+      "name": "Cervantes Vector Network Header",
+      "type": "Header",
+      "order": 0,
+      "html": "parts/header-vector.html",
+      "css": "parts/header-vector.css"
+    },
+    {
+      "key": "footer-vector",
+      "name": "Cervantes Vector Network Footer",
+      "type": "Footer",
+      "order": 0,
+      "html": "parts/footer-vector.html",
+      "css": "parts/footer-vector.css"
+    },
+    {
+      "key": "body-document-record",
+      "name": "Cervantes Vector Network Document Record",
+      "type": "Body",
+      "order": 0,
+      "html": "parts/body-document-record.html",
+      "css": "parts/body-document-record.css"
+    },
+    {
+      "key": "body-contents",
+      "name": "Cervantes Vector Network Contents",
+      "type": "Body",
+      "order": 1,
+      "html": "parts/body-contents.html",
+      "css": "parts/body-contents.css"
+    },
+    {
+      "key": "body-executive-brief",
+      "name": "Cervantes Vector Network Executive Brief",
+      "type": "Body",
+      "order": 2,
+      "html": "parts/body-executive-brief.html",
+      "css": "parts/body-executive-brief.css"
+    },
+    {
+      "key": "body-scope-attack-surface",
+      "name": "Cervantes Vector Network Scope and Attack Surface",
+      "type": "Body",
+      "order": 3,
+      "html": "parts/body-scope-attack-surface.html",
+      "css": "parts/body-scope-attack-surface.css"
+    },
+    {
+      "key": "body-assessment-method",
+      "name": "Cervantes Vector Network Assessment Method",
+      "type": "Body",
+      "order": 4,
+      "html": "parts/body-assessment-method.html",
+      "css": "parts/body-assessment-method.css"
+    },
+    {
+      "key": "body-findings-register",
+      "name": "Cervantes Vector Network Findings Register",
+      "type": "Body",
+      "order": 5,
+      "html": "parts/body-findings-register.html",
+      "css": "parts/body-findings-register.css"
+    },
+    {
+      "key": "body-detailed-findings",
+      "name": "Cervantes Vector Network Detailed Findings",
+      "type": "Body",
+      "order": 6,
+      "html": "parts/body-detailed-findings.html",
+      "css": "parts/body-detailed-findings.css"
+    },
+    {
+      "key": "body-attack-path-analysis",
+      "name": "Cervantes Vector Network Attack Path Analysis",
+      "type": "Body",
+      "order": 7,
+      "html": "parts/body-attack-path-analysis.html",
+      "css": "parts/body-attack-path-analysis.css"
+    },
+    {
+      "key": "body-remediation-plan",
+      "name": "Cervantes Vector Network Remediation Plan",
+      "type": "Body",
+      "order": 8,
+      "html": "parts/body-remediation-plan.html",
+      "css": "parts/body-remediation-plan.css"
+    },
+    {
+      "key": "body-validation-next-steps",
+      "name": "Cervantes Vector Network Validation and Next Steps",
+      "type": "Body",
+      "order": 9,
+      "html": "parts/body-validation-next-steps.html",
+      "css": "parts/body-validation-next-steps.css"
+    },
+    {
+      "key": "body-appendices",
+      "name": "Cervantes Vector Network Appendices",
+      "type": "Body",
+      "order": 10,
+      "html": "parts/body-appendices.html",
+      "css": "parts/body-appendices.css"
+    }
+  ]
+}

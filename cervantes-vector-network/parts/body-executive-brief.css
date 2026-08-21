@@ -1,0 +1,20 @@
+.vector-risk-band { width: 100%; margin: 0 0 18pt; border-top: 2pt solid #071B26; border-bottom: .7pt solid #9ABBC2; table-layout: fixed; }
+.vector-risk-band td { padding: 12pt; vertical-align: middle; }
+.vector-risk-label { width: 46mm; background: #DDECEF; }
+.vector-risk-label span,
+.vector-risk-label strong { display: block; }
+.vector-risk-label span { color: #5C7882; font-family: "DejaVu Sans Mono", Consolas, monospace; font-size: 6.7pt; font-weight: 700; letter-spacing: .65pt; text-transform: uppercase; }
+.vector-risk-label strong { margin-top: 3pt; font-size: 23pt; line-height: 1; text-transform: uppercase; }
+.vector-risk-context { color: #294B58; font-size: 10.2pt; line-height: 1.5; }
+
+.vector-metric-table { width: 100%; margin: 0 0 18pt; table-layout: fixed; border-collapse: separate; border-spacing: 3pt; }
+.vector-metric-table td { padding: 9pt 5pt; border-top: 1pt solid #25B9D1; background: #E6F1F3; text-align: center; }
+.vector-metric-value,
+.vector-metric-label { display: block; }
+.vector-metric-value { color: #0D5262; font-family: "DejaVu Sans Mono", Consolas, monospace; font-size: 17pt; font-weight: 700; line-height: 1; }
+.vector-metric-label { margin-top: 4pt; color: #627F89; font-size: 6.3pt; font-weight: 700; letter-spacing: .55pt; text-transform: uppercase; }
+
+.vector-signal-table { width: 100%; margin-top: 9pt; }
+.vector-signal-table td { padding: 7pt 6pt; border-bottom: .6pt solid #BED2D7; vertical-align: top; }
+.vector-signal-table td:first-child { width: 38%; color: #617C86; font-size: 7pt; font-weight: 700; letter-spacing: .45pt; text-transform: uppercase; }
+.vector-signal-table td:last-child { color: #102D39; font-size: 8.5pt; font-weight: 700; }

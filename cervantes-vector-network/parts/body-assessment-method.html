@@ -1,0 +1,32 @@
+<div class="page-break"></div>
+<section class="vector-section vector-method">
+    <table class="vector-section-heading" role="presentation">
+        <tr><td class="vector-section-code">OPS / 03</td><td><h1 id="assessment-method" class="vector-section-title">Assessment method</h1></td></tr>
+    </table>
+    <p class="vector-lead">A repeatable sequence for moving from observable attack surface to verified impact without exceeding the authorised boundary.</p>
+
+    <table class="vector-method-route" role="presentation">
+        <tr>
+            <td><span>01</span><strong>Map</strong><p>Discover hosts, services, routes and application entry points.</p></td>
+            <td><span>02</span><strong>Model</strong><p>Identify trust boundaries, identities and likely attack paths.</p></td>
+            <td><span>03</span><strong>Verify</strong><p>Test weaknesses manually and retain reproducible evidence.</p></td>
+        </tr>
+        <tr>
+            <td><span>04</span><strong>Control</strong><p>Demonstrate impact with the minimum safe level of exploitation.</p></td>
+            <td><span>05</span><strong>Trace</strong><p>Connect individual findings into reachable attack sequences.</p></td>
+            <td><span>06</span><strong>Transfer</strong><p>Prioritise fixes and define objective retest criteria.</p></td>
+        </tr>
+    </table>
+
+    <h2 class="vector-subtitle">Evidence standard</h2>
+    <table class="vector-data-table">
+        <thead><tr><th>Requirement</th><th>Expected record</th></tr></thead>
+        <tbody>
+            <tr><td class="vector-meta-value">Reproducible</td><td>Requests, commands or steps allow an authorised reviewer to repeat the observation.</td></tr>
+            <tr><td class="vector-meta-value">Scoped</td><td>Evidence identifies the affected target and remains inside the approved test boundary.</td></tr>
+            <tr><td class="vector-meta-value">Impact-led</td><td>The record explains what control failed and the consequence an attacker could reach.</td></tr>
+            <tr><td class="vector-meta-value">Actionable</td><td>Remediation includes a concrete control change and a verification condition.</td></tr>
+        </tbody>
+    </table>
+    <div class="vector-note"><strong>Safety rule.</strong> Exploitation should stop once the agreed impact is demonstrated. Destructive actions, persistence and access to unrelated data require separate authorisation.</div>
+</section>

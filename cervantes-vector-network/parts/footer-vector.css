@@ -1,0 +1,8 @@
+footer { position: running(footer); width: 100%; }
+.vector-footer-table { width: 100%; border-collapse: collapse; border-top: .7pt solid #8FB2BA; table-layout: fixed; }
+.vector-footer-table td { padding: 6pt 0 0; color: #607D87; font-family: "DejaVu Sans Mono", Consolas, monospace; font-size: 6.2pt; letter-spacing: .35pt; vertical-align: middle; }
+.vector-footer-left { width: 40%; text-align: left; }
+.vector-footer-center { width: 38%; text-align: center; }
+.vector-footer-right { width: 22%; color: #087F96; text-align: right; }
+#current-page::before { content: counter(page); }
+#total-pages::before { content: counter(pages); }

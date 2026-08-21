@@ -1,0 +1,67 @@
+<div class="vector-cover">
+    <div class="vector-cover-panel"></div>
+    <div class="vector-cover-axis"></div>
+
+    <div class="vector-cover-grid" aria-hidden="true">
+        <table role="presentation">
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        </table>
+    </div>
+
+    <div class="vector-cover-brand">
+        <table class="vector-cover-brand-table" role="presentation">
+            <tr>
+                <td class="vector-cover-mark-cell"><span class="vector-cover-mark">V/</span></td>
+                <td>
+                    <span class="vector-cover-wordmark">Cervantes</span>
+                    <span class="vector-cover-series">Vector / Network 01</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="vector-cover-coordinates vector-mono">40.4168N / 03.7038W</div>
+
+    <div class="vector-cover-main">
+        <div class="vector-cover-report-type">Network &amp; application penetration test</div>
+        <h1 class="vector-cover-title">{{ProjectName}}</h1>
+        <div class="vector-cover-deck">Attack surface, verified findings and a clear route from exposure to remediation.</div>
+    </div>
+
+    <div class="vector-cover-route">
+        <table role="presentation">
+            <tr>
+                <td><span class="vector-route-id">01</span><span class="vector-route-label">DISCOVER</span></td>
+                <td class="vector-route-link">—</td>
+                <td><span class="vector-route-id">02</span><span class="vector-route-label">VERIFY</span></td>
+                <td class="vector-route-link">—</td>
+                <td><span class="vector-route-id">03</span><span class="vector-route-label">CONTROL</span></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="vector-cover-metadata">
+        <table class="vector-cover-metadata-table" role="presentation">
+            <tr>
+                <td><span class="vector-cover-label">Prepared for</span><span class="vector-cover-value">{{ClientName}}</span></td>
+                <td><span class="vector-cover-label">Prepared by</span><span class="vector-cover-value">{{OrganizationName}}</span></td>
+            </tr>
+            <tr>
+                <td><span class="vector-cover-label">Test window</span><span class="vector-cover-value tabular">{{StartDate}} — {{EndDate}}</span></td>
+                <td><span class="vector-cover-label">Reference</span><span class="vector-cover-value tabular">{{ReportReference}}</span></td>
+            </tr>
+            <tr>
+                <td><span class="vector-cover-label">Issued</span><span class="vector-cover-value">{{TodayLong}}</span></td>
+                <td><span class="vector-cover-label">Version</span><span class="vector-cover-value tabular">{{for doc in Documents}}{{if for.last}}{{doc.DocumentVersion}}{{end}}{{end}}</span></td>
+            </tr>
+        </table>
+        <div class="vector-cover-folio">VECTOR—01 / CONFIDENTIAL</div>
+    </div>
+</div>

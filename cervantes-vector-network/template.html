@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Cervantes Vector Network penetration testing report"/>
+    <title>{{ProjectName}} — Vector Network Report</title>
+</head>
+<body>
+    <header>
+        <!-- report-zone:header:start -->
+        <!-- gallery-part:header-vector:start -->
+<table class="vector-header-table" role="presentation">
+    <tr class="vector-header-spacer"><td colspan="3"></td></tr>
+    <tr>
+        <td class="vector-header-brand"><span class="vector-header-mark">V/</span><span>Vector / Network</span></td>
+        <td class="vector-header-project">{{ProjectName}}</td>
+        <td class="vector-header-reference tabular">{{ReportReference}}</td>
+    </tr>
+</table>
+        <!-- gallery-part:header-vector:end -->
+        <!-- report-zone:header:end -->
+    </header>
+    <cover>
+        <!-- report-zone:cover:start -->
+        <!-- gallery-part:cover-vector:start -->
+<div class="vector-cover">
+    <div class="vector-cover-panel"></div>
+    <div class="vector-cover-axis"></div>
+
+    <div class="vector-cover-grid" aria-hidden="true">
+        <table role="presentation">
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        </table>
+    </div>
+
+    <div class="vector-cover-brand">
+        <table class="vector-cover-brand-table" role="presentation">
+            <tr>
+                <td class="vector-cover-mark-cell"><span class="vector-cover-mark">V/</span></td>
+                <td>
+                    <span class="vector-cover-wordmark">Cervantes</span>
+                    <span class="vector-cover-series">Vector / Network 01</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="vector-cover-coordinates vector-mono">40.4168N / 03.7038W</div>
+
+    <div class="vector-cover-main">
+        <div class="vector-cover-report-type">Network &amp; application penetration test</div>
+        <h1 class="vector-cover-title">{{ProjectName}}</h1>
+        <div class="vector-cover-deck">Attack surface, verified findings and a clear route from exposure to remediation.</div>
+    </div>
+
+    <div class="vector-cover-route">
+        <table role="presentation">
+            <tr>
+                <td><span class="vector-route-id">01</span><span class="vector-route-label">DISCOVER</span></td>
+                <td class="vector-route-link">—</td>
+                <td><span class="vector-route-id">02</span><span class="vector-route-label">VERIFY</span></td>
+                <td class="vector-route-link">—</td>
+                <td><span class="vector-route-id">03</span><span class="vector-route-label">CONTROL</span></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="vector-cover-metadata">
+        <table class="vector-cover-metadata-table" role="presentation">
+            <tr>
+                <td><span class="vector-cover-label">Prepared for</span><span class="vector-cover-value">{{ClientName}}</span></td>
+                <td><span class="vector-cover-label">Prepared by</span><span class="vector-cover-value">{{OrganizationName}}</span></td>
+            </tr>
+            <tr>
+                <td><span class="vector-cover-label">Test window</span><span class="vector-cover-value tabular">{{StartDate}} — {{EndDate}}</span></td>
+                <td><span class="vector-cover-label">Reference</span><span class="vector-cover-value tabular">{{ReportReference}}</span></td>
+            </tr>
+            <tr>
+                <td><span class="vector-cover-label">Issued</span><span class="vector-cover-value">{{TodayLong}}</span></td>
+                <td><span class="vector-cover-label">Version</span><span class="vector-cover-value tabular">{{for doc in Documents}}{{if for.last}}{{doc.DocumentVersion}}{{end}}{{end}}</span></td>
+            </tr>
+        </table>
+        <div class="vector-cover-folio">VECTOR—01 / CONFIDENTIAL</div>
+    </div>
+</div>
+        <!-- gallery-part:cover-vector:end -->
+        <!-- report-zone:cover:end -->
+    </cover>
+    <main>
+        <!-- report-zone:body:start -->
+        <!-- gallery-part:body-document-record:start -->
+<div class="page-break"></div>
+<section class="vector-section vector-document-record">
+    <table class="vector-section-heading" role="presentation">
+        <tr><td class="vector-section-code">SYS / 00</td><td><h1 id="document-record" class="vector-section-title">Document record</h1></td></tr>
+    </table>
+    <p class="vector-lead">Control data for the authorised test window, report issue and assessment team.</p>
+
+    <h2 class="vector-subtitle">Report parameters</h2>
+    <table class="vector-data-table vector-record-table">
+        <tr><td class="vector-meta-label">Document</td><td class="vector-meta-value">{{ProjectName}} — Network &amp; Application Penetration Test</td></tr>
+        <tr><td class="vector-meta-label">Client</td><td class="vector-meta-value">{{ClientName}}</td></tr>
+        <tr><td class="vector-meta-label">Prepared by</td><td class="vector-meta-value">{{OrganizationName}}</td></tr>
+        <tr><td class="vector-meta-label">Test window</td><td class="vector-meta-value tabular">{{StartDate}} — {{EndDate}}</td></tr>
+        <tr><td class="vector-meta-label">Reference</td><td class="vector-meta-value tabular">{{ReportReference}}</td></tr>
+        <tr><td class="vector-meta-label">Issued</td><td class="vector-meta-value">{{TodayLong}}</td></tr>
+        <tr><td class="vector-meta-label">Handling</td><td class="vector-meta-value">Confidential — authorised recipients only</td></tr>
+    </table>
+
+    <h2 class="vector-subtitle">Revision channel</h2>
+    <table class="vector-data-table vector-revision-table">
+        <thead><tr><th>Version</th><th>Issued</th><th>Change record</th></tr></thead>
+        <tbody>
+        {{for doc in Documents}}
+        <tr><td class="tabular">{{doc.DocumentVersion}}</td><td class="tabular">{{doc.DocumentCreatedDate}}</td><td>{{doc.DocumentDescription}}</td></tr>
+        {{end}}
+        </tbody>
+    </table>
+
+    <h2 class="vector-subtitle">Assessment team</h2>
+    <table class="vector-data-table vector-team-table">
+        <thead><tr><th>Operator</th><th>Role</th><th>Contact</th></tr></thead>
+        <tbody>
+        {{for user in Users}}
+        <tr><td class="vector-meta-value">{{user.UserFullName}}</td><td>{{user.UserPosition}}</td><td>{{user.UserEmail}}</td></tr>
+        {{end}}
+        </tbody>
+    </table>
+</section>
+        <!-- gallery-part:body-document-record:end -->
+        <!-- gallery-part:body-contents:start -->
+<div class="page-break"></div>
+<section class="vector-section vector-contents">
+    <table class="vector-section-heading" role="presentation">
+        <tr><td class="vector-section-code">IDX / 01</td><td><h1 class="vector-section-title">Contents</h1></td></tr>
+    </table>
+    <table class="vector-toc-table">
+        <tr><td class="vector-toc-index">01</td><td><a href="#executive-brief">Executive brief</a></td><td class="vector-toc-route">BRIEF / RISK</td></tr>
+        <tr><td class="vector-toc-index">02</td><td><a href="#scope-attack-surface">Scope &amp; attack surface</a></td><td class="vector-toc-route">TARGET / BOUNDARY</td></tr>
+        <tr><td class="vector-toc-index">03</td><td><a href="#assessment-method">Assessment method</a></td><td class="vector-toc-route">DISCOVER / VERIFY</td></tr>
+        <tr><td class="vector-toc-index">04</td><td><a href="#findings-register">Findings register</a></td><td class="vector-toc-route">SIGNAL / STATUS</td></tr>
+        <tr><td class="vector-toc-index">05</td><td><a href="#detailed-findings">Detailed findings</a></td><td class="vector-toc-route">EVIDENCE / IMPACT</td></tr>
+        <tr><td class="vector-toc-index">06</td><td><a href="#attack-path-analysis">Attack path analysis</a></td><td class="vector-toc-route">ROUTE / CONTROL</td></tr>
+        <tr><td class="vector-toc-index">07</td><td><a href="#remediation-plan">Remediation plan</a></td><td class="vector-toc-route">PRIORITY / OWNER</td></tr>
+        <tr><td class="vector-toc-index">08</td><td><a href="#validation-next-steps">Validation &amp; next steps</a></td><td class="vector-toc-route">RETEST / CLOSE</td></tr>
+        <tr><td class="vector-toc-index">A</td><td><a href="#appendices">Appendices</a></td><td class="vector-toc-route">REFERENCE / METHOD</td></tr>
+    </table>
+    <div class="vector-toc-guide">
+        <span class="vector-kicker">Reading route</span>
+        <p>Decision-makers can begin with sections 01, 04 and 07. Technical teams should follow the full route from scoped asset to finding evidence, attack path and validation criteria.</p>
+    </div>
+</section>
+        <!-- gallery-part:body-contents:end -->
+        <!-- gallery-part:body-executive-brief:start -->
+<div class="page-break"></div>
+<section class="vector-section vector-executive-brief">
+    <table class="vector-section-heading" role="presentation">
+        <tr><td class="vector-section-code">BRF / 01</td><td><h1 id="executive-brief" class="vector-section-title">Executive brief</h1></td></tr>
+    </table>
+    <p class="vector-lead">A decision-focused view of exposure, verified weaknesses and the first actions required to reduce reachable risk.</p>
+
+    <table class="vector-risk-band risk-band-{{OverallRiskRating | string.downcase}}" role="presentation">
+        <tr>
+            <td class="vector-risk-label"><span>Overall exposure</span><strong class="risk-text-{{OverallRiskRating | string.downcase}}">{{OverallRiskRating}}</strong></td>
+            <td class="vector-risk-context">
+                {{if HasCriticalFindings}}Critical weaknesses create a credible route to material compromise and require immediate containment.{{else if HasHighFindings}}High-impact attack routes were verified and should enter an accelerated remediation cycle.{{else}}No critical route was verified; address the recorded weaknesses and preserve the tested controls.{{end}}
+            </td>
+        </tr>
+    </table>
+
+    <table class="vector-metric-table" role="presentation">
+        <tr>
+            <td><span class="vector-metric-value">{{VulnCriticalCount}}</span><span class="vector-metric-label">Critical</span></td>
+            <td><span class="vector-metric-value">{{VulnHighCount}}</span><span class="vector-metric-label">High</span></td>
+            <td><span class="vector-metric-value">{{VulnMediumCount}}</span><span class="vector-metric-label">Medium</span></td>
+            <td><span class="vector-metric-value">{{VulnLowCount}}</span><span class="vector-metric-label">Low</span></td>
+            <td><span class="vector-metric-value">{{VulnInfoCount}}</span><span class="vector-metric-label">Info</span></td>
+        </tr>
+    </table>
+
+    <table class="vector-two-column" role="presentation">
+        <tr>
+            <td>
+                <h2 class="vector-subtitle">Assessment statement</h2>
+                <div class="rich-text">{{ProjectExecutiveSummary}}</div>
+            </td>
+            <td>
+                <h2 class="vector-subtitle">Operational context</h2>
+                <table class="vector-signal-table">
+                    <tr><td>Window</td><td class="tabular">{{StartDate}} — {{EndDate}}</td></tr>
+                    <tr><td>Total findings</td><td class="tabular">{{VulnTotalCount}}</td></tr>
+                    <tr><td>Client</td><td>{{ClientName}}</td></tr>
+                    <tr><td>Operator</td><td>{{OrganizationName}}</td></tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</section>
+        <!-- gallery-part:body-executive-brief:end -->
+        <!-- gallery-part:body-scope-attack-surface:start -->
+<div class="page-break"></div>
+<section class="vector-section vector-scope">
+    <table class="vector-section-heading" role="presentation">
+        <tr><td class="vector-section-code">SCP / 02</td><td><h1 id="scope-attack-surface" class="vector-section-title">Scope &amp; attack surface</h1></td></tr>
+    </table>
+    <p class="vector-lead">The authorised boundary defines what could be tested, from which perspective and under which operational constraints.</p>
+
+    <h2 class="vector-subtitle">Engagement context</h2>
+    <div class="rich-text">{{ProjectDescription}}</div>
+
+    <h2 class="vector-subtitle">Target register</h2>
+    {{if HasTargets}}
+    <table class="vector-data-table vector-target-table">
+        <thead><tr><th>Asset / endpoint</th><th>Type</th><th>Test context</th></tr></thead>
+        <tbody>
+        {{for target in Targets}}
+        <tr><td class="vector-meta-value vector-mono">{{target.TargetName}}</td><td><span class="vector-status">{{target.TargetType}}</span></td><td>{{target.TargetDescription}}</td></tr>
+        {{end}}
+        </tbody>
+    </table>
+    {{else}}
+    <div class="vector-empty">No target records were available when this report was generated. Confirm the authorised asset list before testing or retesting.</div>
+    {{end}}
+
+    <table class="vector-boundary-table" role="presentation">
+        <tr>
+            <td><span class="vector-boundary-code">IN</span><strong>Authorised surface</strong><p>Named network ranges, hosts, applications, APIs and identities in the target register.</p></td>
+            <td><span class="vector-boundary-code">GUARD</span><strong>Operational constraints</strong><p>Testing window, rate limits, safety rules, exclusions and escalation contacts.</p></td>
+            <td><span class="vector-boundary-code">OUT</span><strong>Excluded surface</strong><p>Third-party systems and any asset not explicitly authorised remain outside the test boundary.</p></td>
+        </tr>
+    </table>
+</section>
+        <!-- gallery-part:body-scope-attack-surface:end -->
+        <!-- gallery-part:body-assessment-method:start -->
+<div class="page-break"></div>
+<section class="vector-section vector-method">
+    <table class="vector-section-heading" role="presentation">
+        <tr><td class="vector-section-code">OPS / 03</td><td><h1 id="assessment-method" class="vector-section-title">Assessment method</h1></td></tr>
+    </table>
+    <p class="vector-lead">A repeatable sequence for moving from observable attack surface to verified impact without exceeding the authorised boundary.</p>
+
+    <table class="vector-method-route" role="presentation">
+        <tr>
+            <td><span>01</span><strong>Map</strong><p>Discover hosts, services, routes and application entry points.</p></td>
+            <td><span>02</span><strong>Model</strong><p>Identify trust boundaries, identities and likely attack paths.</p></td>
+            <td><span>03</span><strong>Verify</strong><p>Test weaknesses manually and retain reproducible evidence.</p></td>
+        </tr>
+        <tr>
+            <td><span>04</span><strong>Control</strong><p>Demonstrate impact with the minimum safe level of exploitation.</p></td>
+            <td><span>05</span><strong>Trace</strong><p>Connect individual findings into reachable attack sequences.</p></td>
+            <td><span>06</span><strong>Transfer</strong><p>Prioritise fixes and define objective retest criteria.</p></td>
+        </tr>
+    </table>
+
+    <h2 class="vector-subtitle">Evidence standard</h2>
+    <table class="vector-data-table">
+        <thead><tr><th>Requirement</th><th>Expected record</th></tr></thead>
+        <tbody>
+            <tr><td class="vector-meta-value">Reproducible</td><td>Requests, commands or steps allow an authorised reviewer to repeat the observation.</td></tr>
+            <tr><td class="vector-meta-value">Scoped</td><td>Evidence identifies the affected target and remains inside the approved test boundary.</td></tr>
+            <tr><td class="vector-meta-value">Impact-led</td><td>The record explains what control failed and the consequence an attacker could reach.</td></tr>
+            <tr><td class="vector-meta-value">Actionable</td><td>Remediation includes a concrete control change and a verification condition.</td></tr>
+        </tbody>
+    </table>
+    <div class="vector-note"><strong>Safety rule.</strong> Exploitation should stop once the agreed impact is demonstrated. Destructive actions, persistence and access to unrelated data require separate authorisation.</div>
+</section>
+        <!-- gallery-part:body-assessment-method:end -->
+        <!-- gallery-part:body-findings-register:start -->
+<div class="page-break"></div>
+<section class="vector-section vector-findings-register">
+    <table class="vector-section-heading" role="presentation">
+        <tr><td class="vector-section-code">SIG / 04</td><td><h1 id="findings-register" class="vector-section-title">Findings register</h1></td></tr>
+    </table>
+    <p class="vector-lead">A compact control register for triage. Severity expresses technical risk; status tracks the current remediation state.</p>
+
+    {{if HasNoFindings}}
+    <div class="vector-empty">No security findings were recorded for the selected report data.</div>
+    {{else}}
+    <table class="vector-data-table vector-findings-table">
+        <thead><tr><th>ID</th><th>Verified weakness</th><th>Severity</th><th>CVSS</th><th>Status</th></tr></thead>
+        <tbody>
+        {{for vuln in Vulns}}
+        <tr>
+            <td class="vector-mono vector-finding-id">{{vuln.VulnFindingId}}</td>
+            <td class="vector-meta-value"><a href="#vuln-{{vuln.VulnFindingId}}">{{vuln.VulnName}}</a></td>
+            <td><span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span></td>
+            <td class="vector-mono vector-cvss">{{vuln.VulnCvss}}</td>
+            <td><span class="vector-status">{{vuln.VulnStatus}}</span></td>
+        </tr>
+        {{end}}
+        </tbody>
+    </table>
+    {{end}}
+
+    <table class="vector-register-summary" role="presentation">
+        <tr>
+            <td><span class="vector-meta-label">Total signals</span><strong class="vector-mono">{{VulnTotalCount}}</strong></td>
+            <td><span class="vector-meta-label">Mean CVSS</span><strong class="vector-mono">{{VulnAvgCvss}}</strong></td>
+            <td><span class="vector-meta-label">Overall exposure</span><strong class="risk-text-{{OverallRiskRating | string.downcase}}">{{OverallRiskRating}}</strong></td>
+        </tr>
+    </table>
+</section>
+        <!-- gallery-part:body-findings-register:end -->
+        <!-- gallery-part:body-detailed-findings:start -->
+<div class="page-break"></div>
+<section class="vector-section vector-detailed-findings">
+    <table class="vector-section-heading" role="presentation">
+        <tr><td class="vector-section-code">EVD / 05</td><td><h1 id="detailed-findings" class="vector-section-title">Detailed findings</h1></td></tr>
+    </table>
+    <p class="vector-lead">Each finding separates the verified condition, reachable impact, evidence and the control change required to close it.</p>
+
+    {{if HasNoFindings}}
+    <div class="vector-empty">No detailed findings were available for this report.</div>
+    {{else}}
+    {{for vuln in Vulns}}
+    <article class="vector-finding" id="vuln-{{vuln.VulnFindingId}}">
+        <table class="vector-finding-header severity-border-{{vuln.VulnRisk | string.downcase}}" role="presentation">
+            <tr>
+                <td class="vector-finding-key"><span>FINDING</span><strong>{{vuln.VulnFindingId}}</strong></td>
+                <td><h2>{{vuln.VulnName}}</h2><span class="vector-finding-category">{{vuln.VulnCategory}}</span></td>
+                <td class="vector-finding-risk"><span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span><strong class="vector-mono">{{vuln.VulnCvss}}</strong></td>
+            </tr>
+        </table>
+
+        <table class="vector-finding-meta">
+            <tr><td><span class="vector-meta-label">Targets</span><span class="vector-meta-value">{{vuln.VulnTargets}}</span></td><td><span class="vector-meta-label">Status</span><span class="vector-meta-value">{{vuln.VulnStatus}}</span></td></tr>
+            <tr><td colspan="2"><span class="vector-meta-label">CVSS vector</span><code>{{vuln.VulnCvssVector}}</code></td></tr>
+            {{if vuln.VulnCve != ""}}
+            <tr><td><span class="vector-meta-label">CVE</span><span class="vector-meta-value vector-mono">{{vuln.VulnCve}}</span></td><td><span class="vector-meta-label">CWE</span><span class="vector-meta-value vector-mono">{{vuln.VulnCwes}}</span></td></tr>
+            {{end}}
+        </table>
+
+        <div class="vector-finding-block">
+            <h3><span>01</span>Condition</h3>
+            <div class="rich-text">{{vuln.VulnDescription}}</div>
+        </div>
+        <div class="vector-finding-block vector-impact-block">
+            <h3><span>02</span>Reachable impact</h3>
+            <div class="rich-text">{{vuln.VulnImpact}}</div>
+        </div>
+        <div class="vector-finding-block vector-evidence-block">
+            <h3><span>03</span>Verification evidence</h3>
+            <div class="rich-text">{{vuln.VulnPoc}}</div>
+        </div>
+        <div class="vector-finding-block vector-remediation-block">
+            <h3><span>04</span>Control change</h3>
+            <div class="rich-text">{{vuln.VulnRemediation}}</div>
+            <table class="vector-remediation-meta" role="presentation"><tr><td>Priority <strong>{{vuln.VulnPriority}}</strong></td><td>Complexity <strong>{{vuln.VulnComplexity}}</strong></td></tr></table>
+        </div>
+    </article>
+    {{if for.last == false}}<div class="page-break"></div>{{end}}
+    {{end}}
+    {{end}}
+</section>
+        <!-- gallery-part:body-detailed-findings:end -->
+        <!-- gallery-part:body-attack-path-analysis:start -->
+<div class="page-break"></div>
+<section class="vector-section vector-attack-path">
+    <table class="vector-section-heading" role="presentation">
+        <tr><td class="vector-section-code">PTH / 06</td><td><h1 id="attack-path-analysis" class="vector-section-title">Attack path analysis</h1></td></tr>
+    </table>
+    <p class="vector-lead">Individual weaknesses become materially important when they connect an exposed entry point to identity, control or sensitive data.</p>
+
+    <table class="vector-path-diagram" role="presentation">
+        <tr class="vector-path-axis"><td>ENTRY</td><td>ACCESS</td><td>CONTROL</td><td>IMPACT</td></tr>
+        <tr>
+            <td><span class="vector-path-node">01</span><strong>Scoped surface</strong><small class="vector-mono">{{Targets | array.size}} target(s)</small></td>
+            <td><span class="vector-path-node">02</span><strong>Verified weakness</strong><small class="vector-mono">{{VulnTotalCount}} signal(s)</small></td>
+            <td><span class="vector-path-node">03</span><strong>Privilege or trust</strong><small>Identity, service or application boundary</small></td>
+            <td><span class="vector-path-node">04</span><strong>Business consequence</strong><small>{{ProjectBusinessImpact}}</small></td>
+        </tr>
+    </table>
+
+    <h2 class="vector-subtitle">Priority route candidates</h2>
+    {{if HasNoFindings}}
+    <div class="vector-empty">No findings are available to construct an attack route.</div>
+    {{else}}
+    <table class="vector-data-table vector-path-register">
+        <thead><tr><th>Signal</th><th>Potential route contribution</th><th>Priority</th></tr></thead>
+        <tbody>
+        {{for vuln in Vulns}}
+        {{if vuln.VulnRisk == "Critical" || vuln.VulnRisk == "High"}}
+        <tr><td class="vector-mono">{{vuln.VulnFindingId}}</td><td><strong>{{vuln.VulnName}}</strong><br/><span class="muted">Affected: {{vuln.VulnTargets}}</span></td><td><span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span></td></tr>
+        {{end}}
+        {{end}}
+        </tbody>
+    </table>
+    {{end}}
+    <div class="vector-note"><strong>Interpretation.</strong> Confirm each route against the detailed evidence. Shared identity, reachable management interfaces and reused trust relationships often connect findings that appear isolated in a flat register.</div>
+</section>
+        <!-- gallery-part:body-attack-path-analysis:end -->
+        <!-- gallery-part:body-remediation-plan:start -->
+<div class="page-break"></div>
+<section class="vector-section vector-remediation-plan">
+    <table class="vector-section-heading" role="presentation">
+        <tr><td class="vector-section-code">FIX / 07</td><td><h1 id="remediation-plan" class="vector-section-title">Remediation plan</h1></td></tr>
+    </table>
+    <p class="vector-lead">Prioritisation follows reachability and impact: break critical routes first, then reduce exposed surface and strengthen durable controls.</p>
+
+    <div class="vector-remediation-lane vector-lane-now">
+        <h2><span>LANE 01</span>Contain and break the route</h2>
+        <table class="vector-data-table">
+            <thead><tr><th>ID</th><th>Action candidate</th><th>Severity</th></tr></thead>
+            <tbody>{{for vuln in Vulns}}{{if vuln.VulnRisk == "Critical" || vuln.VulnRisk == "High"}}<tr><td class="vector-mono">{{vuln.VulnFindingId}}</td><td>{{vuln.VulnName}}</td><td><span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span></td></tr>{{end}}{{end}}</tbody>
+        </table>
+    </div>
+
+    <div class="vector-remediation-lane vector-lane-next">
+        <h2><span>LANE 02</span>Reduce reachable exposure</h2>
+        <table class="vector-data-table">
+            <thead><tr><th>ID</th><th>Action candidate</th><th>Severity</th></tr></thead>
+            <tbody>{{for vuln in Vulns}}{{if vuln.VulnRisk == "Medium"}}<tr><td class="vector-mono">{{vuln.VulnFindingId}}</td><td>{{vuln.VulnName}}</td><td><span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span></td></tr>{{end}}{{end}}</tbody>
+        </table>
+    </div>
+
+    <div class="vector-remediation-lane vector-lane-harden">
+        <h2><span>LANE 03</span>Harden and observe</h2>
+        <table class="vector-data-table">
+            <thead><tr><th>ID</th><th>Action candidate</th><th>Severity</th></tr></thead>
+            <tbody>{{for vuln in Vulns}}{{if vuln.VulnRisk == "Low" || vuln.VulnRisk == "Info"}}<tr><td class="vector-mono">{{vuln.VulnFindingId}}</td><td>{{vuln.VulnName}}</td><td><span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span></td></tr>{{end}}{{end}}</tbody>
+        </table>
+    </div>
+
+    <div class="vector-note">Assign each action an owner, target date and evidence requirement in the remediation tracker. A finding is not closed until the original test path no longer succeeds.</div>
+</section>
+        <!-- gallery-part:body-remediation-plan:end -->
+        <!-- gallery-part:body-validation-next-steps:start -->
+<div class="page-break"></div>
+<section class="vector-section vector-validation">
+    <table class="vector-section-heading" role="presentation">
+        <tr><td class="vector-section-code">VAL / 08</td><td><h1 id="validation-next-steps" class="vector-section-title">Validation &amp; next steps</h1></td></tr>
+    </table>
+    <p class="vector-lead">Closure requires evidence that the affected control changed and that the previously verified attack route no longer works.</p>
+
+    <table class="vector-validation-summary" role="presentation">
+        <tr>
+            <td><span class="vector-meta-label">Assessment duration</span><strong class="vector-mono">{{ProjectDuration}} days</strong></td>
+            <td><span class="vector-meta-label">Targets assessed</span><strong class="vector-mono">{{Targets | array.size}}</strong></td>
+            <td><span class="vector-meta-label">Findings to track</span><strong class="vector-mono">{{VulnTotalCount}}</strong></td>
+            <td><span class="vector-meta-label">Mean CVSS</span><strong class="vector-mono">{{VulnAvgCvss}}</strong></td>
+        </tr>
+    </table>
+
+    <h2 class="vector-subtitle">Retest protocol</h2>
+    <table class="vector-data-table">
+        <thead><tr><th>Stage</th><th>Validation condition</th><th>Output</th></tr></thead>
+        <tbody>
+            <tr><td class="vector-mono">01 / CHANGE</td><td>Confirm the intended configuration, code or architecture change is present on the affected target.</td><td>Implementation evidence</td></tr>
+            <tr><td class="vector-mono">02 / REPLAY</td><td>Repeat the original proof using the same preconditions and a controlled test identity.</td><td>Pass / fail record</td></tr>
+            <tr><td class="vector-mono">03 / BYPASS</td><td>Check reasonable alternate routes and adjacent trust boundaries for regression or partial fixes.</td><td>Residual-risk note</td></tr>
+            <tr><td class="vector-mono">04 / CLOSE</td><td>Record the retest date, operator, evidence and accepted residual risk.</td><td>Closure decision</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="vector-subtitle">Engagement outcome</h2>
+    {{if HasNoFindings}}
+    <p>No exploitable weakness was recorded in the selected data. Maintain the tested controls and repeat the assessment when the attack surface materially changes.</p>
+    {{else}}
+    <p>The assessment recorded <strong>{{VulnTotalCount}}</strong> finding(s) and an overall exposure rating of <strong class="risk-text-{{OverallRiskRating | string.downcase}}">{{OverallRiskRating}}</strong>. Remediation should follow the route-based priority defined in this report.</p>
+    {{end}}
+
+    <div class="vector-contact-block">
+        <table role="presentation">
+            <tr><td><span>Assessment contact</span><strong>{{OrganizationContactName}}</strong></td><td><span>Email</span><strong>{{OrganizationEmail}}</strong></td></tr>
+            <tr><td><span>Organisation</span><strong>{{OrganizationName}}</strong></td><td><span>Phone</span><strong>{{OrganizationPhone}}</strong></td></tr>
+        </table>
+    </div>
+</section>
+        <!-- gallery-part:body-validation-next-steps:end -->
+        <!-- gallery-part:body-appendices:start -->
+<div class="page-break"></div>
+<section class="vector-section vector-appendices">
+    <table class="vector-section-heading" role="presentation">
+        <tr><td class="vector-section-code">REF / A</td><td><h1 id="appendices" class="vector-section-title">Appendices</h1></td></tr>
+    </table>
+    <p class="vector-lead">Reference material for severity interpretation, evidence handling and repeatable technical review.</p>
+
+    <h2 class="vector-subtitle">A. Severity model</h2>
+    <table class="vector-data-table vector-severity-table">
+        <thead><tr><th>Severity</th><th>CVSS</th><th>Interpretation</th></tr></thead>
+        <tbody>
+            <tr><td><span class="severity-badge severity-critical">Critical</span></td><td class="vector-mono">9.0–10.0</td><td>Direct or highly reliable route to material compromise, broad control or sensitive data exposure.</td></tr>
+            <tr><td><span class="severity-badge severity-high">High</span></td><td class="vector-mono">7.0–8.9</td><td>Serious weakness with credible impact that should enter an accelerated remediation cycle.</td></tr>
+            <tr><td><span class="severity-badge severity-medium">Medium</span></td><td class="vector-mono">4.0–6.9</td><td>Meaningful weakness with constrained impact, reachability or required preconditions.</td></tr>
+            <tr><td><span class="severity-badge severity-low">Low</span></td><td class="vector-mono">0.1–3.9</td><td>Limited direct impact; often valuable as part of a wider route or hardening programme.</td></tr>
+            <tr><td><span class="severity-badge severity-info">Info</span></td><td class="vector-mono">0.0</td><td>Observed condition or defensive improvement without a verified standalone exploit.</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="vector-subtitle">B. Evidence handling</h2>
+    <table class="vector-evidence-table" role="presentation">
+        <tr><td class="vector-mono">CAPTURE</td><td>Record time, target, operator and the minimum output needed to support the finding.</td></tr>
+        <tr><td class="vector-mono">REDACT</td><td>Remove secrets and unrelated personal or client data before distributing the report.</td></tr>
+        <tr><td class="vector-mono">PROTECT</td><td>Store evidence with access controls appropriate to confidential security material.</td></tr>
+        <tr><td class="vector-mono">DISPOSE</td><td>Delete working copies according to the agreed retention period and engagement rules.</td></tr>
+    </table>
+
+    <h2 class="vector-subtitle">C. Report coordinates</h2>
+    <table class="vector-data-table">
+        <tr><td class="vector-meta-label">Reference</td><td class="vector-mono">{{ReportReference}}</td></tr>
+        <tr><td class="vector-meta-label">Generated</td><td class="vector-mono">{{TodayISO}}</td></tr>
+        <tr><td class="vector-meta-label">Series</td><td class="vector-mono">CERVANTES / VECTOR / NETWORK 01</td></tr>
+    </table>
+</section>
+        <!-- gallery-part:body-appendices:end -->
+        <!-- report-zone:body:end -->
+    </main>
+    <footer>
+        <!-- report-zone:footer:start -->
+        <!-- gallery-part:footer-vector:start -->
+<table class="vector-footer-table" role="presentation">
+    <tr>
+        <td class="vector-footer-left">CONFIDENTIAL / {{OrganizationName}}</td>
+        <td class="vector-footer-center">CERVANTES VECTOR NETWORK</td>
+        <td class="vector-footer-right"><span id="current-page"></span> / <span id="total-pages"></span></td>
+    </tr>
+</table>
+        <!-- gallery-part:footer-vector:end -->
+        <!-- report-zone:footer:end -->
+    </footer>
+</body>
+</html>

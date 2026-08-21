@@ -1,0 +1,5 @@
+.vector-severity-table th:first-child { width: 18%; }
+.vector-severity-table th:nth-child(2) { width: 16%; }
+.vector-evidence-table { width: 100%; margin: 10pt 0 18pt; border-top: 2pt solid #071B26; }
+.vector-evidence-table td { padding: 9pt 8pt; border-bottom: .6pt solid #B8CFD4; vertical-align: top; }
+.vector-evidence-table td:first-child { width: 24mm; color: #087F96; font-size: 7pt; font-weight: 700; letter-spacing: .6pt; }

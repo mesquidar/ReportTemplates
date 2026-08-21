@@ -1,0 +1,10 @@
+.vector-target-table th:first-child { width: 32%; }
+.vector-target-table th:nth-child(2) { width: 18%; }
+.vector-boundary-table { width: 100%; margin: 20pt 0 0; table-layout: fixed; border-top: 2pt solid #071B26; }
+.vector-boundary-table td { padding: 11pt 10pt; border-right: .7pt solid #B8CFD4; vertical-align: top; }
+.vector-boundary-table td:last-child { border-right: 0; }
+.vector-boundary-code,
+.vector-boundary-table strong { display: block; }
+.vector-boundary-code { margin-bottom: 12pt; color: #087F96; font-family: "DejaVu Sans Mono", Consolas, monospace; font-size: 7pt; font-weight: 700; letter-spacing: .7pt; }
+.vector-boundary-table strong { margin-bottom: 5pt; color: #102D39; font-size: 9pt; }
+.vector-boundary-table p { margin: 0; color: #587681; font-size: 8pt; line-height: 1.45; }

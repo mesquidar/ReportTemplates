@@ -1,0 +1,34 @@
+<div class="page-break"></div>
+<section class="vector-section vector-findings-register">
+    <table class="vector-section-heading" role="presentation">
+        <tr><td class="vector-section-code">SIG / 04</td><td><h1 id="findings-register" class="vector-section-title">Findings register</h1></td></tr>
+    </table>
+    <p class="vector-lead">A compact control register for triage. Severity expresses technical risk; status tracks the current remediation state.</p>
+
+    {{if HasNoFindings}}
+    <div class="vector-empty">No security findings were recorded for the selected report data.</div>
+    {{else}}
+    <table class="vector-data-table vector-findings-table">
+        <thead><tr><th>ID</th><th>Verified weakness</th><th>Severity</th><th>CVSS</th><th>Status</th></tr></thead>
+        <tbody>
+        {{for vuln in Vulns}}
+        <tr>
+            <td class="vector-mono vector-finding-id">{{vuln.VulnFindingId}}</td>
+            <td class="vector-meta-value"><a href="#vuln-{{vuln.VulnFindingId}}">{{vuln.VulnName}}</a></td>
+            <td><span class="severity-badge severity-{{vuln.VulnRisk | string.downcase}}">{{vuln.VulnRisk}}</span></td>
+            <td class="vector-mono vector-cvss">{{vuln.VulnCvss}}</td>
+            <td><span class="vector-status">{{vuln.VulnStatus}}</span></td>
+        </tr>
+        {{end}}
+        </tbody>
+    </table>
+    {{end}}
+
+    <table class="vector-register-summary" role="presentation">
+        <tr>
+            <td><span class="vector-meta-label">Total signals</span><strong class="vector-mono">{{VulnTotalCount}}</strong></td>
+            <td><span class="vector-meta-label">Mean CVSS</span><strong class="vector-mono">{{VulnAvgCvss}}</strong></td>
+            <td><span class="vector-meta-label">Overall exposure</span><strong class="risk-text-{{OverallRiskRating | string.downcase}}">{{OverallRiskRating}}</strong></td>
+        </tr>
+    </table>
+</section>
