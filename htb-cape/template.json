@@ -1,7 +1,7 @@
 {
   "name": "Hack The Box CAPE Penetration Test Report",
   "description": "Professional CAPE penetration testing report template for Cervantes.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Cervantes",
   "language": "en",
   "reportType": "general",
@@ -38,7 +38,7 @@
     },
     {
       "key": "body-document-control",
-      "name": "Document Control",
+      "name": "HTB CAPE Document Control",
       "type": "Body",
       "order": 0,
       "html": "parts/body-document-control.html",
@@ -46,7 +46,7 @@
     },
     {
       "key": "body-table-of-contents",
-      "name": "Table of Contents",
+      "name": "HTB CAPE Table of Contents",
       "type": "Body",
       "order": 1,
       "html": "parts/body-table-of-contents.html",
@@ -54,7 +54,7 @@
     },
     {
       "key": "body-executive-summary",
-      "name": "Executive Summary",
+      "name": "HTB CAPE Executive Summary",
       "type": "Body",
       "order": 2,
       "html": "parts/body-executive-summary.html",
@@ -62,7 +62,7 @@
     },
     {
       "key": "body-scope-methodology",
-      "name": "Scope and Methodology",
+      "name": "HTB CAPE Scope and Methodology",
       "type": "Body",
       "order": 3,
       "html": "parts/body-scope-methodology.html",
@@ -70,7 +70,7 @@
     },
     {
       "key": "body-findings-summary",
-      "name": "Findings Summary",
+      "name": "HTB CAPE Findings Summary",
       "type": "Body",
       "order": 4,
       "html": "parts/body-findings-summary.html",
@@ -78,7 +78,7 @@
     },
     {
       "key": "body-detailed-findings",
-      "name": "Detailed Findings",
+      "name": "HTB CAPE Detailed Findings",
       "type": "Body",
       "order": 5,
       "html": "parts/body-detailed-findings.html",
@@ -86,7 +86,7 @@
     },
     {
       "key": "body-recommendations",
-      "name": "Recommendations",
+      "name": "HTB CAPE Recommendations",
       "type": "Body",
       "order": 6,
       "html": "parts/body-recommendations.html",
@@ -94,7 +94,7 @@
     },
     {
       "key": "body-conclusion",
-      "name": "Conclusion",
+      "name": "HTB CAPE Conclusion",
       "type": "Body",
       "order": 7,
       "html": "parts/body-conclusion.html",
@@ -102,7 +102,7 @@
     },
     {
       "key": "body-appendices",
-      "name": "Appendices",
+      "name": "HTB CAPE Appendices",
       "type": "Body",
       "order": 8,
       "html": "parts/body-appendices.html",

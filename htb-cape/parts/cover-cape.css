@@ -13,11 +13,12 @@ cover {
     position: relative;
     padding: 0;
     margin: 0;
+    overflow: hidden;
 }
 
 .cover-decoration-top {
     position: absolute;
-    top: -100;
+    top: -100pt;
     left: 0;
     width: 100%;
     height: 120pt;
@@ -29,6 +30,12 @@ cover {
     left: 0;
     width: 100%;
     height: 100pt;
+}
+
+.cover-decoration-bottom svg {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .cover-content {
@@ -47,6 +54,14 @@ cover {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.cover-logo-container img {
+    display: block;
+    width: 100%;
+    max-width: 160mm;
+    height: auto;
+    margin: 0 auto;
 }
 
 .cover-logo-cert-container {
