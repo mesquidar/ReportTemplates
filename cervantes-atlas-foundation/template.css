@@ -409,13 +409,12 @@ cover { page: atlas-cover-page; }
 }
 
 .atlas-cover-folio {
-    position: absolute;
-    top: 281mm;
-    right: 23mm;
+    margin-top: 12mm;
     color: #66705A;
     font-size: 7pt;
     font-weight: 600;
     letter-spacing: 1.4pt;
+    text-align: right;
 }
 /* gallery-part:cover-atlas:end */
 
@@ -434,6 +433,14 @@ header {
 .atlas-header-table td {
     padding: 0 0 5pt;
     vertical-align: middle;
+}
+
+.atlas-header-table .atlas-header-spacer td {
+    height: 5mm;
+    padding: 0;
+    border: 0;
+    font-size: 0;
+    line-height: 0;
 }
 
 .atlas-header-brand {

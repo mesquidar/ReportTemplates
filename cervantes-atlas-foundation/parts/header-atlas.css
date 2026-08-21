@@ -14,6 +14,14 @@ header {
     vertical-align: middle;
 }
 
+.atlas-header-table .atlas-header-spacer td {
+    height: 5mm;
+    padding: 0;
+    border: 0;
+    font-size: 0;
+    line-height: 0;
+}
+
 .atlas-header-brand {
     width: 38%;
     color: #59624E;

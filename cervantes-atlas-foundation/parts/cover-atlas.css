@@ -129,11 +129,10 @@ cover { page: atlas-cover-page; }
 }
 
 .atlas-cover-folio {
-    position: absolute;
-    top: 281mm;
-    right: 23mm;
+    margin-top: 12mm;
     color: #66705A;
     font-size: 7pt;
     font-weight: 600;
     letter-spacing: 1.4pt;
+    text-align: right;
 }
