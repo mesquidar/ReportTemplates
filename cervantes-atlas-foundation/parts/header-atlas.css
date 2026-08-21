@@ -22,13 +22,20 @@ header {
     line-height: 0;
 }
 
-.atlas-header-brand {
+.atlas-header-table td.atlas-header-brand {
     width: 38%;
     color: #59624E;
     font-size: 7pt;
     font-weight: 600;
     letter-spacing: .75pt;
     text-transform: uppercase;
+}
+
+.atlas-header-brand-offset {
+    display: block;
+    height: 5mm;
+    font-size: 1pt;
+    line-height: 5mm;
 }
 
 .atlas-header-mark {

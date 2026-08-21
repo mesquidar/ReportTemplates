@@ -34,7 +34,12 @@ cover { page: atlas-cover-page; }
     width: 158mm;
 }
 
-.atlas-cover-brand td { vertical-align: middle; }
+.atlas-cover-brand-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.atlas-cover-brand-table td { vertical-align: middle; }
 .atlas-cover-mark-cell { width: 17mm; }
 .atlas-cover-mark { display: block; width: 12mm; height: 12mm; }
 

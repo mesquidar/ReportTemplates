@@ -5,6 +5,7 @@
   "author": "OWASP Cervantes",
   "language": "en",
   "reportType": "general",
+  "preview" : "preview.png",
   "tags": [
     "cervantes",
     "atlas",
